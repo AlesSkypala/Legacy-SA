@@ -1,0 +1,66 @@
+﻿<!-- =====SectionImageChange==== --> 
+
+<script type="text/javascript"> 
+var subitem = null;
+
+function set_subitem(subset){
+   var subitem = subset;
+   return true}
+
+function update_rbox(){
+   var elemnent = document.getElementById("myList");
+   var tvalue = element.options[element.selectedIndex].text;
+   var vvalue = element.value;
+   document.getElementById("headername").textContent = "Workload analysis over the LUNs assigned to HostGroup: ["+tvalue+"]";
+   var prefix = "%ImagePath%";
+   document.getElementById("response").src = prefix+subitem+"_"+vvalue+".png";
+   document.getElementById("r_response").src = prefix+"r_response_"+vvalue+".png";
+   document.getElementById("w_response").src = prefix+"w_response_"+vvalue+".png";
+   document.getElementById("iops").src = prefix+"iops_"+vvalue+".png";
+   document.getElementById("r_iops").src = prefix+"r_iops_"+vvalue+".png";
+   document.getElementById("w_iops").src = prefix+"w_iops_"+vvalue+".png";
+   document.getElementById("mbps").src = prefix+"iops_"+vvalue+".png";
+   document.getElementById("r_mbps").src = prefix+"r_mbps_"+vvalue+".png";
+   document.getElementById("w_mbps").src = prefix+"w_mbps_"+vvalue+".png";
+   return true};
+</script>
+
+
+<div>
+<!-- =====Listbox Section==== --> 
+<div style="display: inline-block; vertical-align: top; margin-top: 10px; width: 150px; height: 600px;">
+<select id="myList" multiple="multiple" style="width: 145px; height: 600px; font-size: 12px; border: 1px solid black; font-family: Calibri Light, Helvetica, sans-serif;"  onChange="update_rbox()">
+%ListBoxItems%
+</select>
+</div>
+
+
+<!-- =====Result Section==== --> 
+<div class="sectionBox" style="border:1px solid #ffd65e; width: 790px;">
+<h2 id="headername" style="background: #ffd65e;">Summary over the all HostGroups<a href="#toph">&#9650;</a></h2>
+
+<div class="menu_simple"> 
+<ul>
+<li><a href="javascript:set_subitem("response");">Response Time Analysis [ms]</a></li>
+<li><a href="javascript:set_subitem("iops");">Transaction Rate Analysis [IOps]</a></li>
+<li><a href="javascript:set_subitem("mbps");">Transfer Rate Analysis [MBps]</a></li>
+</ul>
+
+<div><img id="response" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%response.png"></div>
+<div style="display: inline-block; width: 370px; vertical-align: top; text-align:center;"><img id="r_response" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%r_response.png"></div>
+<div style="display: inline-block; width: 370px; vertical-align: top; text-align:center;"><img id="w_response" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%w_response.png"></div>
+
+<div><img id="iops" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%iops.png"></div>
+<div style="display: inline-block; width: 370px; vertical-align: top; text-align:center;"><img id="r_iops" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%r_iops.png"></div>
+<div style="display: inline-block; width: 370px; vertical-align: top; text-align:center;"><img id="w_iops" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%w_iops.png"></div>
+
+<div><img id="mbps" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%mbps.png"></div>
+<div style="display: inline-block; width: 370px; vertical-align: top; text-align:center;"><img id="r_mbps" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%r_mbps.png"></div>
+<div style="display: inline-block; width: 370px; vertical-align: top; text-align:center;"><img id="w_mbps" style="display: block;" title="Others Group IOps" alt="IOps" src="%ImagePath%w_mbps.png"></div>
+</div>
+
+</div>
+
+
+
+

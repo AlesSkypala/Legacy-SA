@@ -1,0 +1,87 @@
+
+<!-- The Modal & Dygraph code -->
+<div id="myModal" class="modal">
+<!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="graphdiv"></div>
+    <br>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks, open the modal 
+function DynChart(csvfile, stitle, sylabel) {
+    data = '%ImagePath%' + csvfile + '.csv';	
+    modal.style.display = "block";
+    graph = new Dygraph(
+    document.getElementById("graphdiv"),
+     data,
+     {  title: stitle,
+        ylabel: sylabel,
+        xAxisHeight: 14,        
+        showRangeSelector: true,
+        highlightCircleSize: 2,
+        strokeWidth: 1,
+        strokeBorderWidth: 0,
+        rangeSelectorHeight: 60,
+        highlightSeriesOpts: {
+          strokeWidth: 1,
+          strokeBorderWidth: 1,
+          highlightCircleSize: 5,
+        }, 
+      });
+}
+
+
+function DynChartUnderlay(csvfile, stitle, sylabel, highlight_start, highlight_end) {
+    data = '%ImagePath%' + csvfile + '.csv';	
+    modal.style.display = "block";
+    graph = new Dygraph(
+    document.getElementById("graphdiv"),
+     data,
+     {  title: stitle,
+        ylabel: sylabel,
+        xAxisHeight: 14,        
+        showRangeSelector: true,
+        highlightCircleSize: 2,
+        strokeWidth: 1,
+        strokeBorderWidth: 0,
+        rangeSelectorHeight: 60,
+        highlightSeriesOpts: {
+          strokeWidth: 1,
+          strokeBorderWidth: 1,
+          highlightCircleSize: 5,
+        }, 
+        underlayCallback: function(canvas, area, g) {
+          var bottom_left = g.toDomCoords(new Date(highlight_start), -20);
+          var top_right = g.toDomCoords(new Date(highlight_end), +20);
+          var left = bottom_left[0];
+          var right = top_right[0];
+          canvas.fillStyle = "rgba(255, 255, 102, 1.0)";
+          canvas.fillRect(left, area.y, right - left, area.h);
+        } 
+      });
+}
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none"
+    graph.destroy();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+	graph.destroy();
+    }
+}
+</script>

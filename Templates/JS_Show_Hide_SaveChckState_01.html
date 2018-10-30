@@ -1,0 +1,35 @@
+<script src='/jquery.js'></script>	
+<script type="text/javascript">
+// Toggle item
+$(document).ready(function () {
+	$('[data-toggle="toggle"]').change(function () {
+	  if ( $(this).is(':checked') ) {
+		$(this).parents().next('.hide').show(1000);
+		} else {
+		$(this).parents().next('.hide').hide(1000);
+		}
+	});
+});
+
+// Save state to cookie
+var checkboxValues = JSON.parse(localStorage.getItem('%CheckBoxSet_Name%')) || {},
+    $checkboxes = $(":checkbox");
+
+$checkboxes.on("change", function(){
+  $checkboxes.each(function(){
+    checkboxValues[this.id] = this.checked;
+  });
+  localStorage.setItem('%CheckBoxSet_Name%', JSON.stringify(checkboxValues));
+});
+
+// On page load
+$.each(checkboxValues, function(key, value) {
+  var ids="#" + key;
+  $(ids).prop('checked', value);
+  if ( $(ids).is(':checked') ) {
+		$(ids).parents().next('.hide').show();
+		} else {
+		$(ids).parents().next('.hide').hide();
+		}
+});
+</script>

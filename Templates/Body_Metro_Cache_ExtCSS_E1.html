@@ -1,0 +1,42 @@
+<!-- ===== SubHeader ==== -->
+<div class="menu_simple"> 
+<ul>
+%HeaderItems%
+</ul>
+<br>
+</div>
+
+   
+<!-- ===== Section Cache Paths ===== --> 
+
+<div id="cm" class="sectionBox" style="border:1px solid #e570e7; width: 995px;">
+<h2 style="background: #e570e7;">Usage Rate of Cache Paths analysis<a href="#toph">&#9650;</a></h2>
+<!-- ===== CHA_CMPK ===== -->
+<div><img title="Usage rates for access paths between channel adapters and CM packages - average: %CHA_CMPK_AVG% [ms],  peak: %CHA_CMPK_MAX% [ms]." alt="CHA_CMPK Utilization" src="%ImagePath%CHA_CMPK_00.png"  onclick="DynChart('CHA_CMPK_00', 'Usage rates for access paths between Channel Adapters and CM packages', '[%]')"  style="cursor: alias;" ></div>
+<div>Usage rates for access paths between Channel Adapters and CM packages. X-Axis represents Date-Time, Y-Axis represents utilization [%]. Average Utilization: %CHA_CMPK_AVG% [%],  peak: %CHA_CMPK_MAX% [%].</div>
+<br>
+<!-- ===== DKA_CMPK ===== -->
+<div><img title="Usage rates for access paths between Disk Adapters and CM packages - average: %DKA_CMPK_AVG% [ms],  peak: %DKA_CMPK_MAX% [ms]." alt="DKA_CMPK Utilization" src="%ImagePath%DKA_CMPK_00.png"  onclick="DynChart('DKA_CMPK_00', 'Usage rates for access paths between Disk Adapters and CM packages', '[%]')"  style="cursor: alias;"></div>
+<div>Usage rates for access paths between Disk Adapters and CM packages. X-Axis represents Date-Time, Y-Axis represents utilization [%]. Average Utilization: %DKA_CMPK_AVG% [%],  peak: %DKA_CMPK_MAX% [%].</div>
+<br>
+<!-- ===== MPPCB_CMPK ===== -->
+<div><img title="Usage rates for access paths between Processors and CM packages - average: %MPPCB_CMPK_AVG% [ms],  peak: %MPPCB_CMPK_MAX% [ms]." alt="MPPCB_CMPK Utilization" src="%ImagePath%MPPCB_CMPK_00.png"  onclick="DynChart('MPPCB_CMPK_00', 'Usage rates for access paths between Processors and CM packages', '[%]')"  style="cursor: alias;"></div>
+<div>Usage rates for access paths between Processors and CM packages. X-Axis represents Date-Time, Y-Axis represents utilization [%]. Average Utilization: %MPPCB_CMPK_AVG% [%],  peak: %MPPCB_CMPK_MAX% [%].</div>
+<br>
+<!-- ===== CMPK_Cache ===== -->
+<div><img title="Cache usage rates within CM packages - average: %CMPK_Cache_AVG% [ms],  peak: %CMPK_Cache_MAX% [ms]." alt="CMPK_Cache Utilization" src="%ImagePath%CMPK_Cache_00.png"  onclick="DynChart('CMPK_Cache_00', 'Cache usage rates within CM packages', '[%]')"  style="cursor: alias;"></div>
+<div>Cache usage rates within CM packages. X-Axis represents Date-Time, Y-Axis represents utilization [%]. Average Utilization: %CMPK_Cache_AVG% [%],  peak: %CMPK_Cache_MAX% [%].</div>
+</div>
+
+   
+<!-- ===== Section Write Pending Paths ===== --> 
+
+<div id="wp" class="sectionBox" style="border:1px solid #e570e7; width: 995px;">
+<h2 style="background: #ffd65e;">Write Pending analysis<a href="#toph">&#9650;</a></h2>
+<!-- ===== CHA_CMPK ===== -->
+<div><img title="Average Write Pending Rate - average: %WP_AVG% [ms],  peak: %WP_MAX% [ms]." alt="WP Utilization" src="%ImagePath%WP_00.png"  onclick="DynChart('WP_00', 'Usage rates for access paths between Channel Adapters and CM packages', '[%]')"  style="cursor: alias;" ></div>
+<div>Average Write Pending Rate. X-Axis represents Date-Time, Y-Axis represents utilization [%]. Average Utilization: %WP_AVG% [%],  peak: %WP_MAX% [%].</div>
+<br>
+<!-- ===== Particular Write Pending ===== -->
+%HTMLBody%
+</div>

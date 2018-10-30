@@ -1,0 +1,71 @@
+
+<!-- ===== Global DashBoard DPpool Table SUM Math ==== --> 
+<script type="text/javascript">
+function checkTotal(room) {
+	var SumPhySub = 0;
+	var SumPhyCap = 0;
+	var SumAvaCap = 0;
+	var SumLogUse = 0;
+	var SumPhyUse = 0;
+	var SumComRat = 0;
+	var Count = 0;
+	// Get list of check boxes inside table
+	var RoomCont = document.getElementById(room);
+	var CheckList = RoomCont.getElementsByClassName("chck_item");
+	var OutCont = RoomCont.getElementsByClassName('sum_infobox')[0]; 
+	// Math
+    for (i=0;i<CheckList.length;i++) {
+	  if (CheckList[i].checked) {
+	    var TrElem = CheckList[i].parentNode.parentNode;
+		var PhySub = TrElem.cells[1];
+		var PhyCap = TrElem.cells[2];
+		var AvaCap = TrElem.cells[3];
+		var LogUse = TrElem.cells[4];
+		var PhyUse = TrElem.cells[5];
+		var ComRat = TrElem.cells[6];
+
+	    Cap = normVal(PhyCap);
+		SumPhySub += normVal(PhySub)*Cap;
+		SumPhyCap += Cap;
+		SumAvaCap += normVal(AvaCap);
+		SumLogUse += normVal(LogUse)*Cap;
+		SumPhyUse += normVal(PhyUse)*Cap;
+		SumComRat += normVal(ComRat)*Cap;
+		Count++;
+	  }
+	}
+	// Show
+	if (Count > 0) {
+	    OutCont.style.display = "block";
+		SumPhySub = SumPhySub/SumPhyCap;
+		SumLogUse = SumLogUse/SumPhyCap;
+		SumPhyUse = SumPhyUse/SumPhyCap;
+		SumComRat = SumComRat/SumPhyCap;
+		OutElems= OutCont.getElementsByTagName('h3');
+		OutElems[0].textContent = Count.toLocaleString();
+		OutElems[1].textContent = (Math.round(SumPhySub*10)/10).toLocaleString();
+		OutElems[2].textContent = SumPhyCap.toLocaleString();
+		OutElems[3].textContent = SumAvaCap.toLocaleString();
+		OutElems[4].textContent = (Math.round(SumLogUse*10)/10).toLocaleString();
+		OutElems[5].textContent = (Math.round(SumPhyUse*10)/10).toLocaleString();
+		OutElems[6].textContent = (Math.round(SumComRat*100)/100).toLocaleString();
+	        }
+	    else   {OutCont.style.display = "none";}
+			
+	}
+
+//Normalize String to Float Value
+function normVal(elm) {
+        num  = elm.innerText.split(" ");
+		return parseFloat(num[0].replace(',','.'));
+		}
+
+//Init result base on check values
+$(document).ready(function() { 
+	var RoomList=document.getElementsByClassName('sectionBox');
+	for (q=0;q<RoomList.length;q++) {
+	   checkTotal(RoomList[q].id)}
+    })	   
+</script>
+
+

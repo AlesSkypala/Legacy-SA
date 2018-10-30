@@ -1,0 +1,124 @@
+﻿
+<!-- =====DashBoard ==== --> 
+<div>
+ <div class="myBox" style="border:1px solid #0094ff;   width: 133px;">
+  <h2 style="background: #0094ff;">Workload<a href="#sec1">&#9658;</a></h2>
+  <p>%PortIopsAvg%<span style="font-size:12px;">&nbsp;IOPs</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %PortIopsMax% IOPs</p>
+ </div>
+     
+ <div class="myBox" style="border:1px solid #ffd65e;   width: 133px;">
+  <h2 style="background: #ffd65e;">Transfer<a href="#sec1">&#9658;</a></h2>
+  <p>%PortMBsAvg%<span style="font-size:11px;">&nbsp;MB/s</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %PortMBsMax% MB/s</p>
+ </div>
+
+ <div class="myBox" style="border:1px solid #a4b357;   width: 133px;">
+  <h2 style="background: #a4b357;">Response<a href="#sec2">&#9658;</a></h2>
+  <p>%PGRespAvg%<span style="font-size:11px;">&nbsp;ms</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %PGRespMax% ms</p>
+ </div>
+     
+<div class="myBox" style="border:1px solid #ff670f;   width: 133px;">
+  <h2 style="background: #ff670f;">CPU<a href="#sec2">&#9658;</a></h2>
+  <p>%ProcUtilAvg%<span style="font-size:11px;">&nbsp;%</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %ProcUtilMax% %</p>
+</div>
+
+<div class="myBox" style="border:1px solid #E0BA96;   width: 133px;">
+  <h2 style="background: #E0BA96;">HDD<a href="#sec3">&#9658;</a></h2>
+  <p>%PGUtilAvg%<span style="font-size:11px;">&nbsp;%</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %PGUtilMax% %</p>
+</div>
+
+<div class="myBox" style="border:1px solid #fb83fa;  width: 133px;">
+  <h2 style="background: #fb83fa;">External Response<a href="#sec4">&#9658;</a></h2>
+  <p>%ExtResponseAvg% <span style="font-size:11px;">&nbsp;ms</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %ExtResponseMax% ms</p>
+</div>
+
+<div class="myBox" style="border:1px solid #ffa84c;  width: 133px;">
+  <h2 style="background: #ffa84c;">External Transfer<a href="#sec4">&#9658;</a></h2>
+  <p>%ExtMBsAvg% <span style="font-size:11px;">&nbsp;MB/s</span></p>
+  <p style="font-size:11px; font-weight: normal">Peak: %ExtMBsMax% MB/s</p>
+</div>
+</div>
+
+<br>
+<hr>
+
+
+
+<!-- =====Sections1 ==== --> 
+<div id="sec1">
+<div class="sectionBox" style="border:1px solid #0094ff; width: 495px;">
+<h2 style="background: #0094ff;">Transaction Rate<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;" title="IOPs - average: %PortIopsAvg% [IOPs], peak: %PortIopsMax% [IOPs]." alt="Iops" src="%ImagePath%IopsOnPort_00.png"></div>
+<div>
+%IOPsTable%
+</div>
+</div>
+
+<div class="sectionBox" style="border:1px solid #ffd65e; width: 495px;">
+<h2 style="background: #ffd65e;">Transfer Rate<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;" title="Transfer rate - average: %PortMBsAvg% [MB/x], peak: %PortMBsMax%. [MB/s]" alt="MBps" src="%ImagePath%MBsOnPort_00.png"></div>
+<div>
+%MBsTable%
+</div>
+</div>
+</div>
+
+
+<!-- =====Sections2 ==== --> 
+<div id="sec2">
+
+<div class="sectionBox" style="border:1px solid #a4b357; width: 495px; vertical-align:top">
+<h2 style="background: #a4b357;">Response Time<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;" title="Response time - average: %PGRespAvg% [%],  peak: %PGRespMax% [%]." alt="Response" src="%ImagePath%Response_00.png"></div>
+<div><img style="display: block;" title="Response Histogram" alt="Response Histogram" src="%ImagePath%Response2_00.png"></div>
+<div>
+%ResponseTable%
+</div>
+</div>
+
+<div style="width: 495px; display: inline-block;">
+<div class="sectionBox" style="border:1px solid #ff670f; width: 100%;">
+<h2 style="background: #ff670f;">Storage Processor Utilization<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;" title="CPU utilisation - average: %ProcUtilAvg% [%]. peaks: %ProcUtilMax% [%]." alt="ProcUtil" src="%ImagePath%ProcUtilization_00.png"></div>
+</div>
+
+<div class="sectionBox" style="border:1px solid #a9e4f7; width: 100%; margin-top: 4px">
+<h2 style="background: #a9e4f7;">Cache Queue Length<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;"  title="Write Pending - average: %WritePendingAvg% [%], peak: %WritePendingMax% [%]." alt="WritePending" src="%ImagePath%WritePending_00.png"></div>
+<div style="font-size: 11px">The write pending rate indicates the quantity of cache alocated by write operations.This metrics is critical for the latency: <33% Normal value, >33% Hosts priority is decreased, >70% Host are paused until cache destage.</div>
+</div>
+</div>
+</div>
+
+     
+
+<!-- =====Sections3 ==== --> 
+<div id="sec3">
+<div class="sectionBox" style="border:1px solid #d2ff52; width: 495px;">
+<h2 style="background: #d2ff52;">HDD Utilization<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;" title="Drive utilisation - Average: %PGUtilAvg% [%], peak: %PGUtilMax% [%]." alt="PGUtil" src="%ImagePath%PGUtilization_00.png"></div>
+<div><img style="display: block;" title="Drive utilisation." alt="PGUtil" src="%ImagePath%PGUtilization2_00.png"></div>
+
+</div>
+
+<div class="sectionBox" style="border:1px solid #c3d9ff; width: 495px;">
+<h2 style="background: #c3d9ff;">Read/Write Ratio<a href="#toph">&#9650;</a></h2>
+<div><img style="display: block;" title="Read/Write ratio." alt="RW" src="%ImagePath%SeqRndRatio_00.png"></div>
+<div><img style="display: block;" title="RW" alt="RW" src="%ImagePath%SeqRndRatioPie_00.png"></div>
+</div>
+</div>
+
+
+<!-- =====Sections4 ==== --> 
+<div id="sec4">
+<div class="sectionBox" style="border:1px solid #ffa84c; width: 997px;">
+<h2 style="background: #ffa84c;">External Storages<a href="#toph">&#9650;</a></h2>
+<div style="display: inline-block; width: 470px;"><img style="display: block;" title="External storages Response Time - Average: %ExtResponseAvg% [ms], peak: %ExtReponseMax% [ms]." alt="ExternalStorages" src="%ImagePath%ExtResponse.png"></div>
+<div style="display: inline-block; width: 470px;"><img style="display: block;" title="External storages Transfer Rate - Average: %ExtMBsAvg% [MB/s], peak: %ExtMbsMax% [MB/s]." alt="ExternalStorages" src="%ImagePath%ExtMbs.png"></div>
+</div>
+</div>

@@ -1,0 +1,145 @@
+﻿
+<!-- ===== SubHeader ==== --> 
+<table class="offer">
+ <tbody>
+  <tr>
+   <td><a href="#response">Response</a></td>
+   <td><a href="#iops">Port IO rate</a></td>
+   <td><a href="#lun">LUN IO rate</a></td>
+   <td><a href="#mbs">Transfer rate</a></td>
+   <td><a href="#bsize">Block size</a></td>
+   <td><a href="#ratio">Workload info</a></td>
+   <td><a href="#cpu">CPU utilisation</a></td>
+   <td><a href="#hdd">HDD utilisation</a></td>
+   <td><a href="#queue">Write queue</a></td>
+   <td><a href="#cha">CHA Check</a></td>
+  </tr>
+ </tbody>
+</table>
+
+
+<!-- ===== Warnings ===== --> 
+<p>
+%WarningList%
+</p>
+
+   
+<!-- ===== Section Latency ===== --> 
+<div id="response">
+<div class="sectionBox" style="border:1px solid #e570e7; width: 995px;">
+<h2 style="background: #e570e7;">Response Time<a href="#toph">&#9650;</a></h2>
+<div><img title="Response time - average: %PGRespAvg% [ms],  peak: %PGRespMax% [ms]." alt="Response" src="%ImagePath%Response_00.png"></div>
+<div>LUN latency over the entire data collection. X-Axis represents Date-Time, Y-Axis represents latency [ms]. Average latency: %PGRespAvg% [ms],  peak: %PGRespMax% [ms].</div>
+<div style="display: inline-block; width: 470px;"><img title="Response Histogram" alt="Response Histogram" src="%ImagePath%Response2_00.png">
+<br>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div>
+<div style="display: inline-block; width: 470px;">
+%LatencyTable%
+</div>
+<div><img id="LatencyTable" src="../../empty.png"></div>
+</div>
+</div>
+
+<!-- ===== Section Iops ===== --> 
+<div id="iops">
+<div class="sectionBox" style="border:1px solid #0094ff; width: 995px;">
+<h2 style="background: #0094ff;">Input/Output operations per second<a href="#toph">&#9650;</a></h2>
+<div><img title="IOPs - average: %PortIopsAvg% [IOPs], peak: %PortIopsMax% [IOPs]." alt="Iops" src="%ImagePath%IopsOnPort_00.png"></div>
+<div>Number of I/O operations per second over the entire data collection on the disk array ports. X-Axis represents Date-Time, Y-Axis represents IOPs on ports. Average: %PortIopsAvg% [IOPs], peak: %PortIopsMax% [IOPs].</div>
+<div style="display: inline-block; width: 470px;"><img title="IOPs by hour" alt="Iops" src="%ImagePath%IopsOnPort2_00.png">
+<br>Total I/O Rate by hour of day. X-Axis represents Date-Time, Y-Axis represents IOPs on ports.</div>
+<div id="lun" style="display: inline-block; width: 470px;">
+%IOPsTable2%
+</div>
+<div><img id="IOPsTable2" src="../../empty.png"></div>
+</div>
+</div>
+    
+<!-- ===== Section MBs ===== --> 
+<div id="mbs">
+<div class="sectionBox" style="border:1px solid #ffd65e; width: 995px;">
+<h2 style="background: #ffd65e;">Transfer Rate<a href="#toph">&#9650;</a></h2>
+<div><img title="Transfer rate - average: %PortMBsAvg% [MB/s], peak: %PortMBsMax% [MB/s]." alt="MBps" src="%ImagePath%MBsOnPort_00.png"></div>
+<div>Transfer rate over the entire data collection on the disk array ports. X-Axis represents Date-Time, Y-Axis represents transfer rate on ports [MB/s]. Average: %PortMBsAvg% [MB/s], peak: %PortMBsMax% [MB/s].</div>
+<div style="display: inline-block; width: 470px;"><img title="MB/s" alt="MB/s" src="%ImagePath%MBsOnPort2_00.png">
+<br>Total I/O Rate by hour of day. X-Axis represents Date-Time, Y-Axis represents IOPs on ports.</div>
+<div id="lun" style="display: inline-block; width: 470px;">
+%MBsTable2%
+</div>
+<div><img id="MBsTable2" src="../../empty.png"></div>
+</div>
+</div>
+
+<!-- ===== Section BlockSize ===== --> 
+<div id="bsize">
+<div class="sectionBox" style="border:1px solid #a4b357; width: 995px;">
+<h2 style="background: #a4b357;">Block Size<a href="#toph">&#9650;</a></h2>
+
+<div style="display: inline-block; width: 470px;"><img title="Read IO size" alt="Read IO Size" src="%ImagePath%RBlockSize_00.png"><br> The Read Block Size histogram provide insight into the distribution of Read IO requests size. X-Axis represents latency, Y-Axis represents Read IO size rate [%].</div>
+
+<div style="display: inline-block; width: 470px;"><img title="Write IO size" alt="Write IO size" src="%ImagePath%WBlockSize_00.png"><br>The Write Block Size histogram provide insight into the distribution of Write IO requests size. X-Axis represents latency, Y-Axis represents Write IO size rate [%].</div>
+
+</div>
+</div>
+    
+<!-- ===== Section Random/Write ===== --> 
+<div id="ratio">
+<div class="sectionBox" style="border:1px solid #ff670f; width: 995px;">
+<h2 style="background: #ff670f;">Workload structure<a href="#toph">&#9650;</a></h2>
+
+<div><img title="Read/Write ratio." alt="RW" src="%ImagePath%RWratio_00.png"></div>
+<div>Read/Write ratio shows the ratio of read activity to write activity over the entire data collection. X-Axis represents Date-Time, Y-Axis represents Read/Write ratio [%].</div>
+
+<div><img title="Random/Sequential ratio." alt="RW" src="%ImagePath%SeqRndRatio_00.png"></div>
+<div>Read/Write ratio shows the ratio of read activity to write activity over the entire data collection. X-Axis represents Date-Time, Y-Axis represents Read/Write ratio [%].</div>
+
+<div style="display: inline-block; width: 470px;"><img title="RW" alt="RW" src="%ImagePath%RWRatioPie_00.png"></div>
+<div style="display: inline-block; width: 470px;"><img title="RW" alt="RW" src="%ImagePath%SeqRndRatioPie_00.png"></div>
+
+</div>
+</div>
+     
+<!-- ===== Section HDDUtil ===== -->
+<div id="hdd">
+<div class="sectionBox" style="border:1px solid #a9e4f7; width: 995px;">
+<h2 style="background: #a9e4f7;">Drives Utilization<a href="#toph">&#9650;</a></h2>
+
+%PoolsUtilization%
+
+<div><img title="Drive utilisation." alt="PGUtil" src="%ImagePath%PGUtilization2_00.png"></div>
+<div>Utilization of physical disks over the Parity Groups. X-Axis represents Parity Groups, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg% [%], peak: %PGUtilMax% [%].</div>
+</div>
+</div>
+
+<!-- ===== Section CPUUtil ===== -->
+
+<div id="cpu">
+<div class="sectionBox" style="border:1px solid #c3d9ff; width: 995px;">
+<h2 style="background: #c3d9ff;">Utilization of the Storage procesors and Cache<a href="#toph">&#9650;</a><a href="#toph">&#9650;</a></h2>
+
+<div><img title="CPU utilization - average: %ProcUtilAvg% [%], peaks: %ProcUtilMax% [%]." alt="ProcUtil" src="%ImagePath%ProcUtilization_00.png"></div>
+<div>Utilization of the Storage procesors over the entire data collection. X-Axis represents Date-Time, Y-Axis represents CPU utilization [%]. Average: %ProcUtilAvg% [%] peaks: %ProcUtilMax% [%].</div>
+
+<div><img id="queue" title="Procesor Utilization" alt="Procesor Utilization" src="%ImagePath%ProcUtilization2_00.png"></div>
+<div>Average Utilization of the Storage procesors. X-Axis represents Parity Groups, Y-Axis represents drive utilization [%].</div>
+
+<div><img id="queue" title="WritePending" alt="WritePending" src="%ImagePath%WritePending_00.png"></div>
+<div>The write pending rate indicates the quantity of cache alocated by write operations. X-Axis represents Date-Time, Y-Axis represents Wite pending rate [%]. Average: %WritePendingAvg% [%], peaks: %WritePendingMax% [%].  This metrics is critical for the latency: &lt;33% Normal value, &gt;33% Hosts priority is decreased, &gt;70% Host are paused until cache destage.</div>
+</div>
+</div>
+
+
+
+
+<!-- ===== Section CHA-Port check ===== -->
+<div id="cha">
+<div class="sectionBox" style="border:1px solid #c3d9ff; width: 995px;">
+<h2 style="background: #c3d9ff;">Channel Adapters transfer check<a href="#toph">&#9650;</a></h2>
+
+<div><img title="Channel Adapters transfer rate peaks" alt="MB/s" src="%ImagePath%CHadapt_01.png"></div>
+<div>Channel Adapters transfer rate peaks.</div>
+
+<div><img title="Channel Adapters transfer rate peaks" alt="MB/s" src="%ImagePath%CHadapt_00.png"></div>
+<div>Channel Adapters transfer rate. X-Axis represents Date-Time, Y-Axis represents transfer rate on CHA [MB/s].</div>
+</div>
+</div>
+

@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>%template%</title>
+<style type="text/css">
+body { 
+  width: 1000px; 
+  margin: 0px auto;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 11px;  
+  color: black;  
+  text-align: left;
+}
+
+
+
+.header_g {  
+  padding: 1px;	 
+  font-size: 19px;
+  width: 100%;  
+  color: white;
+  background-color: #009900;  
+  text-align: left;  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.header_b {
+  padding: 1px;  
+  font-size: 19px;
+  width: 100%;  
+  color: white;
+  background-color: #000099;  
+  text-align: left;  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.header_s { 
+  padding: 1px; 
+  font-size: 19px;
+  width: 100%;  
+  color: black;
+  background-color: #DDDDDD;  
+  text-align: left;  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.footer {
+  width: 100%; 
+  font-size: 12px;  
+  color: black; 
+  text-align: center;
+  background-color: #EEEEEE;  
+  line-height: 25px;
+  vertical-align: middle;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.menu_simple br { clear:left }
+
+.menu_simple {
+ width: 100%;
+ background-color: white;
+ font-size: 12px;
+}
+
+.menu_simple ul {
+ margin: 0px; padding: 0;
+ float: left;
+}
+
+.menu_simple ul li {
+ display: inline;
+}
+
+
+.menu_simple ul li a {
+ float: left; text-decoration: none;
+ color: black; 
+ margin: 2px;
+ padding: 2px 15px;
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #FFFCB0 0%, #FFAE0D 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #FFFCB0 0%, #FFAE0D 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #FFFCB0 0%, #FFAE0D 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFCB0), color-stop(1, #FFAE0D));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #FFFCB0 0%, #FFAE0D 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #FFFCB0 0%, #FFAE0D 100%);
+ -moz-border-radius: 0 0 10px 10px;
+ -webkit-border-radius: 0 0 10px 10px;
+ -khtml-border-radius: 0 0 10px 10px;
+ border-radius: 0 0 10px 10px;
+}
+ 
+.menu_simple ul li a:visited {
+ color: back;
+}
+ 
+.menu_simple ul li a:hover, .menu_simple ul li .current {
+ background: #FF9F05 !important;
+ text-decoration: underline;
+ -moz-transition:all 0.9s ease;
+ -webkit-transition:all 0.9s ease;
+ -o-transition:all 0.9s ease;
+ transition:all 0.9s ease;
+}
+
+</style>
+
+
+<body>
+
+<!-- ===== Version 11-5-2015 ==== -->
+
+
+
+<!-- ===== Header ==== --> 
+<table style="width: 100%; border-spacing: 0px 4px;" border="0">
+ <tbody>
+  <tr>
+   <td class="header_g">&nbsp;System: %StorageSystem%</td>
+   <td style="padding: 0px;" rowspan=2><img style="display: block;" title="logo" alt="logo" src="%ImagePath%logo.png"></td>
+  </tr>
+  <tr>
+   <td class="header_s">&nbsp;Report:&nbsp; %JobName%</td> 
+  </tr></tbody>
+</table>
+
+
+
+<!-- ===== SubHeader ==== -->
+<div class="menu_simple"> 
+<ul>
+%InsertShortCuts%
+</ul>
+<br>
+</div>
+
+<br><br>
+
+     
+<!-- ===== Section LUNs ===== -->
+<div class="header_b">&nbsp;Utilization of HDDs assigned to RaidGroups</div>
+<br>
+
+%InsertLUNs%
+
+
+
+<!-- ===== footer ==== --> 
+<p class="footer">
+<a  href="http://helpdesk.3scz.cz" title="Helpdesk">Helpdesk</a>&nbsp; | &nbsp; 
+ Hotline: +420 511 133 830 &nbsp; | &nbsp;Twitter:&nbsp;
+ <a href="http://twitter.com/storagecz" title="Follow us on Twitter">@storagecz</a>&nbsp; • &nbsp;
+ <a href="http://www.storage.cz/cs" title="Intro">Intro</a> &nbsp; | &nbsp;  
+ <a href="http://www.storage.cz/cs/o-nas" title="About Us">About Us</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/portfolio" title="Portfolio">Portfolio</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/reference" title="References">References</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/partneri" title="Partners">Partners</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/odborna-sekce" title="Specialized Section ">Specialized Section</a> &nbsp;| &nbsp;
+ <a href="http://www.storage.cz/cs/kontakt" title="Contacts">Contacts</a><br />
+Created: %ReportTime%  © 2006 - 2016 3S.cz, s.r.o. All Rights Reserved | Using materials of these webpages including their parts is not allowed without 
+</p>
+
+      
+</body></html>

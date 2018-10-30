@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>%template%</title>
+<link rel="stylesheet" type="text/css" href="../../metro_styles.css" />
+</head>
+
+<body>
+
+<!-- ===== Version 27-05-2015 ==== -->
+
+
+<!-- ===== Header ==== --> 
+<div id="toph">
+ <div class="myBox" style="border:1px solid black; width: 640px; height: 88px; margin: 0px; text-align: left;"> 
+   <h2 style="background: #d8d8d8; font-size:20px;">System: %StorageSystem%<a href="../index.html">&#9668;</a></h2>
+   <p>&nbsp;%ReportDate%&nbsp;&#10148;&nbsp;%JobName%</p>
+ </div>
+ <div style="display: inline-block; float:right;"><img style="display: block;" title="logo" alt="logo" src="../../logo.png"></div>
+</div>
+
+
+<!-- ===== SubHeader ==== --> 
+<table class="offer">
+ <tbody>
+  <tr>
+   <td><a href="#response">Response</a></td>
+   <td><a href="#iops">Port IO rate</a></td>
+   <td><a href="#lun">LUN IO rate</a></td>
+   <td><a href="#mbs">Transfer rate</a></td>
+   <td><a href="#bsize">Block size</a></td>
+   <td><a href="#ratio">Workload info</a></td>
+   <td><a href="#cpu">CPU utilisation</a></td>
+   <td><a href="#hdd">HDD utilisation</a></td>
+   <td><a href="#queue">Write queue</a></td>
+   <td><a href="#external">External storages</a></td>
+  </tr>
+ </tbody>
+</table>
+
+
+<!-- ===== Warnings ===== --> 
+<p>
+%WarningList%
+</p>
+
+    
+   
+<!-- ===== Section Latency ===== --> 
+<div id="response">
+<div class="sectionBox" style="border:1px solid #e570e7; width: 995px;">
+<h2 style="background: #e570e7;">Response Time<a href="#toph">&#9650;</a></h2>
+<div><img title="Response time - average: %PGRespAvg% [ms],  peak: %PGRespMax% [ms]." alt="Response" src="%ImagePath%Response_00.png"></div>
+<div>LUN latency over the entire data collection. X-Axis represents Date-Time, Y-Axis represents latency [ms]. Average latency: RespAvg% [ms],  peak: %PGRespMax% [ms].</div>
+<div style="display: inline-block; width: 470px;"><img title="Response Histogram" alt="Response Histogram" src="%ImagePath%Response2_00.png">
+<br>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div>
+<div style="display: inline-block; width: 470px;">
+%LatencyTable%
+</div>
+</div>
+</div>
+
+<!-- ===== Section Iops ===== --> 
+<div id="iops">
+<div class="sectionBox" style="border:1px solid #0094ff; width: 995px;">
+<h2 style="background: #0094ff;">Input/Output operations per second<a href="#toph">&#9650;</a></h2>
+<div><img title="IOPs - average: %PortIopsAvg% [IOPs], peak: %PortIopsMax% [IOPs]." alt="Iops" src="%ImagePath%IopsOnPort_00.png"></div>
+<div>Number of I/O operations per second over the entire data collection on the disk array ports. X-Axis represents Date-Time, Y-Axis represents IOPs on ports. Average: %PortIopsAvg% [IOPs], peak: %PortIopsMax% [IOPs].</div>
+<div style="display: inline-block; width: 470px;"><img title="IOPs by hour" alt="Iops" src="%ImagePath%IopsOnPort2_00.png">
+<br>Total I/O Rate by hour of day. X-Axis represents Date-Time, Y-Axis represents IOPs on ports.</div>
+<div id="lun" style="display: inline-block; width: 470px;">
+%IOPsTable2%
+</div>
+</div>
+</div>
+    
+<!-- ===== Section MBs ===== --> 
+<div id="mbs">
+<div class="sectionBox" style="border:1px solid #ffd65e; width: 995px;">
+<h2 style="background: #ffd65e;">Transfer Rate<a href="#toph">&#9650;</a></h2>
+<div><img title="Transfer rate - average: %PortMBsAvg% [MB/s], peak: %PortMBsMax% [MB/s]." alt="MBps" src="%ImagePath%MBsOnPort_00.png"></div>
+<div>Transfer rate over the entire data collection on the disk array ports. X-Axis represents Date-Time, Y-Axis represents transfer rate on ports [MB/s]. Average: %PortMBsAvg% [MB/s], peak: %PortMBsMax% [MB/s].</div>
+<div style="display: inline-block; width: 470px;"><img title="MB/s" alt="MB/s" src="%ImagePath%MBsOnPort2_00.png">
+<br>Total I/O Rate by hour of day. X-Axis represents Date-Time, Y-Axis represents IOPs on ports.</div>
+<div id="lun" style="display: inline-block; width: 470px;">
+%MBsTable2%
+</div>
+</div>
+</div>
+
+<!-- ===== Section BlockSize ===== --> 
+<div id="bsize">
+<div class="sectionBox" style="border:1px solid #a4b357; width: 995px;">
+<h2 style="background: #a4b357;">Block Size<a href="#toph">&#9650;</a></h2>
+
+<div style="display: inline-block; width: 470px;"><img title="Read IO size" alt="Read IO Size" src="%ImagePath%RBlockSize_00.png"><br> The Read Block Size histogram provide insight into the distribution of Read IO requests size. X-Axis represents latency, Y-Axis represents Read IO size rate [%].</div>
+
+<div style="display: inline-block; width: 470px;"><img title="Write IO size" alt="Write IO size" src="%ImagePath%WBlockSize_00.png"><br>The Write Block Size histogram provide insight into the distribution of Write IO requests size. X-Axis represents latency, Y-Axis represents Write IO size rate [%].</div>
+
+</div>
+</div>
+    
+<!-- ===== Section Random/Write ===== --> 
+<div id="ratio">
+<div class="sectionBox" style="border:1px solid #ff670f; width: 995px;">
+<h2 style="background: #ff670f;">Workload structure<a href="#toph">&#9650;</a></h2>
+
+<div><img title="Read/Write ratio." alt="RW" src="%ImagePath%RWratio_00.png"></div>
+<div>Read/Write ratio shows the ratio of read activity to write activity over the entire data collection. X-Axis represents Date-Time, Y-Axis represents Read/Write ratio [%].</div>
+
+<div><img title="Random/Sequential ratio." alt="RW" src="%ImagePath%SeqRndRatio_00.png"></div>
+<div>Read/Write ratio shows the ratio of read activity to write activity over the entire data collection. X-Axis represents Date-Time, Y-Axis represents Read/Write ratio [%].</div>
+
+<div style="display: inline-block; width: 470px;"><img title="RW" alt="RW" src="%ImagePath%RWRatioPie_00.png"></div>
+<div style="display: inline-block; width: 470px;"><img title="RW" alt="RW" src="%ImagePath%SeqRndRatioPie_00.png"></div>
+
+</div>
+</div>
+     
+<!-- ===== Section HDDUtil ===== -->
+<div id="hdd">
+<div class="sectionBox" style="border:1px solid #a9e4f7; width: 995px;">
+<h2 style="background: #a9e4f7;">Drives Utilization<a href="#toph">&#9650;</a></h2>
+
+<div><img title="Drive utilisation - average: %PGUtilAvg% [%], peaks: %PGUtilMax% [%]." alt="PGUtil" src="%ImagePath%PGUtilization1_00.png"></div>
+<div>Utilization of physical disks over the Parity Groups. X-Axis represents Parity Groups, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg% [%], peak: %PGUtilMax% [%].</div>
+
+
+<div><img title="Drive utilisation." alt="PGUtil" src="%ImagePath%PGUtilization2_00.png"></div>
+<div>Utilization of physical disks over the Parity Groups. X-Axis represents Parity Groups, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg% [%], peak: %PGUtilMax% [%].</div>
+
+
+%PoolsUtilization%
+
+</div>
+</div>
+
+<!-- ===== Section CPUUtil ===== -->
+
+<div id="cpu">
+<div class="sectionBox" style="border:1px solid #c3d9ff; width: 995px;">
+<h2 style="background: #c3d9ff;">Utilization of the Storage procesors and Cache<a href="#toph">&#9650;</a></h2>
+
+<div><img title="CPU utilization - average: %ProcUtilAvg% [%], peaks: %ProcUtilMax% [%]." alt="ProcUtil" src="%ImagePath%ProcUtilization_00.png"></div>
+<div>Utilization of the Storage procesors over the entire data collection. X-Axis represents Date-Time, Y-Axis represents CPU utilization [%]. Average: %ProcUtilAvg% [%] peaks: %ProcUtilMax% [%].</div>
+
+<div><img id="queue" title="Procesor Utilization" alt="Procesor Utilization" src="%ImagePath%ProcUtilization2_00.png"></div>
+<div>Average Utilization of the Storage procesors. X-Axis represents Parity Groups, Y-Axis represents drive utilization [%].</div>
+
+<div><img id="queue" title="WritePending" alt="WritePending" src="%ImagePath%WritePending_00.png"></div>
+<div>The write pending rate indicates the quantity of cache alocated by write operations. X-Axis represents Date-Time, Y-Axis represents Wite pending rate [%]. Average: %WritePendingAvg% [%], peaks: %WritePendingMax% [%].  This metrics is critical for the latency: &lt;33% Normal value, &gt;33% Hosts priority is decreased, &gt;70% Host are paused until cache destage.</div>
+</div>
+</div>
+
+
+
+<!-- ===== Section External Storage ===== -->
+<div id="external">
+<div class="sectionBox" style="border:1px solid #c3d9ff; width: 995px;">
+<h2 style="background: #c3d9ff;">External Strorages<a href="#toph">&#9650;</a></h2>
+
+<div><img title="External Storage response time - average: %ExRespAvg%, peak: %ExRespMax%." alt="Iops" src="%ImagePath%ExResponse_00.png"></div>
+<div>Latency over the entire data collection on the External Storages. X-Axis represents Date-Time, Y-Axis represents latency [ms]. Average latency: %ExRespAvg% [ms], peak: %ExRespMax% [ms].</div>
+
+<div><img title="Transfer rate on External storage - average: %ExMBsAvg%, peak: %ExMBsMax%." alt="MB/s" src="%ImagePath%ExMBs_00.png"></div>
+<div>Transfer rate over the entire data collection on the External Storages. X-Axis represents Date-Time, Y-Axis represents transfer rate on ports [MB/s]. Average: %ExMBsAvg% [MB/s], peak: %ExMBsMax%. [MB/s]</div>
+</div>
+</div>
+
+
+<!-- ===== footer ==== --> 
+<p class="footer">
+<a  href="http://helpdesk.3scz.cz" title="Helpdesk">Helpdesk</a>&nbsp; | &nbsp; 
+ Hotline: +420 511 133 830 &nbsp; | &nbsp;Twitter:&nbsp;
+ <a href="http://twitter.com/storagecz" title="Follow us on Twitter">@storagecz</a>&nbsp; • &nbsp;
+ <a href="http://www.storage.cz/cs" title="Intro">Intro</a> &nbsp; | &nbsp;  
+ <a href="http://www.storage.cz/cs/o-nas" title="About Us">About Us</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/portfolio" title="Portfolio">Portfolio</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/reference" title="References">References</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/partneri" title="Partners">Partners</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/odborna-sekce" title="Specialized Section ">Specialized Section</a> &nbsp;| &nbsp;
+ <a href="http://www.storage.cz/cs/kontakt" title="Contacts">Contacts</a><br />
+Created: %ReportTime%  © 2006 - 2016 3S.cz, s.r.o. All Rights Reserved | Using materials of these webpages including their parts is not allowed without 
+</p>
+
+      
+</body></html>

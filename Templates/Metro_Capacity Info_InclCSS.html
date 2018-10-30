@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>%template%</title>
+<style type="text/css">
+body {  
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 1000px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;  
+  color: black;  
+  text-align: left;
+}
+
+
+
+.header_g {  
+  padding: 1px;	 
+  font-size: 19px;
+  width: 100%;  
+  color: white;
+  background-color: #009900;  
+  text-align: left;  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.header_b {
+  padding: 1px;  
+  font-size: 19px;
+  width: 100%;  
+  color: white;
+  background-color: #000099;  
+  text-align: left;  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.header_s { 
+  padding: 1px; 
+  font-size: 19px;
+  width: 100%;  
+  color: black;
+  background-color: #DDDDDD;  
+  text-align: left;  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.footer {
+  width: 100%; 
+  font-size: 12px;  
+  color: black; 
+  text-align: center;
+  background-color: #EEEEEE;  
+  line-height: 25px;
+  vertical-align: middle;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+</style>
+
+     
+<body>
+
+<!-- ===== Version 5-1-2015 ==== -->
+
+
+<!-- ===== Section ActualCapacity ===== --> 
+<div id="act" class="header_s">&nbsp;Actual Capacity Dynamic Provisioning / Tiering Pools</div>
+
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+   <td><img title="Pool Size" alt="Pool Size" src="%ImagePath%dp_cap_total01.png"><br><center>Pool Size</center></td>
+   <td><img title="Consumed Poll Capacity" alt="Consumed Poll Capacity" src="%ImagePath%dp_cap_consumed01.png"><br><center>Consumed Pool Capacity</center></td>
+   <td><img title="Free Poll Capacity" alt="Free Poll Capacity" src="%ImagePath%dp_cap_free01.png"><br><center>Free Pool Capacity</center></td>
+ </tr>
+</tbody>
+</table>
+<br>
+<br>
+
+
+  
+<!-- ===== Section Capacity trends ===== -->
+<div class="header_s" style="line-height: 50px;">&nbsp;Capacity trends</div>
+<br>
+
+
+
+<div id="consumed" class="header_b">&nbsp;Consumed capacity</div>
+<img title="Consumed Capacity" alt="Consumed Capacity" src="%ImagePath%dp_cap_consumed00.png">
+<div>Capacity usage of DP/HDT polls. X-Axis represents Date-Time, Y-Axis represents consumed capacity in [TB].</div>
+<br>
+<br> 
+<br>
+    
+<div id="free" class="header_b">&nbsp;Free capacity</div>
+<img title="Free Capacity" alt="Free Capacity" src="%ImagePath%dp_cap_free00.png">
+<div>Capacity usage of DP/HDT polls. X-Axis represents Date-Time, Y-Axis represents Free capacity in [RB].</div>
+<br>
+<br> 
+<br>
+    
+<div id="ratio" class="header_b">&nbsp;Capacity usage ratio</div>
+<img title="Capacity usage" alt="Capacity usage" src="%ImagePath%dp_cap_usage00.png">
+<div>Capacity usage of DP/HDT polls. X-Axis represents Date-Time, Y-Axis represents capacity usage in [%].</div>
+<br>
+<br> 
+<br>
+
+
+
+      
+</body></html>

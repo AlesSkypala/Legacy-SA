@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>%template%</title>
+<link rel="stylesheet" type="text/css" href="../../styles.css" />
+</head>
+
+<body>
+
+<!-- ===== Version 11-6-2014 ==== -->
+
+
+<!-- ===== Header ==== --> 
+<table style="width: 100%; border-spacing: 0px 4px;" border="0">
+ <tbody>
+  <tr>
+   <td class="header_g">&nbsp;System: %StorageSystem% <br>&nbsp;Report:&nbsp; %JobName%</td>
+   <td style="padding: 0px;" rowspan=2><img style="display: block;" title="logo" alt="logo" src="%ImagePath%logo.png"></td>
+  </tr>
+  <tr>
+   <td class="header_s">&nbsp;<a href="../../index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../index.html">Back</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+   <a href="mailto:performance@3scz.cz?subject=Performance%20Analysis%20Request%20Time:%SelectedTime%%20%20%20System:%StorageSystem%">Contact performance team</a></td> 
+  </tr></tbody>
+</table>
+
+
+<!-- ===== SubHeader ==== --> 
+<table class="offer">
+ <tbody>
+  <tr>
+   <td><a href="#response">Response</a></td>
+   <td><a href="#trends">Trends</a></td>
+   <td><a href="#iops">Port IO rate</a></td>
+   <td><a href="#lun">LUN IO rate</a></td>
+   <td><a href="#mbs">Transfer rate</a></td>
+   <td><a href="#bsize">Block size</a></td>
+   <td><a href="#ratio">Workload info</a></td>
+   <td><a href="#cpu">CPU utilisation</a></td>
+   <td><a href="#hdd">HDD utilisation</a></td>
+   <td><a href="#queue">Write queue</a></td>
+  </tr>
+ </tbody>
+</table>
+
+
+<!-- ===== Comment ===== --> 
+<p>
+%WarningList%
+</p>
+
+    
+ 
+   
+<!-- ===== Section Latency ===== --> 
+<div id="response" class="header_g">&nbsp;Latency of the disk array</div>
+<img title="Response time - average: %PGRespAvg%,  peak: %PGRespMax%." alt="Response" src="%ImagePath%Response_00.png">
+
+
+
+<div>LUN latency over the entire data collection. X-Axis represents Date-Time, Y-Axis represents latency [ms]. Average latency: %PGRespAvg%,  peak: %PGRespMax%.</div><br>
+
+<img title="Response Histogram" alt="Response Histogram" src="%ImagePath%Response2_00.png">
+<div>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div><br><br>
+
+%LatencyTable%
+<br>
+<div>Top Ten table of the LUNs with the highest average latency.</div><br><br> 
+       
+
+
+
+
+    
+
+<!-- ===== Section LongTerm Trends ===== --> 
+<p class="header_s" style="line-height: 50px;">&nbsp;Workload trends for %TrendDays% elapsed days</p><br>
+
+
+
+
+
+
+
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="Response trend - average: %ResponseTrend%." alt="LongTerm Response" src="%ImagePath%ResponseTrend_00.png"></td>
+  <td><img title="IOPs trend - average: %IOPsTrend%." alt="LongTerm IOPs" src="%ImagePath%IopsTrend_00.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="Transfer rate trend - average: %MBsTrend%." alt="LongTerm MBs" src="%ImagePath%MBsTrend_00.png"></td>
+  <td><img title="SAS  Drives trend - average: %DisktrendSAS%." alt="LongTerm SAS" src="%ImagePath%DiskTrend_00.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="Controller 0 trend - average: %CPUtrend0%." alt="LongTerm CPU" src="%ImagePath%CPUTrend_00.png"></td>
+  <td><img title="Controller 1 trend - average: %CPUtrend1%." alt="LongTerm CPU" src="%ImagePath%CPUTrend_01.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+
+<br>
+<br>
+
+
+
+
+
+  
+<!-- ===== Section Detailni analyza ===== -->
+<div class="header_s" style="line-height: 50px;">&nbsp;Detailed Analysis - %ActualDate%</div>
+<br>
+
+
+<!-- ===== Section Iops ===== --> 
+<div id="iops" class="header_b">&nbsp;Input/Output operations per second</div>
+<img title="IOPs - average: %PortIopsAvg%, peak: %PortIopsMax%." alt="Iops" src="%ImagePath%IopsOnPort_00.png">
+<div>Number of I/O operations per second over the entire data collection on the disk array ports. X-Axis represents Date-Time, Y-Axis represents IOPs on ports. Average: %PortIopsAvg%, peak: %PortIopsMax%.</div><br>
+
+<img title="IOPs by hour" alt="Iops" src="%ImagePath%IopsOnPort2_00.png">
+<div>Total I/O Rate by hour of day. X-Axis represents Date-Time, Y-Axis represents IOPs on ports.</div><br><br> 
+
+<div id="lun"></div>
+%LunTable% 
+<br>
+<div>Top Ten table of the LUNs with the highest IO rate.</div><br><br> 
+    
+    
+<!-- ===== Section MBs ===== --> 
+<div id="mbs" class="header_b">&nbsp;Transfer rate</div>
+<img title="Transfer rate - average: %PortMBsAvg%, peak: %PortMBsMax%." alt="Iops" src="%ImagePath%MBsOnPort_00.png">
+<div>Transfer rate over the entire data collection on the disk array ports. X-Axis represents Date-Time, Y-Axis represents transfer rate on ports [MB/s].
+  Average: %PortMBsAvg%, peak: %PortMBsMax%.</div><br>
+
+<img title="MB/s" alt="MB/s" src="%ImagePath%MBsOnPort2_00.png">
+<div>Total transfer rate by hour of day. X-Axis represents Date-Time, Y-Axis represents transfer rate on ports [MB/s].</div><br><br>
+    
+
+  
+
+<!-- ===== Section BlockSize ===== --> 
+<div id="bsize" class="header_b">&nbsp;Transfer size histograms</div>
+<img title="Read IO size" alt="Read IO Size" src="%ImagePath%RBlockSize_00.png"><br>
+<div>The Read Block Size histogram provide insight into the distribution of Read IO requests size. X-Axis represents latency, Y-Axis represents Read IO size rate [%].</div><br>
+
+<img title="Write IO size" alt="Write IO size" src="%ImagePath%WBlockSize_00.png"><br><br>
+<div>The Write Block Size histogram provide insight into the distribution of Write IO requests size. X-Axis represents latency, Y-Axis represents Write IO size rate [%].</div><br><br>
+
+    
+<!-- ===== Section Random/Write ===== --> 
+<div id="ratio" class="header_b">&nbsp;Read/Write and Random/Sequential ratio</div>
+<img title="Read/Write ratio." alt="RW" src="%ImagePath%RWratio_00.png">
+<div>Read/Write ratio shows the ratio of read activity to write activity over the entire data collection. X-Axis represents Date-Time, Y-Axis represents Read/Write ratio [%].</div><br>
+
+<img title="Random/Sequential ratio." alt="RW" src="%ImagePath%SeqRndRatio_00.png">
+<div>Random/Sequential ratio shows the ratio of Random IOPs and Sequential IOPs over the entire data collection. X-Axis represents Date-Time, Y-Axis represents Read/Write ratio [%].</div>
+
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td> <img title="RW" alt="RW" src="%ImagePath%RWRatioPie_00.png"></td>
+  <td><img title="RW" alt="RW" src="%ImagePath%SeqRndRatioPie_00.png"></td>
+ </tr>
+</tbody>
+</table>
+<div>Average Read/Write ratio and Random/Sequential ratio.</div><br><br>
+ 
+     
+<!-- ===== Section HDDUtil ===== -->
+<div id="hdd" class="header_b">&nbsp;Utilization of the physical disks</div>
+<img title="Drive utilisation RG View - Average: %PGUtilAvg%, peak: %PGUtilMax%." alt="PGUtil" src="%ImagePath%PGUtilization_00.png">
+<div>Utilization of the physical disks over the entire data collection. Drives are grouped by Raid Group assignment. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg%, peak: %PGUtilMax%.</div><br>
+
+<img title="Drive utilisation - RG View." alt="PGUtil" src="%ImagePath%PGUtilization2_00.png">
+<div>Utilization of physical disks over the Parity Groups.X-Axis represents Parity Groups, Y-Axis represents drive utilization [%].</div><br><br>
+
+<img title="Drive utilisation DP View - Average: %DPUtilAvg%, peak: %PGUtilMax%." alt="DPUtil" src="%ImagePath%DPUtilization_00.png">
+<div>Utilization of the physical disks over the entire data collection. Drives are grouped by DP/DT pool assignment.X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %DPUtilAvg%, peak: %DPUtilMax%.</div><br>
+
+<img title="Drive utilisation - DP View." alt="DPUtil" src="%ImagePath%DPUtilization2_00.png">
+<div>Utilization of physical disks over the DP/DT pools. X-Axis represents DP/DT pool, Y-Axis represents drive utilization [%].</div><br><br>
+
+
+
+<!-- ===== Section CPUUtil ===== -->
+<div id="cpu" class="header_b">&nbsp;Utilization of the Storage procesors and Write pending rate</div>
+<img title="CPU utilisation - average: %ProcUtilAvg%. peaks: %ProcUtilMax%." alt="ProcUtil" src="%ImagePath%ProcUtilization_00.png">
+<div>Utilization of the Storage procesors over the entire data collection. X-Axis represents Date-Time, Y-Axis represents CPU utilization [%]. Average: %ProcUtilAvg%. peaks: %ProcUtilMax%.</div><br>
+
+<img title="CPU utilisation." alt="ProcUtil" src="%ImagePath%ProcUtilization2_00.png">
+<div>Utilization of Storage procesors over the cores. X-Axis represents Cores, Y-Axis represents Cores utilization [%]</div><br><br>
+
+
+<img id="queue" title="WritePending" alt="WritePending" src="%ImagePath%WritePending_00.png">
+<div>The write pending rate indicates the quantity of cache alocated by write operations. X-Axis represents Date-Time, Y-Axis represents Wite pending rate [%]. 
+     Average: %WritePendingAvg%, peaks: %WritePendingMax%. <br>
+     This metrics is critical for the latency: &lt;33% Normal value, &gt;33% Hosts priority is decreased, &gt;70% Host are paused until cache destage.</div><br><br>
+        
+
+<!-- ===== Section FE-BE ===== --> 
+<div class="header_b">&nbsp;FrontEnd/Backed ratio</div>
+<img title="FE-BEratio" alt="FE-BEratio" src="%ImagePath%FeBeIops_00.png">
+<div>The number of total read and write I/O operations per second over the entire data
+collection period. Total Back-end I/O may be compared to Total I/O and the difference is due to the effects
+of the array cache according to RAID type. X-Axis represents Date-Time, Y-Axis represents FE-BE IOPs.</div><br><br> 
+
+
+
+
+<!-- ===== footer ==== --> 
+<p class="footer">
+<a  href="http://helpdesk.3scz.cz" title="Helpdesk">Helpdesk</a>&nbsp; | &nbsp; 
+ Hotline: +420 511 133 830 &nbsp; | &nbsp;Twitter:&nbsp;
+ <a href="http://twitter.com/storagecz" title="Follow us on Twitter">@storagecz</a>&nbsp; • &nbsp;
+ <a href="http://www.storage.cz/cs" title="Intro">Intro</a> &nbsp; | &nbsp;  
+ <a href="http://www.storage.cz/cs/o-nas" title="About Us">About Us</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/portfolio" title="Portfolio">Portfolio</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/reference" title="References">References</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/partneri" title="Partners">Partners</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/odborna-sekce" title="Specialized Section ">Specialized Section</a> &nbsp;| &nbsp;
+ <a href="http://www.storage.cz/cs/kontakt" title="Contacts">Contacts</a><br />
+Created: %ReportTime%  © 2006 - 2016 3S.cz, s.r.o. All Rights Reserved | Using materials of these webpages including their parts is not allowed without 
+</p>
+
+      
+</body></html>

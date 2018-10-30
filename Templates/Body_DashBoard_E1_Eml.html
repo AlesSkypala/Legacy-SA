@@ -1,0 +1,121 @@
+﻿<!-- =====DashBoard ==== --> 
+<table style="width: 1000px;  border-collapse: separate; border-spacing: 2px" border="0">
+<tbody>
+<tr><td style="width: 133px;">
+ <div style="border:1px solid #0094ff; background: #0094ff; font-size: 12px; font-weight: bold">&nbsp;Workload</div>
+ <div style="border:1px solid #0094ff; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%PortIopsAvg%<span style="font-size:12px;">&nbsp;IOPs</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %PortIopsMax% IOPs</div></div></td>
+
+<td style="width: 133px;">  
+ <div style=" border:1px solid #ffd65e; background: #ffd65e; font-size: 12px; font-weight: bold">&nbsp;Transfer</div>
+ <div style=" border:1px solid #ffd65e; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%PortMBsAvg%<span style="font-size:11px;">&nbsp;MB/s</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %PortMBsMax% MB/s</div></div></td>
+
+<td style="width: 133px;">
+ <div style="border:1px solid #a4b357; background: #a4b357; font-size: 12px; font-weight: bold">&nbsp;Response</div>
+ <div style="border:1px solid #a4b357; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%PGRespAvg%<span style="font-size:11px;">&nbsp;ms</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %PGRespMax% ms</div></div></td>
+
+<td style="width: 133px;"> 
+ <div style="border:1px solid #ff670f; background: #ff670f; font-size: 12px; font-weight: bold">&nbsp;CPU</div>
+ <div style="border:1px solid #ff670f; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%ProcUtilAvg%<span style="font-size:11px;">&nbsp;%</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %ProcUtilMax% %</div></div></td>
+
+<td style="width: 133px;">
+ <div style=" border:1px solid #E0BA96; background: #E0BA96; font-size: 12px; font-weight: bold">&nbsp;HDD</div>
+ <div style=" border:1px solid #E0BA96; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%PGUtilAvg%<span style="font-size:11px;">&nbsp;%</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %PGUtilMax% %</div></div></td>
+
+<td style="width: 133px;">
+ <div style="border:1px solid #fb83fa; background: #fb83fa; font-size: 12px; font-weight: bold">&nbsp;External Response</div>
+ <div style="border:1px solid #fb83fa; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%ExtResponseAvg% <span style="font-size:11px;">&nbsp;ms</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %ExtResponseMax% ms</div></div></td>
+
+<td style="width: 133px;">
+ <div style="border:1px solid #ffa84c; background: #ffa84c; font-size: 12px; font-weight: bold">&nbsp;External Transfer</div>
+ <div style="border:1px solid #ffa84c; background: #ffffff; font-size: 25px; font-weight: bold; text-align: center;">%ExtMBsAvg% <span style="font-size:11px;">&nbsp;MB/s</span>
+ <div style="font-size:11px; font-weight: normal">Peak: %ExtMBsMax% MB/s</div></div></td>
+
+</tr></tbody></table>
+
+<br>
+
+<div style="height: 10px; font-size: 8px">&nbsp</div>
+
+<!-- =====Sections1 ==== -->
+<table style="width: 1000px; border-collapse: separate; border-spacing: 2px;" border="0">
+<tr>
+ <td style="width: 50%; border:1px solid #0094ff; background: #0094ff; font-size: 12px; font-weight: bold">&nbsp;Transaction Rate</td>
+ <td style="width: 50%; border:1px solid #ffd65e; background: #ffd65e; font-size: 12px; font-weight: bold">&nbsp;Transfer Rate</td>
+</tr>
+<tr>
+ <td style="width: 50%; border:1px solid #0094ff; background: #ffffff; text-align: center; vertical-align: top; padding: 10px;">
+ <img style="display: block;" title="IOPs - average: %PortIopsAvg% [IOPs], peak: %PortIopsMax% [IOPs]." alt="Iops" src="%ImagePath%IopsOnPort_00.png"><br><br>
+  %IOPsTable%
+ </td>
+ <td style="width: 50%; border:1px solid #ffd65e; background: #ffffff; text-align: center; vertical-align: top; padding: 10px;">
+ <img style="display: block;" title="Transfer rate - average: %PortMBsAvg% [MBps], peak: %PortMBsMax%. [MBps]" alt="MBps" src="%ImagePath%MBsOnPort_00.png"><br><br>
+ %MBsTable%
+ </td>
+</tr>
+</table>
+
+<div style="height: 10px; font-size: 8px">&nbsp</div>
+
+<!-- =====Sections2 ==== --> 
+<table style="width: 1000px; border-collapse: separate; border-spacing: 2px;" border="0">
+<tr>
+ <td style="width: 50%; border:1px solid #a4b357; background: #a4b357; font-size: 12px; font-weight: bold">&nbsp;Transaction Rate</td>
+ <td style="width: 50%; border:1px solid #ff670f; background: #ff670f; font-size: 12px; font-weight: bold">&nbsp;Storage Processor Utilization & Cache</td>
+</tr>
+<tr>
+ <td style="width: 50%; border:1px solid #a4b357; background: #ffffff; text-align: center; vertical-align: top; padding: 10px;">
+ <img style="display: block;" title="Response time - average: %PGRespAvg%,  peak: %PGRespMax%." alt="Response" src="%ImagePath%Response_00.png"><br><br>
+ <img style="display: block;" title="Response Histogram" alt="Response Histogram" src="%ImagePath%Response2_00.png"><br><br>
+ %ResponseTable%
+ </td>
+ <td style="width: 50%; border:1px solid #ff670f; background: #ffffff; text-align: center; vertical-align: top; padding: 10px;">
+ <img style="display: block;" title="CPU utilisation - average: %ProcUtilAvg%. peaks: %ProcUtilMax%." alt="ProcUtil" src="%ImagePath%ProcUtilization_00.png"><br><br>
+ <img style="display: block;"  title="WritePending" alt="WritePending" src="%ImagePath%WritePending_00.png"><br><br>
+ <div style="font-size: 11px; text-align: justify;">The write pending rate indicates the quantity of cache alocated by write operations.This metrics is critical for the latency: <33% Normal value, >33% Hosts  priority is decreased, >70% Host are paused until cache destage.</div>
+ </td>
+</tr>
+</table>
+
+<div style="height: 10px; font-size: 8px">&nbsp</div>     
+
+<!-- =====Sections3 ==== --> 
+<table style="width: 1000px; border-collapse: separate; border-spacing: 2px;" border="0">
+<tr>
+ <td style="width: 50%; border:1px solid #d2ff52; background: #d2ff52; font-size: 12px; font-weight: bold">&nbsp;HDD Utilization</td>
+ <td style="width: 50%; border:1px solid #c3d9ff; background: #c3d9ff; font-size: 12px; font-weight: bold">&nbsp;Read/Write Ratio</td>
+</tr>
+<tr>
+ <td style="width: 50%; border:1px solid #a4b357; background: #ffffff; text-align: center; vertical-align: top; padding: 10px;">
+ <img style="display: block;" title="Drive utilisation - Average: %PGUtilAvg%, peak: %PGUtilMax%." alt="PGUtil" src="%ImagePath%PGUtilization_00.png">
+ <img style="display: block;" title="Drive utilisation." alt="PGUtil" src="%ImagePath%PGUtilization2_00.png">
+ </td>
+ <td style="width: 50%; border:1px solid #ff670f; background: #ffffff; text-align: center; vertical-align: top; padding: 10px;">
+ <img style="display: block;" title="Read/Write ratio." alt="RW" src="%ImagePath%SeqRndRatio_00.png"><br><br>
+ <img style="display: block;" title="RW" alt="RW" src="%ImagePath%SeqRndRatioPie_00.png">
+ </td>
+</tr>
+</table>
+
+<div style="height: 10px; font-size: 8px">&nbsp</div>
+
+
+
+<!-- =====Sections4 ==== --> 
+<table style="width: 1000px; border-collapse: separate; border-spacing: 2px;" border="0">
+<tr><td style="border:1px solid #ffa84c; background: #ffa84c; font-size: 12px; font-weight: bold">&nbsp;External Storages</td></tr>
+<tr><td style="border:1px solid #ffa84c; background: #ffffff;">
+ <table style="width: 100%;">
+ <tr>
+  <td style="width: 50%; text-align: center;"><img title="External storages Response Time - Average: %ExtResponseAvg% [ms], peak: %ExtReponseMax% [ms]." alt="ExternalStorages" src="%ImagePath%ExtResponse.png"></td>
+  <td style="width: 50%; text-align: center;"><img title="External storages Transfer Rate - Average: %ExtMBsAvg% [MB/s], peak: %ExtMbsMax% [MB/s]." alt="ExternalStorages" src="%ImagePath%ExtMbs.png"></td>
+ </tr>
+ </table>
+</td>
+</tr>
+</table>

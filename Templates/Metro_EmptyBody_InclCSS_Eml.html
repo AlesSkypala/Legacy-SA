@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>%template%</title>
+
+<style type="text/css">
+
+body { 
+  width: 1000px; 
+  margin: 0px auto;
+  padding: 5px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;  
+  color: black;
+  background: #f3f3f3;  
+}
+
+img { border-style: none; }
+
+.footer {
+  width: 100%; 
+  font-size: 12px;  
+  color: black; 
+  text-align: center;
+  background-color: #AAAAAA;  
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+</style>
+
+
+<body>
+
+
+<!-- ===== Version 24-5-2015 ==== -->
+
+
+<!-- ===== Header ==== --> 
+<table style="width: 1000px;  border-collapse: separate; border-spacing: 2px" border="0">
+<tbody>    
+<tr>
+ <td style="font-size: 14px; font-wight: bold; background: #cccccc; border:1px solid black; ">&nbsp;Performance report: %ReportTimeRange%</td>
+ <td style="border:1px solid black; width: 350px;" rowspan="2"><img style="display: block;" border="0" title="logo" alt="logo" src="%ImagePath%logo.png"></td>
+</tr>
+<tr>
+ <td style="font-size: 20px; background: white; border:1px solid black;">&nbsp;JOB: %JobName%<br>&nbsp;System: %StorageSystem%<br></td>
+</tr>
+</tbody>
+</table>
+
+<!-- ===== Body ===== --> 
+<p>
+%HtmlBody%
+</p>
+
+
+
+<!-- ===== footer ==== --> 
+<table style="width: 1000px; border-collapse: separate; border-spacing: 2px;" border="0">
+<tr><td>
+<p class="footer">
+<a  href="http://helpdesk.3scz.cz" title="Helpdesk">Helpdesk</a>&nbsp; | &nbsp; 
+ Hotline: +420 511 133 830 &nbsp; | &nbsp;Twitter:&nbsp;
+ <a href="http://twitter.com/storagecz" title="Follow us on Twitter">@storagecz</a>&nbsp; • &nbsp;
+ <a href="http://www.storage.cz/cs" title="Intro">Intro</a> &nbsp; | &nbsp;  
+ <a href="http://www.storage.cz/cs/o-nas" title="About Us">About Us</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/portfolio" title="Portfolio">Portfolio</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/reference" title="References">References</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/partneri" title="Partners">Partners</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/odborna-sekce" title="Specialized Section ">Specialized Section</a> &nbsp;| &nbsp;
+ <a href="http://www.storage.cz/cs/kontakt" title="Contacts">Contacts</a><br />
+Created: %ReportTime%  © 2006 - 2016 3S.cz, s.r.o. All Rights Reserved | Using materials of these webpages including their parts is not allowed without 
+</p>
+</td></tr></table>
+
+      
+</body></html>

@@ -1,0 +1,90 @@
+<!-- ===== SubHeader ==== -->
+<div class="menu_simple"> 
+<ul>
+%HeaderItems%
+</ul>
+<br>
+</div>
+
+
+<!-- ===== Infotable ==== -->
+%InfoTable%
+
+
+<!-- ===== Addition table summary Info boxes ==== -->
+<div id="sum_infobox" style="margin: 18px; width: 100%; display: none;">
+ <div class="myBox" style="width: 130px;"><h2>Pool Sel Count</h2><h3 id="pool_sel" style="display:inline;">0</h3></div>
+ <div class="myBox" style="width: 130px;"><h2>Physical Subscription</h2><h3 id="phy_subs" style="display:inline;">0</h3><span style="font-size:10px;">&nbsp;%</span></div>
+ <div class="myBox" style="width: 130px;"><h2>Physical Capacity</h2><h3 id="phy_cap" style="display:inline;">0</h3><span style="font-size:10px;">&nbsp;TB</span></div>
+ <div class="myBox" style="width: 130px;"><h2>Available Capacity</h2><h3 id="ava_cap" style="display:inline;">0</h3><span style="font-size:10px;">&nbsp;TB</span></div>
+ <div class="myBox" style="width: 130px;"><h2>Logical Used</h2><h3 id="log_use" style="display:inline;">0</h3><span style="font-size:10px;">&nbsp;%</span></div>
+ <div class="myBox" style="width: 130px;"><h2>Physical Used</h2><h3 id="phy_use" style="display:inline;">0</h3><span style="font-size:10px;">&nbsp;%</span></div>
+ <div class="myBox" style="width: 130px;"><h2>Compression Ratio</h2><h3 id="com_rat" style="display:inline;">0</h3></div>
+</div>
+<div>
+
+
+<!-- ===== Body ===== --> 
+<p>
+%HtmlBody%
+</p>
+
+<!-- ===== Addition JS math for DP table ==== -->
+<script type="text/javascript">
+function checkTotal() {
+	var SumPhySub = 0;
+	var SumPhyCap = 0;
+	var SumAvaCap = 0;
+	var SumLogUse = 0;
+	var SumPhyUse = 0;
+	var SumComRat = 0;
+	var Count = 0;
+	var TableElem = document.getElementById('sumTable');
+	// Count total physical capacity
+    for (i=0;i<document.listForm.checksel.length;i++) {
+	  if (document.listForm.checksel[i].checked) {
+		var TrElem = TableElem.rows[i+1];
+		var PhySub = TrElem.cells[9];
+		var PhyCap = TrElem.cells[10];
+		var AvaCap = TrElem.cells[11];
+		var LogUse = TrElem.cells[12];
+		var PhyUse = TrElem.cells[13];
+		var ComRat = TrElem.cells[14];
+
+	    Cap = normVal(PhyCap);
+		SumPhySub += normVal(PhySub)*Cap;
+		SumPhyCap += Cap;
+		SumAvaCap += normVal(AvaCap);
+		SumLogUse += normVal(LogUse)*Cap;
+		SumPhyUse += normVal(PhyUse)*Cap;
+		SumComRat += normVal(ComRat)*Cap;
+		Count++;
+	  }
+	}
+	    
+	if (Count > 0) {
+		document.getElementById("sum_infobox").style.display = "block";
+		SumPhySub = SumPhySub/SumPhyCap;
+		SumLogUse = SumLogUse/SumPhyCap;
+		SumPhyUse = SumPhyUse/SumPhyCap;
+		SumComRat = SumComRat/SumPhyCap;
+		document.getElementById("pool_sel").textContent = Count.toLocaleString();
+		document.getElementById("phy_subs").textContent = (Math.round(SumPhySub*10)/10).toLocaleString();
+		document.getElementById("phy_cap").textContent = SumPhyCap.toLocaleString();
+		document.getElementById("ava_cap").textContent = SumAvaCap.toLocaleString();
+		document.getElementById("log_use").textContent = (Math.round(SumLogUse*10)/10).toLocaleString();
+		document.getElementById("phy_use").textContent = (Math.round(SumPhyUse*10)/10).toLocaleString();
+		document.getElementById("com_rat").textContent = (Math.round(SumComRat*100)/100).toLocaleString();
+	        }
+	    else   {document.getElementById("sum_infobox").style.display = "none";}
+			
+	 
+	}
+
+function normVal(elm) {
+        num  = elm.innerText.split(" ");
+		return parseFloat(num[0].replace(',',''));
+		}
+	
+</script>
+

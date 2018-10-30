@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>%template%</title>
+<link rel="stylesheet" type="text/css" href="../styles.css" />
+</head>
+
+<body>
+
+<!-- ===== Version 11-6-2014 ==== -->
+
+
+<!-- ===== Header ==== --> 
+<table style="width: 100%; border-spacing: 0px 4px;" border="0">
+ <tbody>
+  <tr>
+   <td class="header_g">&nbsp;System: %StorageSystem% <br>&nbsp;Report:&nbsp; %JobName%</td>
+   <td style="padding: 0px;" rowspan=2><img style="display: block;" title="logo" alt="logo" src="../logo.png"></td>
+  </tr>
+  <tr>
+   <td class="header_s">&nbsp;<a href="../index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="index.html">Back</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+   <a href="mailto:performance@3scz.cz?subject=Performance%20Analysis%20Request%20Time:%SelectedTime%%20%20%20System:%StorageSystem%">Contact performance team</a></td> 
+  </tr></tbody>
+</table>
+
+
+
+
+       
+
+<!-- ===== Section LongTerm Trends ===== --> 
+<p class="header_s" style="line-height: 50px;">&nbsp;Workload trends for %TrendDays% elapsed days</p><br>
+
+
+
+
+
+
+<div id="response" class="header_b">&nbsp;Latency of the disk array</div>
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td valign="top"><img title="SAS Response trend - average: %ResponseTrendSAS%." alt="LongTerm Response" src="%ImagePath%ResponseTrend_00.png"></td>
+  <td valign="top"><img title="SATA Response trend - average: %ResponseTrendSATA%." alt="LongTerm Response" src="%ImagePath%ResponseTrend_01.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+<div id="iops" class="header_b">&nbsp;Input/Output operations per second</div>
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="SAS IOPs trend - average: %IOPsTrendSAS%." alt="LongTerm IOPs" src="%ImagePath%IopsTrend_00.png"></td>
+  <td><img title="SATA IOPs trend - average: %IOPsTrendSATA%." alt="LongTerm IOPs" src="%ImagePath%IopsTrend_01.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+<div id="mbs" class="header_b">&nbsp;Transfer rate</div>
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="SAS Transfer rate trend- average: %MBsTrendSAS%." alt="LongTerm MBs" src="%ImagePath%MBsTrend_00.png"></td>
+  <td><img title="SATA Transfer rate trend- average: %MBsTrendSATA%." alt="LongTerm MBs" src="%ImagePath%MBsTrend_01.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+
+<div id="cpu" class="header_b">&nbsp;Utilization of the Storage procesors</div>
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="Controller 0 trend - average: %CPUtrend0%." alt="LongTerm CPU" src="%ImagePath%CPUTrend_00.png"></td>
+  <td><img title="Controller 1 trend - average: %CPUtrend1%." alt="LongTerm CPU" src="%ImagePath%CPUTrend_01.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+
+
+<div id="disk" class="header_b">&nbsp;Utilization of the Hard Disk Drive</div>
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>
+  <td><img title="SAS Drives trend - average: %DisktrendSas%." alt="LongTerm CPU" src="%ImagePath%DiskTrend_00.png"></td>
+  <td><img title="Sata Drives trend - average: %DisktrendSata%." alt="LongTerm CPU" src="%ImagePath%DiskTrend_01.png"></td>
+ </tr>
+</tbody>
+</table>
+<br><br>
+
+<br>
+<br>
+
+<!-- ===== footer ==== --> 
+<p class="footer">
+<a  href="http://helpdesk.3scz.cz" title="Helpdesk">Helpdesk</a>&nbsp; | &nbsp; 
+ Hotline: +420 511 133 830 &nbsp; | &nbsp;Twitter:&nbsp;
+ <a href="http://twitter.com/storagecz" title="Follow us on Twitter">@storagecz</a>&nbsp; • &nbsp;
+ <a href="http://www.storage.cz/cs" title="Intro">Intro</a> &nbsp; | &nbsp;  
+ <a href="http://www.storage.cz/cs/o-nas" title="About Us">About Us</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/portfolio" title="Portfolio">Portfolio</a>  &nbsp; | &nbsp; 
+ <a href="http://www.storage.cz/cs/reference" title="References">References</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/partneri" title="Partners">Partners</a>  &nbsp; | &nbsp;
+ <a href="http://www.storage.cz/cs/odborna-sekce" title="Specialized Section ">Specialized Section</a> &nbsp;| &nbsp;
+ <a href="http://www.storage.cz/cs/kontakt" title="Contacts">Contacts</a><br />
+ © 2006 - 2014 3S.cz, s.r.o. All Rights Reserved | Using materials of these webpages including their parts is not allowed without the prior consent.
+</p>
+
+      
+</body></html>
