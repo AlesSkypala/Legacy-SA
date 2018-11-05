@@ -1,0 +1,208 @@
+SA_Version=87
+{***************************  DashBoard Generate Script *****************************}
+{***************************  DashBoard Generate Script *****************************}
+{***************************  DashBoard Generate Script *****************************}
+{***************************  DashBoard Generate Script *****************************}
+
+
+
+
+{***** Setting width/height/Style***** }
+
+Chart.Width=470
+Chart.Height=250
+Line.Width=1
+Grid=180
+
+
+
+{**** Response time Chart *****}
+Chart.Statistic=Response
+Chart.ModularOpen=1
+Chart=JoinCtrl, DelZero
+Chart.Filter=6
+Chart.Name=Response Time On LUNs
+$PGRespMax=#chart.max
+$PGRespAvg=#chart.avg
+Chart.Save=Response_00
+Chart.Name=
+Chart.TransformToHistogram
+HistogramChart.Height=150
+HistogramChart.Save=Response2_00
+Chart=AscendingSort
+Chart.TopSelect=5
+Chart.Name=Top  LUNs with highest response time
+Chart.TransformToHtmlTable=ResponseTable
+Chart.Close=*
+
+
+
+
+{***** IOPs Chart *****}
+Chart.Statistic=---- Port Information ----,IO Rate(IOPS)
+Chart.ModularOpen=2
+Chart= DelZero, ShowSuma
+Chart.Name=I/O Rate per second on Ports
+
+$PortIopsMax=#chart.summax
+$PortIopsAvg=#chart.sumavg
+Chart.Filter=6
+Chart.Save=IopsOnPort_00
+Chart.Close=*
+
+
+
+
+{***** KBPS Chart *****}
+Chart.Statistic=---- Port Information ----,Trans. Rate(MB/S)
+Chart.ModularOpen=3
+Chart=DelZero, ShowSuma
+Chart.Name=Transfer rate on Ports
+
+$PortMBsMax=#chart.summax
+$PortMBsAvg=#chart.sumavg
+Chart.Filter=6
+Chart.Save=MBsOnPort_00
+Chart.Close=*
+
+
+
+
+{***** PG utilisation *****}
+Chart.Statistic=---- Drive Operate Information ----,Operating Rate(%)
+Chart.ModularOpen=7
+Chart=DelZero
+$PGUtilMax=#chart.max
+$PGUtilAvg=#chart.avg
+Chart.GroupingHDDs
+Chart=AlphabetSort
+Chart.Name=Utilization of the physical drives
+Chart.Filter=6
+Chart.Save=PGUtilization_00
+Chart.TransformToBarChart
+BarChart.Save=PGUtilization2_00
+Chart.Legend=off
+Chart.Close=*
+
+
+
+
+
+{***** Processor utilisation *****}
+Chart.Statistic=---- Processor Information ----,Usage(%)
+Chart.ModularOpen=8
+Chart.Name=Utlization of the  storage processors
+$ProcUtilMax=#chart.max
+$ProcUtilAvg=#chart.avg
+Chart.Filter=6
+Chart.Save=ProcUtilization_00
+Chart.Close=*
+
+
+{***** Random/Seq ration *****}
+Chart.Statistic=---- LU Information ----,Sequential Write Rate(IOPS)
+Chart.ModularOpen=9
+Chart.Statistic=---- LU Information ----,Random Write Rate(IOPS)
+Chart.ModularOpen=11
+Chart.Statistic=---- LU Information ----,Sequential Read Rate(IOPS)
+Chart.ModularOpen=12
+Chart.Statistic=---- LU Information ----,Random Read Rate(IOPS)
+Chart.ModularOpen=13
+
+Chart.Create=10
+Chart.Name=Read/Write and Random/Sequential ratio
+Chart.LeftAxis=[IOPs]
+SerieCopy=#chart.sum,9,10,Sequential Write, clRed, 1
+SerieCopy=#chart.sum,11,10,Random Write, clMaroon, 1
+SerieCopy=#chart.sum,12,10,Sequential Read,clGreen, 1
+SerieCopy=#chart.sum,13,10,Random Read, clOlive, 1
+
+Chart.Filter=6
+Chart.Save=SeqRndRatio_00
+Chart.TransformToPieChart
+PieChart.Save=SeqRndRatioPie_00
+Chart.Close=*
+
+
+
+{***** Write Pending Rate *****}
+Chart.Statistic=---- Cache Information ----,Write Pending Rate(%)
+Chart.ModularOpen=17
+Chart.Name=Write Pending Rate
+$WritePendingMax=#chart.max
+$WritePendingAvg=#chart.avg
+Chart.Filter=6
+Chart.Save=WritePending_00
+Chart.Close=*
+
+
+{***** IOPs per LUN *****}
+Chart.Statistic=---- LU Information ----,IO Rate(IOPS)
+Chart.ModularOpen=19
+Chart=JoinCtrl, ShowSuma
+Chart=AscendingSort
+Chart.TopSelect=10
+Chart.Name=Top LUNs with highest IOPs
+Chart.TransformToHtmlTable=IOPsTable2
+Chart.TopSelect=5
+Chart.TransformToHtmlTable=IOPsTable
+Chart.Close=*
+
+
+{***** MBsper LUN *****}
+Chart.Statistic=---- LU Information ----,Trans. Rate(MB/S)
+Chart.ModularOpen=19
+Chart=JoinCtrl, ShowSuma
+Chart=AscendingSort
+Chart.TopSelect=10
+Chart.Name=Top LUNs with highest MB/s
+Chart.TransformToHtmlTable=MBsTable2
+Chart.TopSelect=5
+Chart.TransformToHtmlTable=MBsTable
+Chart.Close=*
+
+
+
+
+
+$ActualDate=#date.end
+
+
+{*****  Capacity alocation chart*****}
+Day.Select=*
+Chart.File=Config.txt
+Chart.Statistic=Percent
+Chart.ModularCapacityOpen=1
+Chart.Name=Capacity Usage [%]
+Chart.Interpolation=4
+Chart.Save=CapacityUsage_00
+Chart.Close=*
+
+{***** Last Day Capacity Statistic *****}
+Day.Select=1
+Chart.Statistic=Consumed
+Chart.ModularCapacityOpen=2
+$Consumed=#chart.summax
+
+Chart.Statistic=Free
+Chart.ModularCapacityOpen=3
+
+Chart.Statistic=Total
+Chart.ModularCapacityOpen=4
+$Total=#chart.summax
+
+Chart.Create=4
+SerieCopy=#chart.sum, 2, 4 ,Consumed [TB], clSilver
+SerieCopy=#chart.sum, 3, 4 ,Free [TB], cllime
+Chart=AscendingSort
+
+Chart.TransformToPieChart
+PieChart.Save=CapacityUsageRatio_00
+Chart.Close=*
+
+
+
+{*** Parse and reindexing Section ***}
+Html.Parse=Header_01.html,    Body_Metro_DashBoard_ExtCSS_M1.html,    footer_3S_01.html
+
+return

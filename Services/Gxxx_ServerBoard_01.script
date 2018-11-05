@@ -1,0 +1,83 @@
+SA_Version=87
+{*************************************  Server Board Section ****************************************}
+{*************************************  Server Board Section ****************************************}
+{*************************************  Server Board Section ****************************************}
+{*************************************  Server Board Section ****************************************}
+Description=ServerBoard Script compute basic storage metrics by particular WWNGroup and create/parse HTML template
+
+
+
+Chart.Width=970
+Chart.Height=150
+Line.Width=1
+Chart.Style=Legend: Right
+
+
+{**** clear variables ****}
+$HeaderItems=
+$HtmlBody=
+
+ 
+Loop.FileFilter= PPCGWWN_dat.ZIP, iops
+Chart.File=PPCGWWN_dat.ZIP
+
+Loop(
+Chart.Statistic=PPCGWWN_Loop.Value_IOps.csv
+Chart.Open=Loop.ID
+If.Chart.NoContent=No_Content
+Chart.Name=
+Chart=ShowSum
+$Server_Iops_Avg_Loop.ID=#chart.sumavg
+$Server_Iops_Max_Loop.ID=#chart.summax
+Chart.Filter=5
+Chart.Save=Server_Iops_Loop.ID
+Chart.Close=Loop.ID
+
+Chart.Statistic=PPCGWWN_Loop.Value_KBps.csv
+Chart.Open=Loop.ID
+Chart.Name=
+Chart=Divide1000, ShowSum
+$Server_MBps_Avg_Loop.ID=#chart.sumavg
+$Server_MBps_Max_Loop.ID=#chart.summax
+Chart.Filter=5
+Chart.Save=Server_MBps_Loop.ID
+Chart.Close=Loop.ID
+
+Chart.Statistic=PPCGWWN_Loop.Value_Response.csv
+Chart.Open=Loop.ID
+Chart.Name=
+Chart=Divide1000
+$Server_Resp_Avg_Loop.ID=#chart.avg
+$Server_Resp_Max_Loop.ID=#chart.max
+Chart.Filter=5
+Chart.Save=Server_Resp_Loop.ID
+Chart.Close=Loop.ID
+
+$>>HeaderItems=<li><a href="#Loop.Value">Loop.Value</a></li>
+
+$>>HtmlBody=<!-- Loop.Name: Loop.Value -->
+$>>HtmlBody=<div id="Loop.Value" class="sectionBox" style="width: 995px;">
+$>>HtmlBody=<h2>WorkLoad on Server Group <big> Loop.Value</big><a href="#toph">&#9650;</a></h2>
+
+$>>HtmlBody=<!-- Iops -->
+$>>HtmlBody=<div style="text-align:center"><img title="IOPs rate on Loop.Value - Average: %Server_Iops_Avg_Loop.ID% [IOPs], peak: %Server_Iops_Max_Loop.ID% [IOPs]." alt="IOPsl" src="%ImagePath%Server_Iops_Loop.ID.png">
+$>>HtmlBody=<br>IO Rate on server group Loop.Value - Average: %Server_Iops_Avg_Loop.ID% [IOPs], peak: %Server_Iops_Max_Loop.ID% [IOPs]. X-Axis represents Date-Time, Y-Axis represents IO Rate [IOPs].</div>
+$>>HtmlBody=<!-- MBps -->
+$>>HtmlBody=<div style="text-align:center"><img title="MB/s rate on Loop.Value - Average: %Server_MBps_Avg_Loop.ID% [MB/s], peak: %Server_MBps_Max_Loop.ID% [MB/s]." alt="IOPsl" src="%ImagePath%Server_Mbps_Loop.ID.png">
+$>>HtmlBody=<br>MB Rate on server group Loop.Value - Average: %Server_MBps_Avg_Loop.ID% [MB/s], peak: %Server_MBps_Max_Loop.ID% [MB/s]. X-Axis represents Date-Time, Y-Axis represents MB Rate [MB/s].</div>
+$>>HtmlBody=<!-- Resp -->
+$>>HtmlBody=<div style="text-align:center"><img title="Response on Loop.Value - Average: %Server_Resp_Avg_Loop.ID% [ms], peak: %Server_Resp_Max_Loop.ID% [ms]." alt="IOPsl" src="%ImagePath%Server_Resp_Loop.ID.png">
+$>>HtmlBody=<br>Response Time on server group Loop.Value - Average: %Server_Resp_Avg_Loop.ID% [ms], peak: %Server_Resp_Max_Loop.ID% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+$>>HtmlBody=</div>
+
+No_Content:
+)
+
+Chart.Close=*
+
+
+
+{Html Parse}
+Html.Parse=Header_01.html,    Body_Metro_Empty_ExtCSS.html,    Footer_DataClue_01.html
+
+Return

@@ -1,0 +1,103 @@
+SA_Version=87
+
+{*************************************  Server Board Section ****************************************}
+{*************************************  Server Board Section ****************************************}
+{*************************************  Server Board Section ****************************************}
+{*************************************  Server Board Section ****************************************}
+Chart.Width=975
+Chart.Height=130
+Line.Width=1
+Chart.Style=3D: 0, Serie.Border: 0, Sum.Style: area, Sum.Color: clGray, Legend: Right, SubTitle.height: 0, Footer.Height: 0
+Grid=120
+
+
+
+Chart.Statistic=---- LU Information ----,Read Rate(IOPS)
+Chart.ModularOpen=30
+Chart=JoinCtrl
+Chart.Filter=4
+Chart.Statistic=---- LU Information ----,Write Rate(IOPS)
+Chart.ModularOpen=31
+Chart=JoinCtrl
+Chart.Filter=4
+Chart.Create=32
+Chart=ShowSum
+Chart.LeftAxis=[IOPs]
+
+Chart.Statistic=---- LU Information ----,Read Trans. Rate(MB/S)
+Chart.ModularOpen=40
+Chart=JoinCtrl
+Chart.Filter=4
+Chart.Statistic=---- LU Information ----,Write Trans. Rate(MB/S)
+Chart.ModularOpen=41
+Chart=JoinCtrl
+Chart.Filter=4
+Chart.Create=42
+Chart=ShowSum
+Chart.LeftAxis=[MB/s]
+
+Chart.Statistic=Response
+
+Chart.ModularOpen=50
+Chart.Name=
+Chart=JoinCtrl
+Chart.Filter=4
+
+Loop.ItemsFilter=ChartItems
+
+Chart.Create=52
+Chart.LeftAxis=[ms]
+
+
+
+
+Loop(
+Chart.Select=32
+Chart=Clear
+SerieCopy=Loop.ID, 30, 32, Read, $32CD32, 1
+SerieCopy=Loop.ID, 31, 32, Write,$0045FF, 1
+if.chart.nocontent=SKIP
+Chart.Save=Server_Iops_Loop.ID
+$Server_Iops_Avg_Loop.ID=#chart.sumavg
+$Server_Iops_Max_Loop.ID=#chart.summax
+
+
+Chart.Select=42
+Chart=Clear
+SerieCopy=Loop.ID, 40, 42, Read, $32CD32, 1
+SerieCopy=Loop.ID, 41, 42, Write, $0045FF, 1
+
+$Server_MBps_Avg_Loop.ID=#chart.avg
+$Server_MBps_Max_Loop.ID=#chart.max
+Chart.Save=Server_MBps_Loop.ID
+
+Chart.Select=52
+Chart=Clear
+SerieCopy=Loop.ID, 50,52, Resp., $E16941, 1
+Chart.Save=Server_Resp_Loop.ID
+$Server_Resp_Avg_Loop.ID=#chart.avg
+$Server_Resp_Max_Loop.ID=#chart.max
+
+
+$>>HeaderItems=<li><a href="#Loop.Value">Loop.Value</a></li>
+$>>HtmlBody=<!-- Loop.Name: Loop.Value -->
+$>>HtmlBody=<div id="Loop.Value" class="sectionBox" style="width: 995px;">
+$>>HtmlBody=<h2>WorkLoad on Server Group <big> Loop.Value</big><a href="#toph">&#9650;</a></h2>
+
+$>>HtmlBody=<!-- Iops -->
+$>>HtmlBody=<div style="text-align:center"><img title="IOPs rate on Loop.Value - Average: %Server_Iops_Avg_Loop.ID% [IOPs], peak: %Server_Iops_Max_Loop.ID% [IOPs]." alt="IOPsl" src="%ImagePath%Server_Iops_Loop.ID.png">
+$>>HtmlBody=<br>IO Rate on server group Loop.Value - Average: %Server_Iops_Avg_Loop.ID% [IOPs], peak: %Server_Iops_Max_Loop.ID% [IOPs]. X-Axis represents Date-Time, Y-Axis represents IO Rate [IOPs].</div>
+$>>HtmlBody=<!-- MBps -->
+$>>HtmlBody=<div style="text-align:center"><img title="MB/s rate on Loop.Value - Average: %Server_MBps_Avg_Loop.ID% [MB/s], peak: %Server_MBps_Max_Loop.ID% [MB/s]." alt="IOPsl" src="%ImagePath%Server_Mbps_Loop.ID.png">
+$>>HtmlBody=<br>MB Rate on server group Loop.Value - Average: %Server_MBps_Avg_Loop.ID% [MB/s], peak: %Server_MBps_Max_Loop.ID% [MB/s]. X-Axis represents Date-Time, Y-Axis represents MB Rate [MB/s].</div>
+$>>HtmlBody=<!-- Resp -->
+$>>HtmlBody=<div style="text-align:center"><img title="Response on Loop.Value - Average: %Server_Resp_Avg_Loop.ID% [ms], peak: %Server_Resp_Max_Loop.ID% [ms]." alt="IOPsl" src="%ImagePath%Server_Resp_Loop.ID.png">
+$>>HtmlBody=<br>Response Time on server group Loop.Value - Average: %Server_Resp_Avg_Loop.ID% [ms], peak: %Server_Resp_Max_Loop.ID% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+$>>HtmlBody=</div>
+SKIP:
+)
+
+Chart.Close=*
+Html.Parse=Metro_EmptyBody_ExtCSS.html
+
+return

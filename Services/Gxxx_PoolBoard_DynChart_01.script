@@ -1,0 +1,224 @@
+SA_Version=87
+{*************************************** HDD PoolBoard Section *******************************************}
+{*************************************** HDD PoolBoard Section *******************************************}
+{*************************************** HDD PoolBoard Section *******************************************}
+{*************************************** HDD PoolBoard Section *******************************************}
+Description=PoolBoard Script compute basic storage metrics by particular DP pool and create/parse HTML template
+
+
+{**** clear html body****}
+$HtmlBody=<!-- Code Created by Script -->
+
+
+{ DB Image for Buttons }
+CopyFile=db01.png, db01.png
+
+
+{**** Make more poinst for long-term charts ***}
+Chart.Density=0.5
+
+
+{******************  Opening CHart Resources **************************}
+{******************  Opening CHart Resources **************************}
+{******************  Opening CHart Resources **************************}
+
+{***** PG utilisation ... ID= 1  *****}
+Chart.File=PhyPG_dat.ZIP
+Chart.Statistic=PHY_PG.csv, PHY_Short_PG.csv
+Chart.Open=1
+Chart.Filter=3
+
+
+
+{****  load pool PG definitions ****}
+Loop.ConfigFilter=Config.zip, LdevInfo.csv, ECC Group, Pool Name, External
+
+Loop(
+Chart.Height=180
+Chart.SetActive=Loop.Value
+Chart.Name=Physical drives utilization of  Loop.Name
+Chart.Save=PGUtilization_Loop.FName
+$PGUtilMax_Loop.FName=#chart.Max
+$PGUtilAvg_Loop.FName=#chart.Avg
+$PG_SSDUtilAvg_Loop.Fname=#Chart.Avg: SSD
+$PG_SASUtilAvg_Loop.Fname=#Chart.Avg: 10k, 15k
+$PG_NLSASUtilAvg_Loop.Fname=#Chart.Avg: 7k2
+$PG_SSDUtilMax_Loop.Fname=#Chart.Max: SSD
+$PG_SASUtilMax_Loop.Fname=#Chart.Max: 10k, 15k
+$PG_NLSASUtilMAx_Loop.Fname=#Chart.Max: 7k2
+)
+Chart.Close=1
+
+
+{***** Response ... ID=2 *****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Response.zip
+Chart.Statistic=*
+Chart.Open=2
+Chart.Filter=3
+Chart=Divide1000, AscendingSort
+
+{***** Read Response ... ID=3*****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Read_Response.ZIP
+Chart.Open=3
+Chart=Divide1000
+
+{***** Write Response ... ID=4*****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Write_Response.ZIP
+Chart.Open=4
+Chart=Divide1000
+
+{***** IOPS... ID=5*****}
+Chart.File=LDEVEachOfCU_dat\LDEV_IOPS.ZIP
+Chart.Open=5
+Chart.Filter=3
+Chart=ShowSum, AscendingSort
+
+{***** Read IOPS... ID=6****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Read_IOPS.ZIP
+Chart.Open=6
+
+{***** Write IOPS... ID=7****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Write_IOPS.ZIP
+Chart.Open=7
+
+
+
+
+
+{****  load pool LDEV  definitions ****}
+Loop.ConfigFilter=Config.zip, LdevInfo.csv, LDEV#, Pool Name, External
+
+
+Loop(
+
+{****** Prepare Response Charts *******}
+Chart.Select=2
+Chart.Height=180
+Chart.SetActive=Loop.Value
+$SeriesActiveCount_Loop.FName=#Series.ActiveCount
+$SeriesCount_Loop.FName=#Series.Count
+$LDEV_RespMax_Loop.FName=#chart.max
+$LDEV_RespAvg_Loop.FName=#chart.avg
+$LDEV_WgthRespAvg_Loop.FName=#Chart.WeightedAVG: 5
+
+Chart.Name= Response Time of LUNs assigned to  Loop.Name
+Chart.Save=PGResp_Loop.FName
+Chart.TopSelect=8
+Chart.SaveActive=LatencyTable_Loop.FName
+Chart.Name=Top Response Time LUNs of Loop.Name
+Chart.TransformToHtmlTable=LatencyTable_Loop.FName
+Chart.Name=Response Histogram LUNs on Loop.Name
+Chart.TransformToHistogram
+HistogramChart.Width=470
+HistogramChart.Height=140
+HistogramChart.Save=HistogramResp_Loop.FName
+HistogramChart.Close
+
+
+
+{****** Prepare IOPs Charts *******}
+Chart.Select=5
+Chart.Height=180
+Chart.SetActive=Loop.Value
+Chart.Name= IOPs of LUNs assigned to  Loop.Name
+Chart.Save=PGIOPs_Loop.FName
+$LDEV_IOPsMax_Loop.FName=#chart.SumMax
+$LDEV_IOPsAvg_Loop.FName=#chart.SumAvg
+Chart.Select=6
+Chart.SetActive=Loop.Value
+$LDEV_RIOPsMax_Loop.FName=#chart.SumMax
+$LDEV_RIOPsAvg_Loop.FName=#chart.SumAvg
+Chart.Select=7
+Chart.SetActive=Loop.Value
+$LDEV_WIOPsMax_Loop.FName=#chart.SumMax
+$LDEV_WIOPsAvg_Loop.FName=#chart.SumAvg
+
+
+
+{****** Prepare Weighted R/W latency *******}
+Chart.Select=3
+Chart.SetActive=Loop.Value
+$LDEV_RWgthRespAvg_Loop.FName=#Chart.WeightedAVG: 6
+$LDEV_RRespMax_Loop.FName=#Chart.Max
+Chart.Select=4
+Chart.SetActive=Loop.Value
+$LDEV_WWgthRespAvg_Loop.FName=#Chart.WeightedAVG: 7
+$LDEV_WRespMax_Loop.FName=#Chart.Max
+Chart.create=10
+Chart.Height=180
+
+
+{Read latency}
+SerieCopy=#chart.weightedavg,  3, 10, 6, Read Response Time, clGreen, 1
+{Write latency}
+SerieCopy=#chart.weightedavg,  4, 10, 7, Write Response Time, clRed, 1
+Chart.Name=Weighted Average Read/Write Response Time [ms] on Loop.Name
+Chart.LeftAxis=[ms]
+$LDEV_RWWgthRespAvg_Loop.FName=#chart.Avg
+$LDEV_RWWghtRespMax_Loop.FName=#chart.Max
+Chart.Filter=3
+Chart.SaveImgCsv=PGWeightResp_Loop.FName
+Chart.Close=10
+
+
+{fill variables}
+$>>HeaderItems=<li><a href="#Loop.Name"><img title="" alt="" src="db01.png">&nbsp; Loop.Name</a></li>
+
+$>>HtmlBody=<!-- Loop.Name -->
+$>>HtmlBody=<!-- Header -->
+$>>HtmlBody=<div id="Loop.Name" class="sectionBox" style="width: 995px;">
+$>>HtmlBody=<h2>WorkLoad Charakteristic on  <big> Loop.Name</big>   [Selected: %SeriesActiveCount_Loop.FName% of %SeriesCount_Loop.FName% #LDEVs]<a href="#toph">&#9650;</a></h2>
+
+$>>HtmlBody=<!-- Info boxes -->
+$>>HtmlBody=<div style="margin: 18px; width: 100%""'>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>SSD Tier</h2><h3>%PG_SSDUtilAvg_Loop.Fname%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_SSDUtilMax_Loop.Fname%&nbsp%</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>SAS Tier</h2><h3>%PG_SASUtilAvg_Loop.Fname%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_SASUtilMax_Loop.Fname%&nbsp%</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>NL-SAS Tier</h2><h3>%PG_NLSASUtilAvg_Loop.Fname%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_NLSASUtilMax_Loop.Fname%&nbsp%</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>Total IOPs</h2><h3>%LDEV_IOPsAvg_Loop.FName%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_IOPsMax_Loop.FName%&nbspIOPs</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>Read IOPs</h2><h3>%LDEV_RIOPsAvg_Loop.FName%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_RIOPsMax_Loop.FName%&nbspIOPs</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>Write IOPs</h2><h3>%LDEV_WIOPsAvg_Loop.FName%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_WIOPsMax_Loop.FName%&nbspIOPs</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>Response</h2><h3>%LDEV_WgthRespAvg_Loop.FName%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_RespMax_Loop.FName%&nbsp;ms</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>Read Response</h2><h3>%LDEV_RWgthRespAvg_Loop.FName%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_RRespMax_Loop.FName%&nbsp;ms</h4></div>
+$>>HtmlBody= <div class="myBox" style="width: 98px;"'><h2>Write Response</h2><h3>%LDEV_WWgthRespAvg_Loop.FName%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_WRespMax_Loop.FName%&nbsp;ms</h4></div>
+$>>HtmlBody=</div>
+
+$>>HtmlBody=<!-- HDD -->
+$>>HtmlBody=<div style="text-align:center"><img  title="Drive utilization of Loop.Name - Average: %PGUtilAvg_Loop.FName% [%], peak: %PGUtilMax_Loop.FName% [%]." alt="PGUtil" src="%ImagePath%PGUtilization_Loop.FName.png">
+$>>HtmlBody=<br>Utilization of the physical disks of Loop.Name over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_Loop.FName% [%], peak: %PGUtilMax_Loop.FName% [%].</div>
+
+$>>HtmlBody=<!-- Resp -->
+$>>HtmlBody=<div style="text-align:center"><img title="Response on Loop.Name - Average: %LDEV_RespAvg_Loop.FName% [ms], peak: %LDEV_RespMax_Loop.FName% [ms]." alt="IOPs" src="%ImagePath%PGResp_Loop.FName.png">
+$>>HtmlBody=<br>Response Time on server group Loop.Name - Average: %LDEV_RespAvg_Loop.FName% [ms], peak: %LDEV_RespMax_Loop.FName% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+
+$>>HtmlBody=<!-- IOPs -->
+$>>HtmlBody=<div style="text-align:center"><img title="IOPs on Loop.Name - Average: %LDEV_IOPsAvg_Loop.FName% [ms], peak: %LDEV_IOPsMax_Loop.FName% [ms]." alt="IOPs" src="%ImagePath%PGIOPs_Loop.FName.png">
+$>>HtmlBody=<br>Transaction Rate on server group Loop.Name - Average: %LDEV_IOPsAvg_Loop.FName% [IOPs], peak: %LDEV_IOPsMax_Loop.FName% [IOPs]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+
+$>>HtmlBody=<!-- R/W resp-->
+$>>HtmlBody=<div style="text-align:center"><img title="Weighted R/W AverageResponse on Loop.Name - Average: %LDEV_RWWgthRespAvg_Loop.FName% [ms], peak: %LDEV_RWWghtRespMax_Loop.FName% [ms]." alt="IOPs" src="%ImagePath%PGWeightResp_Loop.FName.png"  onclick="DynChart('PGWeightResp_Loop.FName', 'Weighted R/W Average Response on Loop.Name ', '[ms]')" style="cursor: alias;">
+$>>HtmlBody=<br>Weighted R/W Average Response Time on server group Loop.Name - Average: %LDEV_RWWgthRespAvg_Loop.FName% [ms], peak: %LDEV_RWWghtRespMax_Loop.FName% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms]. 
+$>>HtmlBody=<a href="%ImagePath%PGWeightResp_Loop.FName.csv"> CSV Download link...</a></div>
+
+$>>HtmlBody=<!-- Histogram and Tab;e -->
+$>>HtmlBody=<div style="display: inline-block; width: 470px;"><img title="Response Histogram" alt="Response Histogram" src="%ImagePath%HistogramResp_Loop.FName.png">
+$>>HtmlBody=<br>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div>
+$>>HtmlBody=<div style="display: inline-block; width: 470px;">
+$>>HtmlBody=%LatencyTable_Loop.FName%
+$>>HtmlBody=</div>
+$>>HtmlBody=<div><img id="LatencyTable_Loop.FName" src="../empty.png"></div>
+$>>HtmlBody=</div>
+
+$>>HtmlBody=</div>
+$>>HtmlBody=
+)
+
+Chart.Close=*
+
+{Parse HTML}
+Html.Parse=Header_ModalGraph_01.html, Body_ImageChange_JS.html, Body_Metro_Empty_ExtCSS.html,  ModalGraph_01.html,  Footer_3S_01.html
+
+Return
+
+
+
+

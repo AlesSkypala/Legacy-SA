@@ -1,0 +1,178 @@
+SA_Version=87
+
+{***************************************** Trend report*******************************************}
+{***************************************** Trend report*******************************************}
+{***************************************** Trend report*******************************************}
+
+
+Chart.Width=470
+Chart.Height=180
+Grid=1
+
+Chart.File=Trends.zip
+
+
+{IOPS trend}
+Chart.Statistic=IOPs.csv
+Chart.Open=1
+Chart=ShowSuma
+Chart.Create=2
+SerieCopy=#chart.sum, 1, 2, Sum, $3300FF, 1
+Chart.Name=Workload - IOPs
+Chart.LeftAxis=[IOPs]
+Chart.Legend=off
+Chart.Filter=40
+$IOPsTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=IopsTrend_00
+Chart.Close=*
+
+
+
+{MB/strend}
+Chart.Statistic=MBs.csv
+Chart.Open=5
+Chart=ShowSuma
+Chart.Create=6
+SerieCopy=#chart.sum, 5, 6, Sum, $FF066, 1
+Chart.Name=Workload - MB/s
+Chart.LeftAxis=[MB/s]
+Chart.Legend=off
+Chart.Filter=40
+$MBsTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=MBsTrend_00
+Chart.Close=*
+
+
+
+{CPU Trend}
+Chart.Statistic=CTL0.csv
+Chart.Open=9
+Chart=ShowAvg
+Chart.Create=10
+SerieCopy=#chart.avg, 9, 10, Avg, $3366CC, 1
+Chart.Name=Controller 0 Utilization
+Chart.LeftAxis=Utilization [%]
+Chart.Legend=off
+Chart.Filter=40
+$CPUTrend0=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=CPUTrend_00
+Chart.Close=*
+
+
+
+Chart.Statistic=CTL1.csv
+Chart.Open=11
+Chart=ShowAvg
+Chart.Create=12
+SerieCopy=#chart.avg, 11, 12, Avg, $999933, 1
+Chart.Name=Controller 1 Utilization
+Chart.LeftAxis=Utilization [%]
+Chart.Legend=off
+Chart.Filter=40
+$CPUTrend1=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=CPUTrend_01
+Chart.Close=*
+
+
+{DiscUtil}
+Chart.Statistic=SSDHDDs.csv
+Chart.Open=13
+#chart.avg=Show
+Chart.Create=14
+SerieCopy=#chart.avg, 13, 14, Avg, $9900CC, 1
+Chart.Name=SSD Utilization
+Chart.LeftAxis=Utilization [%]
+Chart.Legend=off
+Chart.Filter=40
+$DiskTrendSSD=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=DiskTrend_00
+Chart.Close=*
+
+
+
+Chart.Statistic=SASHDDs.csv
+Chart.Open=15
+Chart=ShowAvg
+Chart.Create=16
+SerieCopy=#chart.avg, 15, 16, Avg, $99FF99, 1
+
+
+Chart.Name=SAS Utilization
+
+Chart.LeftAxis=Utilization [%]
+Chart.Legend=off
+Chart.Filter=40
+$DiskTrendSAS=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=DiskTrend_01
+Chart.Close=*
+
+
+Chart.Statistic=SAS7KHDDs.csv
+Chart.Open=15
+#chart.avg=Show
+Chart.Create=16
+SerieCopy=#chart.avg, 15, 16, Avg, $9933FF, 1
+Chart.Name=NL-SAS/ SATA Utilization
+Chart.LeftAxis=Utilization [%]
+Chart.Legend=off
+Chart.Filter=40
+$DiskTrend7k=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=DiskTrend_02
+Chart.Close=*
+
+
+
+{ResponseTrend}
+Chart.Statistic=Response.csv
+Chart.Open=27
+chart=divide1000, ShowAvg
+Chart.Create=28
+SerieCopy=#chart.avg, 27, 28, Avg, clNavy, 1
+Chart.LeftAxis=[ms]
+Chart.Name=Response Time
+Chart.Legend=off
+Chart.Filter=40
+$ResponseTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=ResponseTrend_00
+Chart.Select=27
+Chart.TopSelect=5
+Chart=AscendingSort
+Chart.Name=Top  LUNs with Highest Latency
+Chart.TransformToHtmlTable=ResponseTrendTable
+Chart.Close=*
+
+
+
+{Write Pending Trend}
+Chart.Statistic=WritePending.csv
+Chart.Open=19
+Chart=ShowAvg
+Chart.Create=20
+SerieCopy=#chart.avg, 19, 20, Avg, clGray, 1
+Chart.LeftAxis=[%]
+
+Chart.Name=Write Pending Rate
+Chart.Legend=off
+Chart.Filter=40
+$WritePendingTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=WritePendingTrend_00
+Chart.Close=*
+
+
+$TrendDays=Days.Select
+
+
+{***** Parse to Html template ******}
+Html.Parse=Metro_Trends_ExtCSS_M1.html
+
+return
+

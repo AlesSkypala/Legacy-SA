@@ -1,0 +1,109 @@
+Chart.Density=0.2
+
+
+{***** Images defaults*****}
+Chart.Width=970
+Chart.Height=250
+Grid=120
+
+
+{**** Set Cache Statistic Group****}
+Chart.File=PhyCMPK_dat.ZIP, PhyMainPK_dat.ZIP, PhyMPU_dat.ZIP,  PhyESW_dat.ZIP, PhyCSW_dat.ZIP
+
+
+{*** Open PHY_Short_CHA_CMPK ****}
+Chart.Statistic=PHY_Short_CHA_CMPK.csv
+Chart.Open=1
+Chart.Name=Usage rates for access paths between Channel Adapters and CM packages
+Chart.LeftAxis=[%]
+$CHA_CMPK_AVG=#Chart.Avg
+$CHA_CMPK_Max=#Chart.Max
+Chart.Filter=3
+Chart.SaveImgCsv=CHA_CMPK_00
+Chart.close=*
+
+
+{*** Open PHY_Short_DKA_CMPK ****}
+Chart.Statistic=PHY_Short_DKA_CMPK.csv
+Chart.Open=2
+Chart.Name=Usage rates for access paths between Disk Adapters and CM packages
+Chart.LeftAxis=[%]
+$DKA_CMPK_AVG=#Chart.Avg
+$DKA_CMPK_Max=#Chart.Max
+Chart.Filter=3
+Chart.SaveImgCsv=DKA_CMPK_00
+Chart.close=*
+
+
+{*** Open PHY_Short_MPPCB_CMPK ****}
+Chart.Statistic=PHY_Short_MPPCB_CMPK.csv
+Chart.Open=3
+Chart.Name=Usage rates for access paths between Processors and CM packages
+Chart.LeftAxis=[%]
+$MPPCB_CMPK_AVG=#Chart.Avg
+$MPPCB_CMPK_Max=#Chart.Max
+Chart.Filter=3
+Chart.SaveImgCsv=MPPCB_CMPK_00
+Chart.close=*
+
+
+{*** Open PHY_Short_CMPK_Cache ****}
+Chart.Statistic=PHY_Short_CMPK_Cache.csv
+Chart.Open=4
+Chart.Name=Cache usage rates within CM packages
+Chart.LeftAxis=[%]
+$CMPK_Cache_AVG=#Chart.Avg
+$CMPK_Cache_Max=#Chart.Max
+Chart.Filter=3
+Chart.SaveImgCsv=CMPK_Cache_00
+Chart.close=*
+
+
+
+{*** Open Write Pending****}
+Chart.Statistic=PHY_Short_Write_Pending_Rate.csv, PHY_Write_Pending_Rate.csv
+Chart.Open=4
+Chart.Name=Average Write Pending Rate
+Chart.LeftAxis=[%]
+$WP_AVG=#Chart.Avg
+$WP_Max=#Chart.Max
+Chart.Filter=3
+Chart.SaveImgCsv=WP_00
+Chart.close=*
+
+
+
+{***  Opening particular Cache Write Pending ****}
+Loop.FileFilterValue=PhyCMPK_dat.ZIP,  PHY_Short_Write_Pending_Rate_MP
+
+$HTMLBody=<!-- HtmlBody created by Script -->
+
+Loop(
+Chart.Statistic=Loop.Name
+Chart.Open=6
+Chart.Filter=3
+Chart.Name=Cache Write Pending assigned to Loop.Value
+Chart.LeftAxis=[%]
+Chart.Width=470
+Chart.Height=200
+Chart.SaveImgCsv=WP_CPU_Loop.ID
+$WPUtilMax_Loop.ID=#chart.max
+$WPUtilAvg_Loop.ID=#chart.avg
+$>>HTMLBody=<!-- Loop.Name : Loop.Value -->
+$>>HTMLBody=<div style="display: inline-block; width: 475px; vertical-align: top; text-align:center;">
+$>>HTMLBody=<img id="Loop.Name" title="Cache Write Pending  of Loop.Value - Average: %WPUtilAvg_Loop.ID%, peak: %WPUtilMax_Loop.ID%." alt="WPUtil" src="%ImagePath%WP_CPU_Loop.ID.png"  onclick="DynChart('WP_CPU_Loop.ID', 'Usage rates for access paths between Channel Adapters and CM packages', '[%]')"  style="cursor: alias;">
+$>>HTMLBody=<br>Usege: Loop.Name, average: %WPUtilAvg_Loop.ID% [%], peak: %WPUtilMax_Loop.ID% [%].
+$>>HTMLBody=</div>
+$>>HTMLBody=
+Chart.Close=*
+)
+
+
+
+Html.Parse=Header_ModalGraph_01.html, Body_Metro_Cache_ExtCSS_E1.html,  ModalGraph_01.html,  Footer_3S_01.html
+
+
+Chart.Density=1
+return
+
+

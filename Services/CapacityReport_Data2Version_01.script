@@ -1,0 +1,144 @@
+SA_Version=87
+{*** Copy images to HTML folder ***}
+CopyFile=metro_capacitystyles.css,metro_capacitystyles.css
+CopyFile=warning_0.png, warning_0.png
+CopyFile=warning_1.png, warning_1.png
+CopyFile=warning_2.png, warning_2.png
+CopyFile=question_0.png, question_0.png
+
+{*************************************  Daily Analysis Section ****************************************}
+{*************************************  Daily Analysis Section ****************************************}
+{*************************************  Daily Analysis Section ****************************************}
+{*************************************  Daily Analysis Section ****************************************}
+
+{***** Report Output Path ******|
+Report.Name=Pool Capacity
+Chart.Style=Line.Width: 1, Serie.Border: 0, Legend: Bottom
+Chart.width=450
+Chart.height=180
+
+
+Chart.File=HdpPoolInfoEx2.dat
+create.html.PoolTable=htmlbody
+
+Day.Select=*
+Chart.CapacityOpen=1
+
+
+
+
+
+
+
+
+{*****************  Front page images generating ***********************}
+{*****************  Front page images generating ***********************}
+{*****************  Front page images generating ***********************}
+{*****************  Front page images generating ***********************}
+$CapacityImg=
+$PoolList=<li><a href="Pool%20Capacity.html"><b>&#9650; Pool List</b></a></li>
+Loop.ConfigFilter=Config.zip, LdevInfo.csv,  Pool Name, Pool ID
+loop(
+Chart.Select=1
+Chart.SearchKey=Loop.Name
+chart.CopyActive=2
+Chart.Select=2
+Chart.Name=Loop.Value
+Chart.LeftAxis=[TB Utilization]
+//chart=AdjustTopBottom
+Chart.Save=Capacity_Loop.ID
+$>>CapacityImg=<!-- Loop.Item -->
+$>>CapacityImg=<div style="display: inline-block; width: 475px; vertical-align: top; text-align:center;">
+$>>CapacityImg=<a href="_Loop.Name.html"><img id="Loop.Name" title="Capacity utilization of Loop.Value." alt="Loop.Valuel" src="%ImagePath%Capacity_Loop.ID.png"></a>
+$>>CapacityImg=</div>
+$>>CapacityImg=
+Chart.Close=2
+$>>PoolList=<li><a href="_Loop.Name.html">&#9658; Loop.Value</a></li>
+)
+
+{************************Parse Section*******************************}
+$WebTitle=Pool Capacity
+Html.Parse=Header_08.html, Body_RowClick_JS.html,    Body_Ecapacity_ExtCSS.html,    Footer_3S_01.html
+
+
+
+
+{*********************  Create POOL Details SubPages ******************************}
+{*********************  Create POOL Details SubPages ******************************}
+{*********************  Create POOL Details SubPages ******************************}
+
+Chart.File=HdpVols.dat
+Chart.Select=1
+Chart.width=900
+Chart.height=230
+
+Day.Select=30
+
+Loop(
+Report.Name=_Loop.Name
+Chart.Statistic=Loop.Name
+Create.Html.VvolTable=htmlbody
+
+
+Chart.Select=1
+Chart.SearchKey=Loop.Name
+{make clones chart for predict}
+chart.CopyActive=2
+chart.CopyActive=3
+chart.CopyActive=4
+chart.CopyActive=5
+
+
+
+$PredictBtn=
+$CapacityImg=
+$PoolDetails=Loop.Value Capacity Details
+$PoolLuns=Loop.Value LDEV Capacity Details
+
+Chart.Select=2
+Chart.Name=Loop.Value - Current Capacity Statistic
+Chart.LeftAxis=[TB Utilization]
+Chart.Save=Capacity0_Loop.ID
+$>>PredictBtn=<li><a href="javascript:imgchange('Loop.Name','Capacity0_Loop.ID.png');">Current Capacity</a></li>
+Chart.Close=2
+
+Chart.Select=3
+Chart.CapacityPredict=30
+Chart.Name=Loop.Value - 1 Month Capacity Predict
+Chart.LeftAxis=[TB Utilization]
+Chart.Save=Capacity1_Loop.ID
+$>>PredictBtn=<li><a href="javascript:imgchange('Loop.Name','Capacity1_Loop.ID.png');">1 Month Predict</a></li>
+Chart.Close=3
+
+Chart.Select=4
+Chart.CapacityPredict=180
+Chart.Name=Loop.Value - 6 Months Capacity Predict
+Chart.LeftAxis=[TB Utilization]
+Chart.Save=Capacity2_Loop.ID
+$>>PredictBtn=<li><a href="javascript:imgchange('Loop.Name','Capacity2_Loop.ID.png');">6 Months Predict</a></li>
+Chart.Close=4
+
+Chart.Select=5
+Chart.CapacityPredict=365
+Chart.Name=Loop.Value - 1 Year Capacity Predict
+Chart.LeftAxis=[TB Utilization]
+Chart.Save=Capacity3_Loop.ID
+$>>PredictBtn=<li><a href="javascript:imgchange('Loop.Name','Capacity3_Loop.ID.png');">1 Year Predict</a></li>
+Chart.Close=5
+
+$CapacityImg=
+$>>CapacityImg=<!-- Loop.Item -->
+$>>CapacityImg=<div style="text-align:center">
+$>>CapacityImg=<img id="Loop.Name" title="Capacity utilization of Loop.Value." alt="Loop.Valuel" src="%ImagePath%Capacity0_Loop.ID.png">
+$>>CapacityImg=</div>
+$>>CapacityImg=
+
+{***** Parse Section*****}
+$WebTitle=Loop.Value Details
+Html.Parse=Header_08.html,  Body_ImageChange_JS.html,   Body_EcapacityDetails_ExtCSS.html,    Footer_3S_01.html
+)
+
+Chart.Close=*
+
+return
+{**** End of Script ****}

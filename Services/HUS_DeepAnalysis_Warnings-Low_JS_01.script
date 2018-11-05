@@ -1,0 +1,265 @@
+SA_Version=87
+
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+{***************************************** Archive Section *******************************************}
+
+
+
+
+{*** Defaul width/height***}
+Chart.Width=980
+Chart.Height=300
+Line.Width=1
+Grid=120
+
+
+
+{***Response time Chart***}
+Chart.Statistic=Response
+Chart.ModularOpen=1
+Chart=JoinCtrl, DelZero
+Chart.Filter=3
+Chart.Name=Response Time 
+$PGRespMax=#chart.max
+$PGRespAvg=#chart.avg
+Chart.Save=Response_00
+
+
+{***Response Histogram***}
+Chart.Name=
+Chart.TransformToHistogram
+HistogramChart.Height=200
+HistogramChart.Width=470
+HistogramChart.Save=Response2_00
+
+
+{***Response Table***}
+Chart.Name=TopTen LUNs with the highest latency
+Chart=AscendingSort
+Chart.TopSelect=10
+Chart.TransformToHtmlTable=LatencyTable
+Chart.Legend=off
+AddWarning=Type: Over, Treshold: 10, Time: 30, Text: Warning: $Item latency  $Time minutes exceed $Valuems at $StartTime
+
+{***Export Trends***}
+Chart=multipy1000
+Chart.Search=*
+Chart.Export=Trends,Response,Rewrite
+Chart.Close=*
+
+
+
+
+
+{********* IOPs Chart *******}
+Chart.Statistic=---- Port Information ----,IO Rate(IOPS)
+Chart.ModularOpen=2
+Chart=DelZero, ShowSuma
+Chart.Name=I/O Rate per second on Ports
+
+$PortIopsMax=#chart.summax
+$PortIopsAvg=#chart.sumavg
+Chart.Filter=3
+Chart.Save=IopsOnPort_00
+Chart.Export=Trends,IOPs
+Chart.Filter=30
+Chart.Name=
+Chart.TransformToAreaChart
+AreaChart.Width=470
+AreaChart.Height=200
+AreaChart.Save=IopsOnPort2_00
+Chart.Close=*
+
+
+
+{********  KBPS Chart **********}
+Chart.Statistic=---- Port Information ----,Trans. Rate(MB/S)
+Chart.ModularOpen=3
+Chart=DelZero, ShowSuma
+Chart.Name=Transfer rate on Ports
+
+$PortMBsMax=#chart.summax
+$PortMBsAvg=#chart.sumavg
+Chart.Filter=3
+Chart.Save=MBsOnPort_00
+Chart.Export=Trends,MBs
+Chart.Filter=30
+Chart.Name=
+Chart.TransformToAreaChart
+AreaChart.Width=470
+AreaChart.Height=200
+AreaChart.Save=MBsOnPort2_00
+Chart.Close=*
+
+
+{********* Read/Write Ratio ***********}
+Chart.Statistic=---- Port Information ----,Read Rate(IOPS)
+Chart.ModularOpen=4
+Chart.Statistic=---- Port Information ----,Write Rate(IOPS)
+Chart.ModularOpen=6
+Chart.Create=5
+Chart.Name=Read/Write ratio
+Chart.LeftAxis=[IOPs]
+SerieCopy=#chart.sum,4,5, Read, clGreen, 1
+SerieCopy=#chart.sum,6,5, Write, clRed, 1
+Chart.Filter=3
+Chart.Save=RWratio_00
+Chart.TransformToPieChart
+PieChart.Width=470
+PieChart.Height=250
+PieChart.Save=RWRatioPie_00
+Chart.Close=*
+
+
+{********* Random/sequentials Ratio ************}
+Chart.Statistic=---- LU Information ----,Sequential Write Rate(IOPS)
+Chart.ModularOpen=9
+Chart.Statistic=---- LU Information ----,Random Write Rate(IOPS)
+Chart.ModularOpen=11
+Chart.Statistic=---- LU Information ----,Sequential Read Rate(IOPS)
+Chart.ModularOpen=12
+Chart.Statistic=---- LU Information ----,Random Read Rate(IOPS)
+Chart.ModularOpen=13
+
+Chart.Create=10
+Chart.Name=Read/Write and Random/Sequential ratio
+Chart.LeftAxis=[IOPs]
+SerieCopy=#chart.sum,9,10,Sequential Write, clRed, 1
+SerieCopy=#chart.sum,11,10,Random Write, clMaroon, 1
+SerieCopy=#chart.sum,12,10,Sequential Read,clGreen, 1
+SerieCopy=#chart.sum,13,10,Random Read, clOlive, 1
+
+Chart.Filter=3
+Chart.Save=SeqRndRatio_00
+Chart.TransformToPieChart
+PieChart.Width=470
+
+
+
+
+PieChart.Height=250
+PieChart.Save=SeqRndRatioPie_00
+Chart.Close=*
+
+
+
+{******* PG utilisation ********}
+Chart.Statistic=---- Drive Operate Information ----,Operating Rate(%)
+Chart.ModularOpen=7
+Chart=DelZero
+Chart.Filter=3
+Chart.Copy=20
+Chart.GroupingHDDs=Modular_RG
+Chart=AlphabetSort
+Chart.Name=Utilization of the physical drives of RaidGroups
+$PGUtilMax=#chart.max
+$PGUtilAvg=#chart.avg
+Chart.TransformToHtmlTable=HDDtable
+Chart.Save=PGUtilization_00
+Chart.TransformToBarChart
+BarChart.Width=470
+BarChart.Height=250
+BarChart.Save=PGUtilization2_00
+AddWarning=Type: Over, Treshold: 80, Time: 30, Text: Warning:  $Item utilization  $Time minutes exceed $Value% at $StartTime
+
+Chart.Search=SSD
+Chart.Export=Trends,SSDHDDs
+Chart.Search=SAS
+Chart.Export=Trends,SASHDDs
+Chart.Search=SAS7k,SATA
+Chart.Export=Trends,SAS7KHDDs
+
+Chart.Select=20
+Chart.GroupingHDDs=Modular_DP
+Chart=AlphabetSort
+Chart.Name=Utilization of the physical drives of Disc Pools
+$DPUtilMax=#chart.max
+$DPUtilAvg=#chart.avg
+Chart.TransformToHtmlTable=DPHDDtable
+Chart.Save=DPUtilization_00
+Chart.TransformToBarChart
+BarChart.Width=470
+BarChart.Height=250
+BarChart.Save=DPUtilization2_00
+Chart.Close=*
+
+
+{********* Processor utilisation *******}
+Chart.Statistic=---- Processor Information ----,Usage(%)
+Chart.ModularOpen=8
+Chart.Name=Utlization of the  storage processors
+
+$ProcUtilMax=#chart.max
+$ProcUtilAvg=#chart.avg
+
+Chart.Search=CTL:0
+Chart.Export=Trends,CTL0
+Chart.Search=CTL:1
+Chart.Export=Trends,CTL1
+
+Chart.Search=*
+Chart.Filter=3
+Chart.Save=ProcUtilization_00
+
+Chart.Legend=off
+AddWarning=Type: Over, Treshold: 80, Time: 30, Text: Warning: $Item storage processor utilization  $Time minutes exceed $Value%  at $StartTime
+Chart.Close=*
+
+
+{*********** Write Pending Rate **********}
+Chart.Statistic=---- Cache Information ----,Write Pending Rate(%)
+Chart.ModularOpen=17
+Chart.Name=Write Pending Rate
+
+$WritePendingMax=#chart.max
+$WritePendingAvg=#chart.avg
+Chart.Export=Trends,WritePending
+Chart.Filter=3
+Chart.Save=WritePending_00
+Chart.Legend=off
+AddWarning=Type: Over, Treshold: 30, Time: 10, Text: Warning: $Item  $Time minutes exceed $Value% ms at $StartTime
+Chart.Close=*
+
+
+
+{******** Read Block Size **********}
+Chart.Statistic=Block Read
+Chart.ModularOpen=18
+Chart=DelZero
+Chart.LeftAxis=[kB]
+Chart.Name=Transfer size histogram of Read IOs
+Chart.TransformToHistogram
+HistogramChart.Height=200
+HistogramChart.Width=470
+HistogramChart.Save=RBlockSize_00
+Chart.Close=*
+
+
+
+{********** Write Block Size *********}
+Chart.Statistic=Block Write
+Chart.ModularOpen=20
+Chart=DelZero
+Chart.LeftAxis=[kB]
+Chart.Name=Transfer size histogram of Write IOs
+Chart.TransformToHistogram
+HistogramChart.Height=200
+HistogramChart.Width=470
+HistogramChart.Save=WBlockSize_00
+Chart.Close=*
+
+
+$ActualDate=#date.end
+
+{************* Parse and reindexing Section ***************}
+
+Html.Parse=Metro_DetailReport_ExtCSS_M1_RG.html
+
+
+return

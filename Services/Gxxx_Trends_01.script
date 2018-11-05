@@ -1,0 +1,194 @@
+SA_Version=87
+{*************************************  Trends Section ****************************************}
+{*************************************  Trends Section ****************************************}
+{*************************************  Trends Section ****************************************}
+{*************************************  Trends Section ****************************************}
+
+AreaChart.Style=Serie.Border: 1, Serie.Bottom.Gama: 250, Serie.Top.Gama: 120
+
+{***** Images defaults ******}
+Chart.Width=470
+Chart.Height=180
+Grid=120
+
+
+{***** IOPs Trends *****}
+Chart.File=Port_dat.ZIP
+Chart.Statistic=Port_IOPS.csv
+Chart.Open=22
+#chart.sum=Show
+Chart.Create=23
+Chart.LeftAxis=[IOPs]
+Chart.Name=Total IOPs
+SerieCopy=#chart.sum, 22, 23, Suma, clRed,1
+Chart.Filter=20
+Chart.SaveCsv=IopsTrend_00.csv
+$IOPsTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=IopsTrend_00
+Chart.Close=*
+
+$TrendDays=Days.Select
+
+
+{***** MB/s Trends *****}
+Chart.Statistic=Port_KBPS.csv
+Chart.Open=24
+Chart=Divide1000, ShowSum
+Chart.Create=25
+Chart.LeftAxis=[MB/s]
+Chart.Name=Total MB/s
+SerieCopy=#chart.sum, 24, 25, Suma, clBlue,1
+Chart.Filter=20
+$MBsTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=MBsTrend_00
+Chart.Close=*
+
+
+
+{***** Response Trends *****}
+Chart.Statistic=Port_Response.csv
+Chart.Open=26
+Chart=DelZero, Divide1000, ShowAvg
+Chart.Create=27
+Chart.LeftAxis=[ms]
+Chart.Name=Response time
+SerieCopy=#chart.avg, 26, 27, Suma, clOlive,1
+Chart.Filter=20
+$ResponseTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=ResponseTrend_00
+Chart.Select=26
+Chart=AscendingSort
+Chart.Name=Port With Highest Response Time
+Chart.TopSelect=8
+Chart.TransformToHtmlTable=ResponseTrendTable
+Chart.Close=*
+
+
+{***** CPU Trends *****}
+Chart.File=PhyProc_dat.ZIP
+Chart.Statistic=PHY_Short_MP.csv, PHY_MP.csv, PHY_Short_CHP.csv
+Chart.Open=28
+Chart.Create=29
+Chart.LeftAxis=[%]
+Chart.Name=CPU utilization
+SerieCopy=#chart.avg, 28, 29, Avg, clPurple,1
+Chart.Filter=20
+$CPUTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=CPUTrend_00
+Chart.Close=*
+
+
+
+
+{***** Write Pending Trends *****}
+Chart.File=PhyMainPK_dat.ZIP, PhyMPU_dat.ZIP, PhyCMPK_dat.ZIP, PhyESW_dat.ZIP, PhyCSW_dat.ZIP
+Chart.Statistic=PHY_Short_Write_Pending_Rate.csv, PHY_Write_Pending_Rate.csv
+Chart.Open=32
+Chart.Create=33
+Chart.LeftAxis=[%]
+Chart.Name=Write Pending Rate
+SerieCopy=#chart.avg, 32, 33, Avg, clGreen
+Chart.Filter=20
+$WPTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=WPTrend_00
+
+
+{***** For correct detecting of HDD tiers, must be defined asociatio1ns table i.e. 1-1=SSD *****}
+{***** HDD trends /SSD tier *****}
+Chart.File=PhyPG_dat.ZIP
+Chart.Statistic=PHY_Short_PG.csv, PHY_PG.csv
+Chart.Open=34
+Chart.Search=SSD
+Chart.Create=35
+Chart.LeftAxis=[%]
+Chart.Name=SSD utilization
+SerieCopy=#chart.avg, 34, 35, AVG, clMaroon
+Chart.Filter=20
+
+$SSDTrend=#chart.avg
+
+Chart.TransformToAreaChart
+AreaChart.Save=SSDTrend_00
+
+{***** HDD 10k Trend *****}
+Chart.Select=34
+Chart.Search=10k
+Chart.Create=36
+Chart.LeftAxis=[%]
+Chart.Name=10k HDD utilization
+SerieCopy=#chart.avg, 34, 36, AVG, clGreen
+Chart.Filter=40
+$10kHDDTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=10kHDDTrend_00
+
+
+{***** HDD 15k Trend *****}
+Chart.Select=34
+Chart.Search=15k
+Chart.Create=38
+Chart.LeftAxis=[%]
+Chart.Name=15k HDD utilization
+SerieCopy=#chart.avg, 34, 38, AVG, clOlive
+Chart.Filter=40
+$15kHDDTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=15kHDDTrend_00
+
+
+{***** HDD 7k2 Trend *****}
+Chart.Select=34
+Chart.Search=7k2
+Chart.Create=37
+Chart.LeftAxis=[%]
+Chart.Name=7k2 HDD utilization
+SerieCopy=#chart.avg, 34, 37, AVG, clBlue
+Chart.Filter=20
+$7k2HDDTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=7k2HDDTrend_00
+Chart.Close=*
+
+
+
+{***** External response Trend *****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Response.csv
+Chart.Open=38
+Chart=DelZero
+Chart.Create=39
+Chart.LeftAxis=[ms]
+Chart.Name=External Storage Response Time
+SerieCopy=#chart.avg, 38, 39, AVG, clGray
+Chart.Filter=20
+$ExRespTrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=ExRespTrend_00
+Chart.Close=*
+
+
+
+
+{***** External MBs Trend *****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Trans.csv
+Chart.Open=40
+Chart=DelZero, Divide1000, ShowSum
+Chart.Create=41
+Chart.LeftAxis=[MB/s]
+Chart.Name=External Storage Transfer rate
+SerieCopy=#chart.sum, 40, 41, Suma, clSkyBlue  
+Chart.Filter=20
+$ExMBstrend=#chart.avg
+Chart.TransformToAreaChart
+AreaChart.Save=ExMBsTrend_00
+Chart.Close=*
+
+Html.Parse=Header_01.html,   Body_Metro_Trends_ExtCSS_E2.html,    Footer_DataClue_01.html
+
+Return

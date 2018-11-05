@@ -1,0 +1,44 @@
+{*************************  Pool Board Makro *************************}
+{*************************  Pool Board Makro *************************}
+{*************************  Pool Board Makro *************************}
+
+Line.Width=1
+Chart.Width=970
+
+
+$HeaderItems=<li><a href="Day%20Analysis.html" style="background: GreenYellow;">Last Day</a></li>
+$>>HeaderItems=<li><a href="index.html">Last Week</a></li>
+$>>HeaderItems=<li><a href="Month%20Analysis.html">Last Month</a></li>
+$>>HeaderItems=<li>&nbsp; &#9658; &nbsp;</li>
+Report.Name=Day Analysis
+Day.Select=1
+Call=Gxxx_GetCapacityInfo_ToVariables_01.script
+Call=Gxxx_PoolBoard_DynChart_04.script
+Variable.Save=DP_day.$StorageSystem
+
+$HeaderItems=<li><a href="Day%20Analysis.html"> Last Day</a></li>
+$>>HeaderItems=<li><a href="index.html" style="background: GreenYellow;">Last Week</a></li>
+$>>HeaderItems=<li><a href="Month%20Analysis.html">Last Month</a></li>
+$>>HeaderItems=<li>&nbsp; &#9658; &nbsp;</li>
+Day.Select=7
+Report.Name=index
+//Override JobName in Title
+$JobName=Week Analysis
+Call=Gxxx_PoolBoard_DynChart_04.script
+Variable.Save=DP_week.$StorageSystem
+
+$HeaderItems=<li><a href="Day%20Analysis.html">Last Day</a></li>
+$>>HeaderItems=<li><a href="index.html">Last Week</a></li>
+$>>HeaderItems=<li><a href="Month%20Analysis.html" style="background: GreenYellow;">Last Month</a></li>
+$>>HeaderItems=<li>&nbsp; &#9658; &nbsp;</li>
+Day.Select=30
+Report.Name=Month Analysis
+Call=Gxxx_PoolBoard_DynChart_04.script
+Variable.Save=DP_month.$StorageSystem
+
+return
+
+
+
+
+

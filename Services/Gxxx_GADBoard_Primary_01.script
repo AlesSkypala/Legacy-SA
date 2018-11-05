@@ -1,0 +1,128 @@
+SA_Version=87
+{***************************************** GADBoard Section *******************************************}
+{***************************************** GADBoard Section *******************************************}
+{***************************************** GADBoard Section *******************************************}
+{***************************************** GADBoard Section *******************************************}
+Description=GADBoard Script compute basic storage metrics and parse DashBoard HTML template
+
+{***** Setting width/height/Style***** }
+Chart.Width=470
+Chart.Height=165
+Line.Width=1
+Grid=180
+
+
+
+{**** Response time Chart *****}
+Chart.File=RCLDEV_dat\RCLDEV_Update_Copy_Response.ZIP
+Chart.Statistic=*
+Chart.Open=1
+Chart=DelZero
+Chart.Filter=8
+Chart.Name=Response Time of Update Copy  
+$TCPPRespMax=#chart.max
+$TCPPRespAvg=#chart.avg
+Chart.Save=ResponseTCP
+Chart.Name=
+Chart.Close=*
+
+
+{***** KBPS Chart *****}
+Chart.File=RCLDEV_dat\RCLDEV_Update_Copy_Transfer.ZIP
+Chart.Statistic=*
+Chart.Open=2
+Chart=DelZero, Divide1000, ShowSum
+Chart.Name=Transfer Rate of Update Copy
+$TCPPMBsMax=#chart.summax
+$TCPMBsAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=MBpsTCP
+Chart.Close=*
+
+
+{***** IOPs Chart *****}
+Chart.File=RCLDEV_dat\RCLDEV_Update_Copy_RIO.ZIP
+Chart.Statistic=*
+Chart.Open=3
+Chart=DelZero, ShowSum
+Chart.Name=IO Rate of Udate Copy
+$TCPIopsMax=#chart.summax
+$TCPIopsAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=IOpsTCP
+Chart.Close=*
+
+
+{***** TC pairs*****}
+Chart.File=RCLDEV_dat\RCLDEV_Out_of_Tracks.ZIP
+Chart.Statistic=*
+Chart.Open=4
+Chart=DelZero
+Chart.Name=Missed Synchronicity Blocks
+Chart.Save=SyncTCP
+Chart.Close=*
+
+
+{******* TC operations on Port - response *****}
+Chart.File=Port_dat.ZIP
+Chart.Statistic=port_Initiator_Response.csv
+Chart.Open=7
+Chart=Divide1000
+Chart.Search=MCU
+Chart.Name=Respose Time of Update Copy on Secondary Storage
+$PPortResponseMax=#chart.summax
+$PPortResponseAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=ResponsePortP
+Chart.Close=*
+
+
+{******* TC operations on Port - response *****}
+Chart.File=Port_dat.ZIP
+Chart.Statistic=port_Initiator_KBPS.csv
+Chart.Open=8
+Chart=Divide1000, ShowSum
+Chart.Search=MCU
+Chart.Name=Transfer rate of Update Copy to Secondary Storage
+$PPortMBpsMax=#chart.summax
+$PPortMBpsAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=MBpsPortP
+Chart.Close=*
+
+
+
+
+
+
+{***** Quorum response*****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Response.csv
+Chart.Open=5
+Chart=DelZero
+Chart.Search=Quorum
+Chart.Name=Response Time to Quorum
+$QPRespMax=#chart.summax
+$QPRepAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=ResponseQP
+Chart.Close=*
+
+
+{***** Quorum MBps****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Trans.csv
+Chart.Open=5
+Chart=DelZero, Divide1000
+Chart.Search=Quorum
+Chart.Name=Transfer Rate to Quorum
+$QPMBpsMax=#chart.summax
+$QPMBpsAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=MBpsQP
+Chart.Close=*
+
+
+
+
+Return

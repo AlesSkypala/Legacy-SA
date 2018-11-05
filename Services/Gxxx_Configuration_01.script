@@ -1,0 +1,11 @@
+SA_Version=87
+{*****************************************  Config Section *******************************************}
+{*****************************************  Config Section *******************************************}
+{*****************************************  Config Section *******************************************}
+{*****************************************  Config Section *******************************************}
+Description=Config Script extract source zipped files to report folder and modify "ReportTitle.html" file to add "Back Home" link
+
+ExtractZipFile=html.zip
+ReplaceTextInFile=Common\html\reportTitle.html,   <h1>Configuration Reports</h1>,   <h1>Configuration Reports&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../../../index.html" target="_top" style="font-size: 22px">Home</a></h1>
+
+Return

@@ -1,0 +1,201 @@
+SA_Version=87
+{***************************************** DashBoard Section *******************************************}
+{***************************************** DashBoard Section *******************************************}
+{***************************************** DashBoard Section *******************************************}
+{***************************************** DashBoard Section *******************************************}
+Description=DashBoard Script compute basic storage metrics and parse DashBoard HTML template
+
+{***** Setting width/height/Style***** }
+Chart.Width=470
+Chart.Height=250
+Line.Width=1
+Grid=180
+
+
+{**** Response time Chart *****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Response.ZIP
+Chart.Statistic=*
+Chart.Open=1
+Chart=DelZero, Divide1000
+Chart.Filter=8
+Chart.Name=Response Time On LUNs
+$PGRespMax=#chart.max
+$PGRespAvg=#chart.avg
+Chart.Save=Response_00
+Chart.Name=
+Chart.TransformToHistogram
+HistogramChart.Height=150
+HistogramChart.Save=Response2_00
+Chart=AscendingSort
+Chart.TopSelect=5
+Chart.Name=Top LUNs with highest response time
+Chart.TransformToHtmlTable=ResponseTable
+Chart.Close=*
+
+
+
+{***** IOPs Chart *****}
+Chart.File=Port_dat.ZIP
+Chart.Statistic=Port_IOPS.csv
+Chart.Open=2
+Chart.Multipy=4
+Chart=DelZero, ShowSum
+Chart.Name=I/O Rate per second on Ports
+$PortIopsMax=#chart.summax
+$PortIopsAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=IopsOnPort_00
+Chart.Close=*
+
+
+
+{***** KBPS Chart *****}
+Chart.File=Port_dat.ZIP
+Chart.Statistic=Port_KBPS.csv
+Chart.Open=3
+Chart.Multipy=4
+Chart=DelZero, Divide1000, ShowSum
+Chart.Name=Transfer rate on Ports
+$PortMBsMax=#chart.summax
+$PortMBsAvg=#chart.sumavg
+Chart.Filter=8
+Chart.Save=MBsOnPort_00
+Chart.Close=*
+
+
+
+{***** PG utilisation *****}
+Chart.File=PhyPG_dat.ZIP
+Chart.Statistic=PHY_Short_PG.csv, PHY_PG.csv
+Chart.Open=7
+Chart=DelZero
+Chart.Multipy=4
+$PGUtilMax=#chart.max
+$PGUtilAvg=#chart.avg
+Chart=AlphabetSort
+Chart.Name=Utilization of the physical drives
+Chart.Filter=8
+Chart.Save=PGUtilization_00
+Chart.TransformToBarChart
+BarChart.Height=200
+BarChart.Save=PGUtilization2_00
+Chart.Legend=off
+Chart.Close=*
+
+
+
+
+
+{***** Processor utilisation *****}
+Chart.File=PhyProc_dat.ZIP
+Chart.Statistic=PHY_Short_MP.csv, PHY_MP.csv
+Chart.Open=8
+Chart.Name=Utlization of the  storage processors
+$ProcUtilMax=#chart.max
+$ProcUtilAvg=#chart.avg
+Chart.Filter=8
+Chart.Save=ProcUtilization_00
+Chart.Close=*
+
+
+{***** Random/Seq ration *****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Seq_Write_IOPS.zip
+Chart.Statistic=*
+Chart.Open=9
+Chart.File=LDEVEachOfCU_dat\LDEV_Rnd_Write_IOPS.zip
+Chart.Statistic=*
+Chart.Open=11
+Chart.File=LDEVEachOfCU_dat\LDEV_Seq_Read_IOPS.zip
+Chart.Statistic=*
+Chart.Open=12
+Chart.File=LDEVEachOfCU_dat\LDEV_Rnd_Read_IOPS.zip
+Chart.Statistic=*
+Chart.Open=13
+Chart.Create=10
+Chart.Name=Read/Write and Random/Sequential ratio
+Chart.LeftAxis=[IOPs]
+SerieCopy=#chart.sum,9,10,Sequential Write, clRed, 1
+SerieCopy=#chart.sum,11,10,Random Write, clMaroon, 1
+SerieCopy=#chart.sum,12,10,Sequential Read,clGreen, 1
+SerieCopy=#chart.sum,13,10,Random Read, clOlive, 1
+Chart.Filter=8
+Chart.Multipy=4
+Chart.Save=SeqRndRatio_00
+Chart.TransformToPieChart
+PieChart.Save=SeqRndRatioPie_00
+Chart.Close=*
+
+
+
+{***** Write Pending Rate *****}
+Chart.File=PhyMainPK_dat.ZIP, PhyMPU_dat.ZIP, PhyCMPK_dat.ZIP,  PhyESW_dat.ZIP, PhyCSW_dat.ZIP
+Chart.Statistic=PHY_Short_Write_Pending_Rate.csv, PHY_Write_Pending_Rate.csv
+Chart.Open=17
+Chart.Name=Write Pending Rate
+$WritePendingMax=#chart.max
+$WritePendingAvg=#chart.avg
+Chart.Filter=8
+Chart.Save=WritePending_00
+Chart.Close=*
+
+
+{***** IOPs Chart on LUNs***** }
+Chart.File=LDEVEachOfCU_dat\LDEV_IOPS.zip
+Chart.Statistic=*
+Chart.Open=4
+Chart=DelZero, AscendingSort
+Chart.Multipy=4
+Chart.Name=Top LUNs with the highest IOPs trafic
+Chart.TopSelect=5
+Chart.TransformToHtmlTable=IOPsTable
+Chart.Close=*
+
+
+{***** IMBs Chart on LUNs***** }
+Chart.File=LDEVEachOfCU_dat\LDEV_TransRate.zip
+Chart.Statistic=*
+Chart.Open=4
+Chart=DelZero, Divide1000
+Chart=AscendingSort
+Chart.Multipy=4
+Chart.Name=Top LUNs with the highest MBps trafic
+Chart.TopSelect=5
+Chart.TransformToHtmlTable=MBsTable
+Chart.Close=*
+
+
+
+{***** External response *****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Response.csv
+Chart.Open=50
+Chart=DelZero
+Chart.Filter=8
+$ExtResponseAvg=#chart.avg
+$ExtResponseMax=#chart.max
+Chart.Name=External Storage Latency
+Chart.LeftAxis=[ms]
+Chart.Save=ExtResponse
+Chart.Close=*
+
+
+{***** External MB/s *****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Trans.csv
+Chart.Open=51
+Chart=DelZero, Divide1000, ShowSum
+Chart.Filter=8
+Chart.Name=External Storage Transfer rate
+Chart.LeftAxis=[MB/s]
+Chart.Save=ExtMBs
+$ExtMBsAvg=#chart.sumavg
+$ExtMBsMax=#chart.summax
+Chart.Close=*
+
+$ActualDate=#date.end
+
+{*** Parse Section ***}
+
+Html.Parse=Header_05.html,    Body_Metro_DashBoard_ExtCSS_E1.html,    footer_3S_01.html
+
+Return

@@ -1,0 +1,2246 @@
+actualdate=TimeRange
+availablecap_pool_1_afa_t1=18.6
+availablecap_pool_2_afa_t1=6.1
+avg_0=-
+avg_1=-
+avg_2=-
+avg_3=-
+avg_4=-
+cmpk_cache_avg=19.7
+cmpk_cache_max=48.8
+compressionratio_pool_1_afa_t1=1.91
+compressionratio_pool_2_afa_t1=2.2
+disbalanceinfo_cha_1pc_cha_2pc=
+disbalanceinfo_cha_1pd_cha_2pd=<div class="utilization-warning">  Warning: Channel Adapter Pair disbalance 34.8% (74 [MB/s]) </div>
+disbalanceinfo_cha_1pe_cha_2pe=
+disbalanceinfo_cha_1pj_cha_2pj=
+disbalanceinfo_cha_1pk_cha_2pk=
+dka_cmpk_avg=4.79
+dka_cmpk_max=18
+dpwarning_wresp_totalevent=0
+DPWarning_WResp_TotalEvent_Pool_1_AFA_T1=0
+DPWarning_WResp_TotalEvent_Pool_2_AFA_T1=0
+dpwarning_wresp_totaltime=00:00:00
+DPWarning_WResp_TotalTime_Pool_1_AFA_T1=00:00:00
+DPWarning_WResp_TotalTime_Pool_2_AFA_T1=00:00:00
+exmbsavg=0
+exmbsmax=0
+exrespavg=-
+exrespmax=-
+extmbsavg=0
+extmbsmax=0
+extresponseavg=-
+extresponsemax=-
+headeritems=<li><a href="Day%20Analysis.html" style="background: GreenYellow;">Last Day</a></li>
+<li><a href="index.html">Last Week</a></li>
+<li><a href="Month%20Analysis.html">Last Month</a></li>
+<li>&nbsp; &#9658; &nbsp;</li>
+<li><a href="#Pool_1_AFA_T1"><img title="" alt="" src="db01.png">&nbsp; Pool#1 AFA-T1</a></li>
+<li><a href="#Pool_2_AFA_T1"><img title="" alt="" src="db01.png">&nbsp; Pool#2 AFA-T1</a></li>
+htmlbody=<!-- Code Created by Script -->
+<!-- Pool#1 AFA-T1 -->
+<!-- Header -->
+<div id="Pool_1_AFA_T1" class="sectionBox" style="width: 995px;">
+<h2>WorkLoad Charakteristic on  <big> Pool#1 AFA-T1</big>   [Selected: %SeriesActiveCount_Pool_1_AFA_T1% of %SeriesCount_Pool_1_AFA_T1% #LDEVs]<a href="#toph">&#9650;</a></h2>
+<!-- Info boxes -->
+<div style="margin: 18px; width: 100%""'>
+ <div class="myBox" style="width: 98px;"'><h2>SSD Tier</h2><h3>%PG_SSDUtilAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_SSDUtilMax_Pool_1_AFA_T1%&nbsp%</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>SAS Tier</h2><h3>%PG_SASUtilAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_SASUtilMax_Pool_1_AFA_T1%&nbsp%</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>NL-SAS Tier</h2><h3>%PG_NLSASUtilAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_NLSASUtilMax_Pool_1_AFA_T1%&nbsp%</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Total IOPs</h2><h3>%LDEV_IOPsAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_IOPsMax_Pool_1_AFA_T1%&nbspIOPs</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Read IOPs</h2><h3>%LDEV_RIOPsAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_RIOPsMax_Pool_1_AFA_T1%&nbspIOPs</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Write IOPs</h2><h3>%LDEV_WIOPsAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_WIOPsMax_Pool_1_AFA_T1%&nbspIOPs</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Response.</h2><h3>%LDEV_WgthRespAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_RespMax_Pool_1_AFA_T1%&nbsp;ms</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Read Response</h2><h3>%LDEV_RWgthRespAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_RRespMax_Pool_1_AFA_T1%&nbsp;ms</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Write Response</h2><h3>%LDEV_WWgthRespAvg_Pool_1_AFA_T1%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_WRespMax_Pool_1_AFA_T1%&nbsp;ms</h4></div>
+</div>
+<div>
+
+</div>
+<!-- R/W resp-->
+<div style="text-align:center"><img title="Weighted R/W AverageResponse on Pool#1 AFA-T1 - Average: %LDEV_RWWgthRespAvg_Pool_1_AFA_T1% [ms], peak: %LDEV_RWWghtRespMax_Pool_1_AFA_T1% [ms]." alt="IOPs" src="%ImagePath%PGWeightResp_Pool_1_AFA_T1.png"  onclick="DynChart('PGWeightResp_Pool_1_AFA_T1', 'Weighted R/W Average Response on Pool#1 AFA-T1 ', '[ms]')" style="cursor: alias;">
+<br>Weighted R/W Average Response Time on server group Pool#1 AFA-T1 - Average: %LDEV_RWWgthRespAvg_Pool_1_AFA_T1% [ms], peak: %LDEV_RWWghtRespMax_Pool_1_AFA_T1% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].
+<a href="%ImagePath%PGWeightResp_Pool_1_AFA_T1.csv"> CSV Download link...</a></div>
+<!-- HDD -->
+<div style="text-align:center"><img  title="Drive utilization of Pool#1 AFA-T1 - Average: %PGUtilAvg_Pool_1_AFA_T1% [%], peak: %PGUtilMax_Pool_1_AFA_T1% [%]." alt="PGUtil" src="%ImagePath%PGUtilization_Pool_1_AFA_T1.png">
+<br>Utilization of the physical disks of Pool#1 AFA-T1 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_Pool_1_AFA_T1% [%], peak: %PGUtilMax_Pool_1_AFA_T1% [%].</div>
+<!-- Resp -->
+<div style="text-align:center"><img title="Response on Pool#1 AFA-T1 - Average: %LDEV_RespAvg_Pool_1_AFA_T1% [ms], peak: %LDEV_RespMax_Pool_1_AFA_T1% [ms]." alt="IOPs" src="%ImagePath%PGResp_Pool_1_AFA_T1.png">
+<br>Response Time on server group Pool#1 AFA-T1 - Average: %LDEV_RespAvg_Pool_1_AFA_T1% [ms], peak: %LDEV_RespMax_Pool_1_AFA_T1% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+<!-- IOPs -->
+<div style="text-align:center"><img title="IOPs on Pool#1 AFA-T1 - Average: %LDEV_IOPsAvg_Pool_1_AFA_T1% [ms], peak: %LDEV_IOPsMax_Pool_1_AFA_T1% [ms]." alt="IOPs" src="%ImagePath%PGIOPs_Pool_1_AFA_T1.png">
+<br>Transaction Rate on server group Pool#1 AFA-T1 - Average: %LDEV_IOPsAvg_Pool_1_AFA_T1% [IOPs], peak: %LDEV_IOPsMax_Pool_1_AFA_T1% [IOPs]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+<!-- Histogram and Table -->
+<div style="display: inline-block; width: 470px;"><img title="Response Histogram" alt="Response Histogram" src="%ImagePath%HistogramResp_Pool_1_AFA_T1.png">
+<br>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div>
+<div style="display: inline-block; width: 470px;">
+%LatencyTable_Pool_1_AFA_T1%
+</div>
+<div><img id="LatencyTable_Pool_1_AFA_T1" src="../empty.png"></div>
+</div>
+</div>
+
+<!-- Pool#2 AFA-T1 -->
+<!-- Header -->
+<div id="Pool_2_AFA_T1" class="sectionBox" style="width: 995px;">
+<h2>WorkLoad Charakteristic on  <big> Pool#2 AFA-T1</big>   [Selected: %SeriesActiveCount_Pool_2_AFA_T1% of %SeriesCount_Pool_2_AFA_T1% #LDEVs]<a href="#toph">&#9650;</a></h2>
+<!-- Info boxes -->
+<div style="margin: 18px; width: 100%""'>
+ <div class="myBox" style="width: 98px;"'><h2>SSD Tier</h2><h3>%PG_SSDUtilAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_SSDUtilMax_Pool_2_AFA_T1%&nbsp%</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>SAS Tier</h2><h3>%PG_SASUtilAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_SASUtilMax_Pool_2_AFA_T1%&nbsp%</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>NL-SAS Tier</h2><h3>%PG_NLSASUtilAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;%</span></h3> <h4>Peak %PG_NLSASUtilMax_Pool_2_AFA_T1%&nbsp%</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Total IOPs</h2><h3>%LDEV_IOPsAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_IOPsMax_Pool_2_AFA_T1%&nbspIOPs</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Read IOPs</h2><h3>%LDEV_RIOPsAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_RIOPsMax_Pool_2_AFA_T1%&nbspIOPs</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Write IOPs</h2><h3>%LDEV_WIOPsAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;IOPs</span></h3> <h4>Peak %LDEV_WIOPsMax_Pool_2_AFA_T1%&nbspIOPs</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Response.</h2><h3>%LDEV_WgthRespAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_RespMax_Pool_2_AFA_T1%&nbsp;ms</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Read Response</h2><h3>%LDEV_RWgthRespAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_RRespMax_Pool_2_AFA_T1%&nbsp;ms</h4></div>
+ <div class="myBox" style="width: 98px;"'><h2>Write Response</h2><h3>%LDEV_WWgthRespAvg_Pool_2_AFA_T1%<span style="font-size:10px;">&nbsp;ms</span></h3> <h4>Peak %LDEV_WRespMax_Pool_2_AFA_T1%&nbsp;ms</h4></div>
+</div>
+<div>
+
+</div>
+<!-- R/W resp-->
+<div style="text-align:center"><img title="Weighted R/W AverageResponse on Pool#2 AFA-T1 - Average: %LDEV_RWWgthRespAvg_Pool_2_AFA_T1% [ms], peak: %LDEV_RWWghtRespMax_Pool_2_AFA_T1% [ms]." alt="IOPs" src="%ImagePath%PGWeightResp_Pool_2_AFA_T1.png"  onclick="DynChart('PGWeightResp_Pool_2_AFA_T1', 'Weighted R/W Average Response on Pool#2 AFA-T1 ', '[ms]')" style="cursor: alias;">
+<br>Weighted R/W Average Response Time on server group Pool#2 AFA-T1 - Average: %LDEV_RWWgthRespAvg_Pool_2_AFA_T1% [ms], peak: %LDEV_RWWghtRespMax_Pool_2_AFA_T1% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].
+<a href="%ImagePath%PGWeightResp_Pool_2_AFA_T1.csv"> CSV Download link...</a></div>
+<!-- HDD -->
+<div style="text-align:center"><img  title="Drive utilization of Pool#2 AFA-T1 - Average: %PGUtilAvg_Pool_2_AFA_T1% [%], peak: %PGUtilMax_Pool_2_AFA_T1% [%]." alt="PGUtil" src="%ImagePath%PGUtilization_Pool_2_AFA_T1.png">
+<br>Utilization of the physical disks of Pool#2 AFA-T1 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_Pool_2_AFA_T1% [%], peak: %PGUtilMax_Pool_2_AFA_T1% [%].</div>
+<!-- Resp -->
+<div style="text-align:center"><img title="Response on Pool#2 AFA-T1 - Average: %LDEV_RespAvg_Pool_2_AFA_T1% [ms], peak: %LDEV_RespMax_Pool_2_AFA_T1% [ms]." alt="IOPs" src="%ImagePath%PGResp_Pool_2_AFA_T1.png">
+<br>Response Time on server group Pool#2 AFA-T1 - Average: %LDEV_RespAvg_Pool_2_AFA_T1% [ms], peak: %LDEV_RespMax_Pool_2_AFA_T1% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+<!-- IOPs -->
+<div style="text-align:center"><img title="IOPs on Pool#2 AFA-T1 - Average: %LDEV_IOPsAvg_Pool_2_AFA_T1% [ms], peak: %LDEV_IOPsMax_Pool_2_AFA_T1% [ms]." alt="IOPs" src="%ImagePath%PGIOPs_Pool_2_AFA_T1.png">
+<br>Transaction Rate on server group Pool#2 AFA-T1 - Average: %LDEV_IOPsAvg_Pool_2_AFA_T1% [IOPs], peak: %LDEV_IOPsMax_Pool_2_AFA_T1% [IOPs]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+<!-- Histogram and Table -->
+<div style="display: inline-block; width: 470px;"><img title="Response Histogram" alt="Response Histogram" src="%ImagePath%HistogramResp_Pool_2_AFA_T1.png">
+<br>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div>
+<div style="display: inline-block; width: 470px;">
+%LatencyTable_Pool_2_AFA_T1%
+</div>
+<div><img id="LatencyTable_Pool_2_AFA_T1" src="../empty.png"></div>
+</div>
+</div>
+
+HtmlWidth=970
+cha_avg_cha-1pc=568
+cha_avg_cha-1pd=177
+cha_avg_cha-1pe=104
+cha_avg_cha-1pj=457
+cha_avg_cha-1pk=500
+cha_avg_cha-2pc=562
+cha_avg_cha-2pd=248
+cha_avg_cha-2pe=103
+cha_avg_cha-2pj=457
+cha_avg_cha-2pk=499
+cha_cmpk_avg=2.88
+cha_cmpk_max=17
+CHA_PAIR_Table_CHA_1PC_CHA_2PC=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PC</th>
+    <td>568</td>
+    <td>568</td>
+    <td>170</td>
+    <td>1770</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PC</th>
+    <td>562</td>
+    <td>562</td>
+    <td>167</td>
+    <td>1786</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+CHA_PAIR_Table_CHA_1PD_CHA_2PD=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PD</th>
+    <td>177</td>
+    <td>177</td>
+    <td>42</td>
+    <td>966</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PD</th>
+    <td>248</td>
+    <td>248</td>
+    <td>56</td>
+    <td>1533</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+CHA_PAIR_Table_CHA_1PE_CHA_2PE=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PE</th>
+    <td>104</td>
+    <td>104</td>
+    <td>18</td>
+    <td>871</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PE</th>
+    <td>103</td>
+    <td>103</td>
+    <td>18</td>
+    <td>871</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+CHA_PAIR_Table_CHA_1PJ_CHA_2PJ=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PJ</th>
+    <td>457</td>
+    <td>457</td>
+    <td>157</td>
+    <td>1427</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PJ</th>
+    <td>457</td>
+    <td>457</td>
+    <td>154</td>
+    <td>1429</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+CHA_PAIR_Table_CHA_1PK_CHA_2PK=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PK</th>
+    <td>500</td>
+    <td>500</td>
+    <td>178</td>
+    <td>1561</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PK</th>
+    <td>499</td>
+    <td>499</td>
+    <td>178</td>
+    <td>1561</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+cha_summary=<!--Sub-Loop code generating -->
+<!-- Series_5=CHA-1PE,CHA-2PE -->
+<div id="CHA_1PE_CHA_2PE" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PE,CHA-2PE<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PE,CHA-2PE</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PE_CHA_2PE%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PE_CHA_2PE" alt="Series_5=CHA-1PE,CHA-2PE" src="%ImagePath%CHA_PAIR_CHA_1PE_CHA_2PE.png" onclick="DynChart('CHA_PAIR_CHA_1PE_CHA_2PE', 'Transfer Rate on Poorts of Channel Adapter CHA-1PE,CHA-2PE in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PE</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PE%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PE" alt="1=CHA-1PE" src="%ImagePath%CHA_PORT_CHA-1PE.png" onclick="DynChart('CHA_PORT_CHA-1PE', 'Transfer Rate on Poorts of Channel Adapter CHA-1PE in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PE</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PE%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PE" alt="2=CHA-2PE" src="%ImagePath%CHA_PORT_CHA-2PE.png" onclick="DynChart('CHA_PORT_CHA-2PE', 'Transfer Rate on Poorts of Channel Adapter CHA-2PE in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+<!-- Series_6=CHA-1PD,CHA-2PD -->
+<div id="CHA_1PD_CHA_2PD" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PD,CHA-2PD<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PD,CHA-2PD</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PD_CHA_2PD%<br>
+<div class="utilization-warning">  Warning: Channel Adapter Pair disbalance 34.8% (74 [MB/s]) </div>
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PD_CHA_2PD" alt="Series_6=CHA-1PD,CHA-2PD" src="%ImagePath%CHA_PAIR_CHA_1PD_CHA_2PD.png" onclick="DynChart('CHA_PAIR_CHA_1PD_CHA_2PD', 'Transfer Rate on Poorts of Channel Adapter CHA-1PD,CHA-2PD in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PD</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PD%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PD" alt="1=CHA-1PD" src="%ImagePath%CHA_PORT_CHA-1PD.png" onclick="DynChart('CHA_PORT_CHA-1PD', 'Transfer Rate on Poorts of Channel Adapter CHA-1PD in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PD</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PD%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PD" alt="2=CHA-2PD" src="%ImagePath%CHA_PORT_CHA-2PD.png" onclick="DynChart('CHA_PORT_CHA-2PD', 'Transfer Rate on Poorts of Channel Adapter CHA-2PD in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+<!-- Series_7=CHA-1PJ,CHA-2PJ -->
+<div id="CHA_1PJ_CHA_2PJ" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PJ,CHA-2PJ<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PJ,CHA-2PJ</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PJ_CHA_2PJ%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PJ_CHA_2PJ" alt="Series_7=CHA-1PJ,CHA-2PJ" src="%ImagePath%CHA_PAIR_CHA_1PJ_CHA_2PJ.png" onclick="DynChart('CHA_PAIR_CHA_1PJ_CHA_2PJ', 'Transfer Rate on Poorts of Channel Adapter CHA-1PJ,CHA-2PJ in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PJ</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PJ%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PJ" alt="1=CHA-1PJ" src="%ImagePath%CHA_PORT_CHA-1PJ.png" onclick="DynChart('CHA_PORT_CHA-1PJ', 'Transfer Rate on Poorts of Channel Adapter CHA-1PJ in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PJ</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PJ%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PJ" alt="2=CHA-2PJ" src="%ImagePath%CHA_PORT_CHA-2PJ.png" onclick="DynChart('CHA_PORT_CHA-2PJ', 'Transfer Rate on Poorts of Channel Adapter CHA-2PJ in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+<!-- Series_8=CHA-1PK,CHA-2PK -->
+<div id="CHA_1PK_CHA_2PK" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PK,CHA-2PK<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PK,CHA-2PK</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PK_CHA_2PK%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PK_CHA_2PK" alt="Series_8=CHA-1PK,CHA-2PK" src="%ImagePath%CHA_PAIR_CHA_1PK_CHA_2PK.png" onclick="DynChart('CHA_PAIR_CHA_1PK_CHA_2PK', 'Transfer Rate on Poorts of Channel Adapter CHA-1PK,CHA-2PK in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PK</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PK%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PK" alt="1=CHA-1PK" src="%ImagePath%CHA_PORT_CHA-1PK.png" onclick="DynChart('CHA_PORT_CHA-1PK', 'Transfer Rate on Poorts of Channel Adapter CHA-1PK in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PK</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PK%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PK" alt="2=CHA-2PK" src="%ImagePath%CHA_PORT_CHA-2PK.png" onclick="DynChart('CHA_PORT_CHA-2PK', 'Transfer Rate on Poorts of Channel Adapter CHA-2PK in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+<!-- Series_9=CHA-1PC,CHA-2PC -->
+<div id="CHA_1PC_CHA_2PC" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PC,CHA-2PC<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PC,CHA-2PC</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PC_CHA_2PC%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PC_CHA_2PC" alt="Series_9=CHA-1PC,CHA-2PC" src="%ImagePath%CHA_PAIR_CHA_1PC_CHA_2PC.png" onclick="DynChart('CHA_PAIR_CHA_1PC_CHA_2PC', 'Transfer Rate on Poorts of Channel Adapter CHA-1PC,CHA-2PC in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PC</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PC%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PC" alt="1=CHA-1PC" src="%ImagePath%CHA_PORT_CHA-1PC.png" onclick="DynChart('CHA_PORT_CHA-1PC', 'Transfer Rate on Poorts of Channel Adapter CHA-1PC in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PC</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PC%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PC" alt="2=CHA-2PC" src="%ImagePath%CHA_PORT_CHA-2PC.png" onclick="DynChart('CHA_PORT_CHA-2PC', 'Transfer Rate on Poorts of Channel Adapter CHA-2PC in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+CHAWarning_EventCount_CHA_1PC_CHA_2PC=0
+CHAWarning_EventCount_CHA_1PD_CHA_2PD=1
+CHAWarning_EventCount_CHA_1PE_CHA_2PE=0
+CHAWarning_EventCount_CHA_1PJ_CHA_2PJ=0
+CHAWarning_EventCount_CHA_1PK_CHA_2PK=0
+chawarning_totalevent=1
+ImagePath=Day_Analysis_Images/
+infotable=<!-- Global Table Info Generated by Code -->
+<form name="listForm">
+<table class="tb2" id="sumTable">
+<tr>
+  <th>Pool<br>Name</th>
+  <th>SSD<br>Tier<br>[%]</th>
+  <th>SAS<br>Tier<br>[%]</th>
+  <th>NL-SAS<br>Tier<br>[%]</th>
+  <th>Total<br>[IOPs]</th>
+  <th>Read<br>[IOPs]</th>
+  <th>Write<br>[IOPs]</th>
+  <th>Read<br>Resp.<br>[ms]</th>
+  <th>Write<br>Resp.<br>[ms]</th>
+  <th>Physical<br>Subs<br> [%]</th>
+  <th>Physical<br>Capacity<br>[TB]</th>
+  <th>Available<br>Capacity<br>[TB]</th>
+  <th>Logical<br>Used<br>[%]</th>
+  <th>Physical<br>Used<br>[%]</th>
+  <th>Comp.<br>Ratio <br>[-]</th>
+ </tr>
+  <tr>
+    <td><input type="checkbox" name="checksel" onchange="checkTotal()" style="float: left; margin-top: 0px; display: inline-block;"><a href="#Pool_1_AFA_T1">Pool#1 AFA-T1</a></td>
+    <td>6.9<span style="font-size:8px;">&nbsp;%</span><p>&#9708;&nbsp;30.1<span style="font-size:8px;">&nbsp;%</span></p></td>
+    <td>-<span style="font-size:8px;">&nbsp;%</span><p>&#9708;&nbsp;-<span style="font-size:8px;">&nbsp;%</span></p></td></td>
+    <td>-<span style="font-size:8px;">&nbsp;%</span><p>&#9708;&nbsp;-<span style="font-size:8px;">&nbsp;%</span></p></td></td>
+    <td>77 450<span style="font-size:8px;">&nbsp;IOps</span><p>&#9708;&nbsp;145 763<span style="font-size:8px;">&nbsp;IOps</span></p></td></td>
+    <td>49 193<span style="font-size:8px;">&nbsp;IOps</span><p>&#9708;&nbsp;115 301<span style="font-size:8px;">&nbsp;IOps</span></p></td></td>
+    <td>28 533<span style="font-size:8px;">&nbsp;IOps</span><p>&#9708;&nbsp;42 740<span style="font-size:8px;">&nbsp;IOps</span></p></td></td>
+    <td>0.5<span style="font-size:8px;">&nbsp;ms</span><p>&#9708;&nbsp;197<span style="font-size:8px;">&nbsp;ms</span></p></td></td>
+    <td>0.22<span style="font-size:8px;">&nbsp;ms</span><p>&#9708;&nbsp;51.3<span style="font-size:8px;">&nbsp;ms</span></p></td></td>
+   <td>277<span style="font-size:8px;">&nbsp;%</span></td>
+   <td>77.6<span style="font-size:8px;">&nbsp;TB</span></td>
+   <td>18.6<span style="font-size:8px;">&nbsp;TB</span></td>
+   <td>72<span style="font-size:8px;">&nbsp;%</span></td>
+   <td>75<span style="font-size:8px;">&nbsp;%</span></td>
+   <td>1.91</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checksel" onchange="checkTotal()" style="float: left; margin-top: 0px; display: inline-block;"><a href="#Pool_2_AFA_T1">Pool#2 AFA-T1</a></td>
+    <td>9.9<span style="font-size:8px;">&nbsp;%</span><p>&#9708;&nbsp;27.9<span style="font-size:8px;">&nbsp;%</span></p></td>
+    <td>-<span style="font-size:8px;">&nbsp;%</span><p>&#9708;&nbsp;-<span style="font-size:8px;">&nbsp;%</span></p></td></td>
+    <td>-<span style="font-size:8px;">&nbsp;%</span><p>&#9708;&nbsp;-<span style="font-size:8px;">&nbsp;%</span></p></td></td>
+    <td>19 755<span style="font-size:8px;">&nbsp;IOps</span><p>&#9708;&nbsp;49 818<span style="font-size:8px;">&nbsp;IOps</span></p></td></td>
+    <td>12 450<span style="font-size:8px;">&nbsp;IOps</span><p>&#9708;&nbsp;42 061<span style="font-size:8px;">&nbsp;IOps</span></p></td></td>
+    <td>7 531<span style="font-size:8px;">&nbsp;IOps</span><p>&#9708;&nbsp;14 138<span style="font-size:8px;">&nbsp;IOps</span></p></td></td>
+    <td>0.79<span style="font-size:8px;">&nbsp;ms</span><p>&#9708;&nbsp;70.8<span style="font-size:8px;">&nbsp;ms</span></p></td></td>
+    <td>0.18<span style="font-size:8px;">&nbsp;ms</span><p>&#9708;&nbsp;34.6<span style="font-size:8px;">&nbsp;ms</span></p></td></td>
+   <td>313<span style="font-size:8px;">&nbsp;%</span></td>
+   <td>22.3<span style="font-size:8px;">&nbsp;TB</span></td>
+   <td>6.1<span style="font-size:8px;">&nbsp;TB</span></td>
+   <td>81<span style="font-size:8px;">&nbsp;%</span></td>
+   <td>72<span style="font-size:8px;">&nbsp;%</span></td>
+   <td>2.2</td>
+  </tr>
+</table>
+</form>
+IOPsTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest IOPs trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>00:12:05 [ThP Volume 200 GB]</th>
+    <td>2236</td>
+    <td>2232</td>
+    <td>0</td>
+    <td>10829</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:57:03 [Data_Volume_integra4]</th>
+    <td>1801</td>
+    <td>1784</td>
+    <td>0</td>
+    <td>6855</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:16:FC [ThP Volume 10 GB]</th>
+    <td>1708</td>
+    <td>1697</td>
+    <td>0</td>
+    <td>1860</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:16:F9 [ThP Volume 10 GB]</th>
+    <td>1668</td>
+    <td>1657</td>
+    <td>0</td>
+    <td>1796</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:16:FA [ThP Volume 10 GB]</th>
+    <td>1549</td>
+    <td>1539</td>
+    <td>0</td>
+    <td>1684</td>
+    <td>[IOPs]</td>
+  </tr>
+ </tbody>
+</table>
+
+IOPsTable2=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest IOPs trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_5.png');">00:12:05 [ThP Volume 200 GB]</a></th>
+    <td>2233</td>
+    <td>2233</td>
+    <td>86</td>
+    <td>4848</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_6.png');">00:57:03 [Data_Volume_integra4]</a></th>
+    <td>1795</td>
+    <td>1784</td>
+    <td>0</td>
+    <td>4741</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_7.png');">00:16:FC [ThP Volume 10 GB]</a></th>
+    <td>1697</td>
+    <td>1697</td>
+    <td>11</td>
+    <td>1794</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_8.png');">00:16:F9 [ThP Volume 10 GB]</a></th>
+    <td>1658</td>
+    <td>1658</td>
+    <td>11</td>
+    <td>1768</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_9.png');">00:16:FA [ThP Volume 10 GB]</a></th>
+    <td>1539</td>
+    <td>1539</td>
+    <td>9.9</td>
+    <td>1639</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_10.png');">00:16:FB [ThP Volume 10 GB]</a></th>
+    <td>1512</td>
+    <td>1512</td>
+    <td>9.6</td>
+    <td>1601</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_11.png');">00:16:06 [ThP Volume]</a></th>
+    <td>1239</td>
+    <td>1239</td>
+    <td>8.3</td>
+    <td>4432</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_12.png');">00:F7:37 [Data_Volume_eterna10]</a></th>
+    <td>1200</td>
+    <td>1153</td>
+    <td>0</td>
+    <td>7015</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_13.png');">00:15:0B [ThP Volume 200 GB]</a></th>
+    <td>1175</td>
+    <td>1175</td>
+    <td>104</td>
+    <td>1638</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_14.png');">00:13:0B [ThP Volume 100 GB]</a></th>
+    <td>1143</td>
+    <td>1143</td>
+    <td>269</td>
+    <td>1546</td>
+    <td>[IOPs]</td>
+  </tr>
+ </tbody>
+</table>
+
+JobName=Day Analysis
+LatencyTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest Reponse Time</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_5.png');">00:11:48 [ThP Volume 50 GB]</a></th>
+    <td>2.7</td>
+    <td>2.7</td>
+    <td>1.0</td>
+    <td>6.7</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_6.png');">00:11:44 [ThP Volume 50 GB]</a></th>
+    <td>2.6</td>
+    <td>2.6</td>
+    <td>0.70</td>
+    <td>7.1</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_7.png');">00:11:45 [ThP Volume 50 GB]</a></th>
+    <td>2.6</td>
+    <td>2.6</td>
+    <td>0.61</td>
+    <td>7.9</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_8.png');">00:66:AA [Data_Volume_mykulls1319]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0</td>
+    <td>44</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_9.png');">00:11:06 [ThP Volume 50 GB]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0.24</td>
+    <td>49</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_10.png');">00:63:A6 [Data_Volume_mykulls1319]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0</td>
+    <td>46</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_11.png');">00:17:A9 [ThP Volume 50 GB]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0</td>
+    <td>45</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_12.png');">00:11:F5 [ThP Volume 50 GB]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0.20</td>
+    <td>44</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_13.png');">00:66:AC [Data_Volume_mykulls1319]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0</td>
+    <td>48</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_14.png');">00:11:F2 [ThP Volume 50 GB]</a></th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0.26</td>
+    <td>45</td>
+    <td>[ms]</td>
+  </tr>
+ </tbody>
+</table>
+
+LatencyTable_Pool_1_AFA_T1=
+<table class="tb1">
+  <tr>
+    <th>Top Response Time LUNs of Pool#1 AFA-T1</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_5.png');">00:82:86 [Data_Volume_quaker1]</a></th>
+    <td>9.6</td>
+    <td>1.9</td>
+    <td>0</td>
+    <td>126</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_6.png');">00:82:81 [Data_Volume_quaker1]</a></th>
+    <td>9.4</td>
+    <td>1.9</td>
+    <td>0</td>
+    <td>126</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_7.png');">00:82:7D [Data_Volume_quaker1]</a></th>
+    <td>9.3</td>
+    <td>1.9</td>
+    <td>0</td>
+    <td>126</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_8.png');">00:82:7F [Data_Volume_quaker1]</a></th>
+    <td>9.0</td>
+    <td>1.8</td>
+    <td>0</td>
+    <td>122</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_9.png');">00:82:84 [Data_Volume_quaker1]</a></th>
+    <td>8.8</td>
+    <td>1.8</td>
+    <td>0</td>
+    <td>122</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_10.png');">00:82:85 [Data_Volume_quaker1]</a></th>
+    <td>8.4</td>
+    <td>1.9</td>
+    <td>0</td>
+    <td>124</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_11.png');">00:82:87 [Data_Volume_quaker1]</a></th>
+    <td>7.3</td>
+    <td>1.9</td>
+    <td>0</td>
+    <td>125</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_1_AFA_T1','LatencyTable_Pool_1_AFA_T1_12.png');">00:82:7E [Data_Volume_quaker1]</a></th>
+    <td>7.2</td>
+    <td>1.9</td>
+    <td>0</td>
+    <td>127</td>
+    <td>[ms]</td>
+  </tr>
+ </tbody>
+</table>
+
+LatencyTable_Pool_2_AFA_T1=
+<table class="tb1">
+  <tr>
+    <th>Top Response Time LUNs of Pool#2 AFA-T1</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_50.png');">00:18:1E [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_57.png');">00:18:26 [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_58.png');">00:18:1A [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_64.png');">00:18:29 [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_66.png');">00:18:1D [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_67.png');">00:18:23 [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_72.png');">00:18:28 [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable_Pool_2_AFA_T1','LatencyTable_Pool_2_AFA_T1_74.png');">00:18:1C [ThP Volume 200 GB]</a></th>
+    <td>2.4</td>
+    <td>2.4</td>
+    <td>0</td>
+    <td>69</td>
+    <td>[ms]</td>
+  </tr>
+ </tbody>
+</table>
+
+ldev_iopsavg_pool_1_afa_t1=77 450
+ldev_iopsavg_pool_2_afa_t1=19 755
+ldev_iopsmax_pool_1_afa_t1=145 763
+ldev_iopsmax_pool_2_afa_t1=49 818
+ldev_respavg_pool_1_afa_t1=0.43
+ldev_respavg_pool_2_afa_t1=0.31
+ldev_respmax_pool_1_afa_t1=130
+ldev_respmax_pool_2_afa_t1=69.4
+ldev_riopsavg_pool_1_afa_t1=49 193
+ldev_riopsavg_pool_2_afa_t1=12 450
+ldev_riopsmax_pool_1_afa_t1=115 301
+ldev_riopsmax_pool_2_afa_t1=42 061
+ldev_rrespmax_pool_1_afa_t1=197
+ldev_rrespmax_pool_2_afa_t1=70.8
+ldev_rwgthrespavg_pool_1_afa_t1=0.5
+ldev_rwgthrespavg_pool_2_afa_t1=0.79
+ldev_rwwghtrespmax_pool_1_afa_t1=6.1
+ldev_rwwghtrespmax_pool_2_afa_t1=17.7
+ldev_rwwgthrespavg_pool_1_afa_t1=0.36
+ldev_rwwgthrespavg_pool_2_afa_t1=0.48
+ldev_wgthrespavg_pool_1_afa_t1=0.4
+ldev_wgthrespavg_pool_2_afa_t1=0.56
+ldev_wiopsavg_pool_1_afa_t1=28 533
+ldev_wiopsavg_pool_2_afa_t1=7 531
+ldev_wiopsmax_pool_1_afa_t1=42 740
+ldev_wiopsmax_pool_2_afa_t1=14 138
+ldev_wrespmax_pool_1_afa_t1=51.3
+ldev_wrespmax_pool_2_afa_t1=34.6
+ldev_wwgthrespavg_pool_1_afa_t1=0.22
+ldev_wwgthrespavg_pool_2_afa_t1=0.18
+logicalused_pool_1_afa_t1=72
+logicalused_pool_2_afa_t1=81
+max_0=-
+max_1=-
+max_2=-
+max_3=-
+max_4=-
+MBsTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest MBps trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>00:63:8B [Data_Volume_mykulws1185]</th>
+    <td>229</td>
+    <td>227</td>
+    <td>0</td>
+    <td>1170</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:17:3E [Data_Volume_opal]</th>
+    <td>61</td>
+    <td>0.56</td>
+    <td>0</td>
+    <td>279</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:A7:19 [Data_Volume_hngdbp5]</th>
+    <td>56</td>
+    <td>53</td>
+    <td>0</td>
+    <td>284</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:57:03 [Data_Volume_integra4]</th>
+    <td>48</td>
+    <td>47</td>
+    <td>0</td>
+    <td>163</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:16:36 [ThP Volume 100 GB]</th>
+    <td>45</td>
+    <td>45</td>
+    <td>0</td>
+    <td>165</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+MBsTable2=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest MBps trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_5.png');">00:63:8B [Data_Volume_mykulws1185]</a></th>
+    <td>228</td>
+    <td>227</td>
+    <td>0</td>
+    <td>874</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_7.png');">00:A7:19 [Data_Volume_hngdbp5]</a></th>
+    <td>55</td>
+    <td>53</td>
+    <td>0</td>
+    <td>179</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_8.png');">00:57:03 [Data_Volume_integra4]</a></th>
+    <td>48</td>
+    <td>47</td>
+    <td>0</td>
+    <td>119</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_9.png');">00:16:36 [ThP Volume 100 GB]</a></th>
+    <td>45</td>
+    <td>45</td>
+    <td>0.66</td>
+    <td>121</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_10.png');">00:13:57 [ThP Volume 100 GB]</a></th>
+    <td>45</td>
+    <td>45</td>
+    <td>5.5</td>
+    <td>121</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_11.png');">00:13:58 [ThP Volume 100 GB]</a></th>
+    <td>45</td>
+    <td>45</td>
+    <td>5.5</td>
+    <td>121</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_12.png');">00:57:1F [Data_Volume_integra4]</a></th>
+    <td>34</td>
+    <td>33</td>
+    <td>0</td>
+    <td>92</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_14.png');">00:13:CC [ThP Volume 200 GB]</a></th>
+    <td>32</td>
+    <td>32</td>
+    <td>7.9</td>
+    <td>215</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_15.png');">00:13:CB [ThP Volume 200 GB]</a></th>
+    <td>32</td>
+    <td>32</td>
+    <td>5.3</td>
+    <td>223</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_17.png');">00:16:04 [ThP Volume]</a></th>
+    <td>30</td>
+    <td>30</td>
+    <td>0.57</td>
+    <td>159</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+mppcb_cmpk_avg=1.45
+mppcb_cmpk_max=4
+pg_nlsasutilavg_pool_1_afa_t1=-
+pg_nlsasutilavg_pool_2_afa_t1=-
+pg_nlsasutilmax_pool_1_afa_t1=-
+pg_nlsasutilmax_pool_2_afa_t1=-
+pg_sasutilavg_pool_1_afa_t1=-
+pg_sasutilavg_pool_2_afa_t1=-
+pg_sasutilmax_pool_1_afa_t1=-
+pg_sasutilmax_pool_2_afa_t1=-
+pg_ssdutilavg_pool_1_afa_t1=6.9
+pg_ssdutilavg_pool_2_afa_t1=9.9
+pg_ssdutilmax_pool_1_afa_t1=30.1
+pg_ssdutilmax_pool_2_afa_t1=27.9
+pgrespavg=0.29
+pgrespmax=83.3
+pgutilavg=7.3
+pgutilavg_0=6.9
+pgutilavg_1=9.9
+pgutilavg_pool_1_afa_t1=6.9
+pgutilavg_pool_2_afa_t1=9.9
+pgutilmax=42
+pgutilmax_0=29.1
+pgutilmax_1=25.9
+pgutilmax_pool_1_afa_t1=30.1
+pgutilmax_pool_2_afa_t1=27.9
+physicalcapacity_pool_1_afa_t1=77.6
+physicalcapacity_pool_2_afa_t1=22.3
+physicalsubs_pool_1_afa_t1=277
+physicalsubs_pool_2_afa_t1=313
+physicalused_pool_1_afa_t1=75
+physicalused_pool_2_afa_t1=72
+poolsutilization=<!-- Pool#1 AFA-T1  -->
+<div><img id="Pool#1 AFA-T1" title="Drive utilization of Pool#1 AFA-T1 - Average: %PGUtilAvg_0%, peak: %PGUtilMax_0%." alt="PGUtil" src="%ImagePath%PGUtilization_0.png"></div>
+<div>Utilization of the physical disks of Pool#1 AFA-T1 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_0% [%], peak: %PGUtilMax_0% [%].</div>
+<br>
+
+<!-- Pool#2 AFA-T1  -->
+<div><img id="Pool#2 AFA-T1" title="Drive utilization of Pool#2 AFA-T1 - Average: %PGUtilAvg_1%, peak: %PGUtilMax_1%." alt="PGUtil" src="%ImagePath%PGUtilization_1.png"></div>
+<div>Utilization of the physical disks of Pool#2 AFA-T1 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_1% [%], peak: %PGUtilMax_1% [%].</div>
+<br>
+
+Port_Table_CHA-1PC=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>1B</th>
+    <td>16</td>
+    <td>18</td>
+    <td>148</td>
+    <td>[MB/s]</td>
+    <td>1.1%</td>
+    <td>9.3%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>3B</th>
+    <td>16</td>
+    <td>39</td>
+    <td>225</td>
+    <td>[MB/s]</td>
+    <td>2.4%</td>
+    <td>14%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>5A</th>
+    <td>-</td>
+    <td>40</td>
+    <td>397</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>7B</th>
+    <td>-</td>
+    <td>75</td>
+    <td>361</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>1A</th>
+    <td>16</td>
+    <td>80</td>
+    <td>365</td>
+    <td>[MB/s]</td>
+    <td>5.0%</td>
+    <td>23%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>3A</th>
+    <td>16</td>
+    <td>147</td>
+    <td>1254</td>
+    <td>[MB/s]</td>
+    <td>9.2%</td>
+    <td>78%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>7A</th>
+    <td>-</td>
+    <td>168</td>
+    <td>745</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-1PD=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>5C</th>
+    <td>-</td>
+    <td>2.0</td>
+    <td>141</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>1C</th>
+    <td>16</td>
+    <td>6.5</td>
+    <td>270</td>
+    <td>[MB/s]</td>
+    <td>0.41%</td>
+    <td>17%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>3D</th>
+    <td>-</td>
+    <td>6.5</td>
+    <td>396</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>7C</th>
+    <td>-</td>
+    <td>15</td>
+    <td>93</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>7D</th>
+    <td>-</td>
+    <td>22</td>
+    <td>238</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>1D</th>
+    <td>16</td>
+    <td>62</td>
+    <td>843</td>
+    <td>[MB/s]</td>
+    <td>3.9%</td>
+    <td>53%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>3C</th>
+    <td>16</td>
+    <td>63</td>
+    <td>432</td>
+    <td>[MB/s]</td>
+    <td>4.0%</td>
+    <td>27%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-1PE=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>1F</th>
+    <td>16</td>
+    <td>3.5</td>
+    <td>150</td>
+    <td>[MB/s]</td>
+    <td>0.22%</td>
+    <td>9.3%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>1E</th>
+    <td>16</td>
+    <td>23</td>
+    <td>831</td>
+    <td>[MB/s]</td>
+    <td>1.4%</td>
+    <td>52%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>3E</th>
+    <td>16</td>
+    <td>77</td>
+    <td>801</td>
+    <td>[MB/s]</td>
+    <td>4.8%</td>
+    <td>50%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-1PJ=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>7K</th>
+    <td>-</td>
+    <td>1.5</td>
+    <td>358</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>3K</th>
+    <td>16</td>
+    <td>23</td>
+    <td>337</td>
+    <td>[MB/s]</td>
+    <td>1.5%</td>
+    <td>21%</td>
+    <td>RESERVED (c6/c7)</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>5K</th>
+    <td>-</td>
+    <td>25</td>
+    <td>261</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>3J</th>
+    <td>16</td>
+    <td>47</td>
+    <td>624</td>
+    <td>[MB/s]</td>
+    <td>2.9%</td>
+    <td>39%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>1K</th>
+    <td>16</td>
+    <td>61</td>
+    <td>161</td>
+    <td>[MB/s]</td>
+    <td>3.8%</td>
+    <td>10%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>5J</th>
+    <td>-</td>
+    <td>65</td>
+    <td>856</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>1J</th>
+    <td>16</td>
+    <td>78</td>
+    <td>824</td>
+    <td>[MB/s]</td>
+    <td>4.9%</td>
+    <td>51%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>7J</th>
+    <td>-</td>
+    <td>156</td>
+    <td>540</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-1PK=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>1L</th>
+    <td>16</td>
+    <td>2.1</td>
+    <td>54</td>
+    <td>[MB/s]</td>
+    <td>0.13%</td>
+    <td>3.4%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>5M</th>
+    <td>-</td>
+    <td>30</td>
+    <td>491</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>5L</th>
+    <td>-</td>
+    <td>36</td>
+    <td>772</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>1M</th>
+    <td>16</td>
+    <td>41</td>
+    <td>204</td>
+    <td>[MB/s]</td>
+    <td>2.6%</td>
+    <td>13%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>7M</th>
+    <td>-</td>
+    <td>62</td>
+    <td>680</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>3L</th>
+    <td>16</td>
+    <td>71</td>
+    <td>244</td>
+    <td>[MB/s]</td>
+    <td>4.4%</td>
+    <td>15%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>3M</th>
+    <td>16</td>
+    <td>86</td>
+    <td>885</td>
+    <td>[MB/s]</td>
+    <td>5.4%</td>
+    <td>55%</td>
+    <td>GENIUSX DB (c6/c7)</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>7L</th>
+    <td>-</td>
+    <td>172</td>
+    <td>552</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PC=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>2B</th>
+    <td>16</td>
+    <td>18</td>
+    <td>148</td>
+    <td>[MB/s]</td>
+    <td>1.1%</td>
+    <td>9.3%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>4B</th>
+    <td>16</td>
+    <td>39</td>
+    <td>225</td>
+    <td>[MB/s]</td>
+    <td>2.4%</td>
+    <td>14%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>6A</th>
+    <td>-</td>
+    <td>41</td>
+    <td>403</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>2A</th>
+    <td>16</td>
+    <td>74</td>
+    <td>360</td>
+    <td>[MB/s]</td>
+    <td>4.6%</td>
+    <td>23%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>8B</th>
+    <td>-</td>
+    <td>75</td>
+    <td>363</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>4A</th>
+    <td>16</td>
+    <td>147</td>
+    <td>1252</td>
+    <td>[MB/s]</td>
+    <td>9.2%</td>
+    <td>78%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>8A</th>
+    <td>-</td>
+    <td>168</td>
+    <td>745</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PD=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>6C</th>
+    <td>-</td>
+    <td>2.0</td>
+    <td>143</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>4D</th>
+    <td>-</td>
+    <td>6.6</td>
+    <td>402</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>2C</th>
+    <td>16</td>
+    <td>13</td>
+    <td>443</td>
+    <td>[MB/s]</td>
+    <td>0.83%</td>
+    <td>28%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>8C</th>
+    <td>-</td>
+    <td>15</td>
+    <td>93</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>8D</th>
+    <td>-</td>
+    <td>20</td>
+    <td>239</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>4C</th>
+    <td>16</td>
+    <td>62</td>
+    <td>431</td>
+    <td>[MB/s]</td>
+    <td>3.9%</td>
+    <td>27%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>2D</th>
+    <td>16</td>
+    <td>130</td>
+    <td>1419</td>
+    <td>[MB/s]</td>
+    <td>8.1%</td>
+    <td>89%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PE=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>2F</th>
+    <td>16</td>
+    <td>3.4</td>
+    <td>149</td>
+    <td>[MB/s]</td>
+    <td>0.21%</td>
+    <td>9.3%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>2E</th>
+    <td>16</td>
+    <td>23</td>
+    <td>832</td>
+    <td>[MB/s]</td>
+    <td>1.4%</td>
+    <td>52%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>4E</th>
+    <td>16</td>
+    <td>77</td>
+    <td>802</td>
+    <td>[MB/s]</td>
+    <td>4.8%</td>
+    <td>50%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PJ=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>8K</th>
+    <td>-</td>
+    <td>1.6</td>
+    <td>361</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>4K</th>
+    <td>16</td>
+    <td>23</td>
+    <td>336</td>
+    <td>[MB/s]</td>
+    <td>1.5%</td>
+    <td>21%</td>
+    <td>RESERVED (c6/c7)</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>6K</th>
+    <td>-</td>
+    <td>25</td>
+    <td>260</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>4J</th>
+    <td>16</td>
+    <td>47</td>
+    <td>625</td>
+    <td>[MB/s]</td>
+    <td>2.9%</td>
+    <td>39%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>2K</th>
+    <td>16</td>
+    <td>61</td>
+    <td>161</td>
+    <td>[MB/s]</td>
+    <td>3.8%</td>
+    <td>10%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>6J</th>
+    <td>-</td>
+    <td>65</td>
+    <td>857</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>2J</th>
+    <td>16</td>
+    <td>78</td>
+    <td>824</td>
+    <td>[MB/s]</td>
+    <td>4.9%</td>
+    <td>52%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>8J</th>
+    <td>-</td>
+    <td>156</td>
+    <td>540</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PK=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>2L</th>
+    <td>16</td>
+    <td>1.9</td>
+    <td>55</td>
+    <td>[MB/s]</td>
+    <td>0.12%</td>
+    <td>3.4%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>6M</th>
+    <td>-</td>
+    <td>30</td>
+    <td>492</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>6L</th>
+    <td>-</td>
+    <td>36</td>
+    <td>772</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>2M</th>
+    <td>16</td>
+    <td>42</td>
+    <td>204</td>
+    <td>[MB/s]</td>
+    <td>2.6%</td>
+    <td>13%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>8M</th>
+    <td>-</td>
+    <td>62</td>
+    <td>678</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>4L</th>
+    <td>16</td>
+    <td>71</td>
+    <td>243</td>
+    <td>[MB/s]</td>
+    <td>4.4%</td>
+    <td>15%</td>
+    <td>hosts</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>4M</th>
+    <td>16</td>
+    <td>86</td>
+    <td>887</td>
+    <td>[MB/s]</td>
+    <td>5.4%</td>
+    <td>55%</td>
+    <td>GENIUSX DB (c6/c7)</td>
+    <td>c6</td>
+    <td>c7</td>
+  </tr>
+  <tr>
+    <th>8L</th>
+    <td>-</td>
+    <td>172</td>
+    <td>552</td>
+    <td>[MB/s]</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+ </tbody>
+</table>
+
+portiopsavg=109 236
+portiopsmax=186 271
+portmbsavg=3 589
+portmbsmax=8 480
+procutilavg=17
+procutilmax=62
+ReportDate=26.10.2018
+ReportPath=c:\StorageAnalytics\WEB\424 DP Pool Board and SLA\
+ReportTime=31.10.2018 9:39:55
+ResponseTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with highest response time</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>00:11:48 [ThP Volume 50 GB]</th>
+    <td>2.7</td>
+    <td>2.7</td>
+    <td>1.3</td>
+    <td>5.8</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:11:44 [ThP Volume 50 GB]</th>
+    <td>2.6</td>
+    <td>2.6</td>
+    <td>0.80</td>
+    <td>6.2</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:11:45 [ThP Volume 50 GB]</th>
+    <td>2.6</td>
+    <td>2.6</td>
+    <td>0.75</td>
+    <td>6.9</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:66:AA [Data_Volume_mykulls1319]</th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0.002</td>
+    <td>40</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:11:06 [ThP Volume 50 GB]</th>
+    <td>2.5</td>
+    <td>2.5</td>
+    <td>0.26</td>
+    <td>44</td>
+    <td>[ms]</td>
+  </tr>
+ </tbody>
+</table>
+
+seriesactivecount_pool_1_afa_t1=7225
+seriesactivecount_pool_2_afa_t1=1291
+seriescount_pool_1_afa_t1=11960
+seriescount_pool_2_afa_t1=11960
+StorageSystem=XP7_AFA2_57222
+Template=Storage Analytics Report [Day Analysis]
+timerange=23.10.2018 00:01  -  25.10.2018 23:59
+warningavgwresp_pool_1_afa_t1=
+warningavgwresp_pool_2_afa_t1=
+WarningList=  <ul class="warning">
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning0.html"> warning: 00:66:AA [Data_Volume_mykulls1319] latency  41 minutes exceed 29.34ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning1.html"> warning: 00:11:06 [ThP Volume 50 GB] latency  41 minutes exceed 32.36ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning2.html"> warning: 00:63:A6 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.37ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning3.html"> warning: 00:17:A9 [ThP Volume 50 GB] latency  41 minutes exceed 30.01ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning4.html"> warning: 00:11:F5 [ThP Volume 50 GB] latency  41 minutes exceed 29.95ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning5.html"> warning: 00:66:AC [Data_Volume_mykulls1319] latency  41 minutes exceed 31.00ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning6.html"> warning: 00:11:F2 [ThP Volume 50 GB] latency  41 minutes exceed 29.65ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning7.html"> warning: 00:D5:18 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.32ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning8.html"> warning: 00:69:DC [Data_Volume_mykulls1319] latency  41 minutes exceed 30.17ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning9.html"> warning: 00:63:AC [Data_Volume_mykulls1319] latency  40 minutes exceed 30.52ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning10.html"> warning: 00:69:D8 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.23ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning11.html"> warning: 00:17:A8 [ThP Volume 50 GB] latency  41 minutes exceed 29.61ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning12.html"> warning: 00:17:75 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 30.14ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning13.html"> warning: 00:11:08 [ThP Volume 50 GB] latency  41 minutes exceed 30.19ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning14.html"> warning: 00:11:07 [ThP Volume 50 GB] latency  41 minutes exceed 29.69ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning15.html"> warning: 00:A5:56 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.64ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning16.html"> warning: 00:69:DA [Data_Volume_mykulls1319] latency  41 minutes exceed 29.34ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning17.html"> warning: 00:13:1F [Data_Volume_mykulls1319_20] latency  41 minutes exceed 30.25ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning18.html"> warning: 00:63:AB [Data_Volume_mykulls1319] latency  40 minutes exceed 29.60ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning19.html"> warning: 00:17:A2 [ThP Volume 50 GB] latency  40 minutes exceed 29.30ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning20.html"> warning: 00:63:B3 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.92ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning21.html"> warning: 00:63:A5 [Data_Volume_mykulls1319] latency  40 minutes exceed 29.76ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning22.html"> warning: 00:6B:49 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.28ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning23.html"> warning: 00:66:AB [Data_Volume_mykulls1319] latency  41 minutes exceed 29.60ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning24.html"> warning: 00:63:AD [Data_Volume_mykulls1319] latency  41 minutes exceed 30.25ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning25.html"> warning: 00:63:B0 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.09ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning26.html"> warning: 00:17:A3 [ThP Volume 50 GB] latency  41 minutes exceed 29.89ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning27.html"> warning: 00:66:A8 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.58ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning28.html"> warning: 00:69:D9 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.29ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning29.html"> warning: 00:18:1E [ThP Volume 200 GB] latency  31 minutes exceed 36.64ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning30.html"> warning: 00:17:A6 [ThP Volume 50 GB] latency  41 minutes exceed 29.35ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning31.html"> warning: 00:17:73 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 29.82ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning32.html"> warning: 00:6B:48 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.77ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning33.html"> warning: 00:66:A9 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.35ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning34.html"> warning: 00:11:04 [ThP Volume 50 GB] latency  40 minutes exceed 29.30ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning35.html"> warning: 00:18:26 [ThP Volume 200 GB] latency  31 minutes exceed 36.86ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning36.html"> warning: 00:63:A8 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.74ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning37.html"> warning: 00:63:AA [Data_Volume_mykulls1319] latency  41 minutes exceed 29.73ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning38.html"> warning: 00:18:1A [ThP Volume 200 GB] latency  31 minutes exceed 36.97ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning39.html"> warning: 00:17:74 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 29.42ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning40.html"> warning: 00:11:0B [ThP Volume 50 GB] latency  41 minutes exceed 30.04ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning41.html"> warning: 00:18:29 [ThP Volume 200 GB] latency  31 minutes exceed 36.79ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning42.html"> warning: 00:18:1D [ThP Volume 200 GB] latency  31 minutes exceed 36.78ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning43.html"> warning: 00:D5:16 [Data_Volume_mykulls1319] latency  41 minutes exceed 31.11ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning44.html"> warning: 00:6B:4A [Data_Volume_mykulls1319] latency  41 minutes exceed 30.49ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning45.html"> warning: 00:18:23 [ThP Volume 200 GB] latency  31 minutes exceed 36.67ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning46.html"> warning: 00:17:A0 [ThP Volume 50 GB] latency  41 minutes exceed 29.68ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning47.html"> warning: 00:13:20 [Data_Volume_mykulls1319_20] latency  41 minutes exceed 30.96ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning48.html"> warning: 00:17:A7 [ThP Volume 50 GB] latency  41 minutes exceed 29.39ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning49.html"> warning: 00:18:28 [ThP Volume 200 GB] latency  31 minutes exceed 36.72ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning50.html"> warning: 00:18:1C [ThP Volume 200 GB] latency  31 minutes exceed 36.50ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning51.html"> warning: 00:18:19 [ThP Volume 200 GB] latency  31 minutes exceed 36.64ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning52.html"> warning: 00:18:1F [ThP Volume 200 GB] latency  31 minutes exceed 36.86ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning53.html"> warning: 00:18:25 [ThP Volume 200 GB] latency  31 minutes exceed 36.64ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning54.html"> warning: 00:63:A7 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.33ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning55.html"> warning: 00:63:AE [Data_Volume_mykulls1319] latency  41 minutes exceed 30.13ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning56.html"> warning: 00:69:DB [Data_Volume_mykulls1319] latency  41 minutes exceed 30.23ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning57.html"> warning: 00:18:1B [ThP Volume 200 GB] latency  31 minutes exceed 36.92ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning58.html"> warning: 00:17:72 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 30.00ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning59.html"> warning: 00:11:F0 [ThP Volume 50 GB] latency  40 minutes exceed 29.12ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning60.html"> warning: 00:18:27 [ThP Volume 200 GB] latency  31 minutes exceed 36.49ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning61.html"> warning: 00:66:AD [Data_Volume_mykulls1319] latency  41 minutes exceed 30.54ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning62.html"> warning: 00:63:A3 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.95ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning63.html"> warning: 00:63:B2 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.72ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning64.html"> warning: 00:17:70 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 29.67ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning65.html"> warning: 00:18:21 [ThP Volume 200 GB] latency  31 minutes exceed 36.36ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning66.html"> warning: 00:13:1B [Data_Volume_mykulls1319_20] latency  41 minutes exceed 29.98ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning67.html"> warning: 00:D5:17 [Data_Volume_mykulls1319] latency  42 minutes exceed 30.48ms at 25.10.2018 10:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning68.html"> warning: 00:18:22 [ThP Volume 200 GB] latency  31 minutes exceed 36.65ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning69.html"> warning: 00:12:2F [Data_Volume_mykulls1319_20] latency  41 minutes exceed 31.12ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning70.html"> warning: 00:63:A9 [Data_Volume_mykulls1319] latency  41 minutes exceed 29.50ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning71.html"> warning: 00:11:0A [ThP Volume 50 GB] latency  41 minutes exceed 30.32ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning72.html"> warning: 00:63:AF [Data_Volume_mykulls1319] latency  41 minutes exceed 31.27ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning73.html"> warning: 00:18:24 [ThP Volume 200 GB] latency  31 minutes exceed 36.54ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning74.html"> warning: 00:82:81 [Data_Volume_quaker1] latency  41 minutes exceed 49.71ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning75.html"> warning: 00:11:0D [ThP Volume 50 GB] latency  41 minutes exceed 29.46ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning76.html"> warning: 00:11:F3 [ThP Volume 50 GB] latency  41 minutes exceed 29.36ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning77.html"> warning: 00:A5:58 [Data_Volume_mykulls1319] latency  41 minutes exceed 28.68ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning78.html"> warning: 00:11:0C [ThP Volume 50 GB] latency  41 minutes exceed 30.17ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning79.html"> warning: 00:13:1E [Data_Volume_mykulls1319_20] latency  41 minutes exceed 30.52ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning80.html"> warning: 00:11:F4 [ThP Volume 50 GB] latency  41 minutes exceed 29.87ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning81.html"> warning: 00:82:86 [Data_Volume_quaker1] latency  41 minutes exceed 49.22ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning82.html"> warning: 00:18:20 [ThP Volume 200 GB] latency  31 minutes exceed 36.38ms at 25.10.2018 04:47</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning83.html"> warning: 00:11:09 [ThP Volume 50 GB] latency  41 minutes exceed 30.88ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning84.html"> warning: 00:11:AD [Data_Volume_mykulls1319_20] latency  41 minutes exceed 30.17ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning85.html"> warning: 00:17:A4 [ThP Volume 50 GB] latency  41 minutes exceed 29.63ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning86.html"> warning: 00:82:7D [Data_Volume_quaker1] latency  41 minutes exceed 49.28ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning87.html"> warning: 00:17:76 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 28.51ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning88.html"> warning: 00:11:05 [ThP Volume 50 GB] latency  41 minutes exceed 31.07ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning89.html"> warning: 00:82:84 [Data_Volume_quaker1] latency  41 minutes exceed 48.00ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning90.html"> warning: 00:17:78 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 29.65ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning91.html"> warning: 00:13:26 [Data_Volume_mykulls1319_20] latency  40 minutes exceed 29.05ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning92.html"> warning: 00:82:7F [Data_Volume_quaker1] latency  41 minutes exceed 47.88ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning93.html"> warning: 00:63:B1 [Data_Volume_mykulls1319] latency  41 minutes exceed 30.25ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning94.html"> warning: 00:82:7B [Data_Volume_quaker1] latency  45 minutes exceed 46.81ms at 25.10.2018 17:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning95.html"> warning: 00:17:79 [DV_50G_mykulls1319-c_T1] latency  41 minutes exceed 29.24ms at 25.10.2018 10:02</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning96.html"> warning: 00:82:7E [Data_Volume_quaker1] latency  41 minutes exceed 49.74ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning97.html"> warning: 00:82:85 [Data_Volume_quaker1] latency  41 minutes exceed 49.41ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning98.html"> warning: 00:82:87 [Data_Volume_quaker1] latency  41 minutes exceed 49.02ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning99.html"> warning: 00:82:7A [Data_Volume_quaker1] latency  45 minutes exceed 43.61ms at 25.10.2018 17:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning100.html"> warning: 00:15:D9 [ThP Volume 50 GB] latency  24 minutes exceed 20.82ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning101.html"> warning: 00:15:DC [ThP Volume 50 GB] latency  24 minutes exceed 21.59ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning102.html"> warning: 00:15:D6 [ThP Volume 50 GB] latency  23 minutes exceed 20.97ms at 25.10.2018 10:04</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning103.html"> warning: 00:82:82 [Data_Volume_quaker1] latency  41 minutes exceed 49.48ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning104.html"> warning: 00:15:D7 [ThP Volume 50 GB] latency  24 minutes exceed 21.28ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning105.html"> warning: 00:82:7C [Data_Volume_quaker1] latency  41 minutes exceed 47.77ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning106.html"> warning: 00:82:80 [Data_Volume_quaker1] latency  41 minutes exceed 49.42ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning107.html"> warning: 00:82:83 [Data_Volume_quaker1] latency  41 minutes exceed 49.15ms at 25.10.2018 17:07</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning108.html"> warning: 00:17:A1 [ThP Volume 50 GB] latency  39 minutes exceed 25.36ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning109.html"> warning: 00:15:DB [ThP Volume 50 GB] latency  22 minutes exceed 21.49ms at 25.10.2018 10:04</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning110.html"> warning: 00:13:2F [Data_Volume_mykulls1319_20] latency  40 minutes exceed 27.29ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning111.html"> warning: 00:15:D3 [ThP Volume 50 GB] latency  24 minutes exceed 22.42ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning112.html"> warning: 00:13:21 [Data_Volume_mykulls1319_20] latency  39 minutes exceed 27.11ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning113.html"> warning: 00:15:DA [ThP Volume 50 GB] latency  24 minutes exceed 21.46ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning114.html"> warning: 00:15:D4 [ThP Volume 50 GB] latency  24 minutes exceed 21.26ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning115.html"> warning: 00:15:D8 [ThP Volume 50 GB] latency  24 minutes exceed 20.57ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning116.html"> warning: 00:11:F1 [ThP Volume 50 GB] latency  39 minutes exceed 26.00ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning117.html"> warning: 00:17:71 [DV_50G_mykulls1319-c_T1] latency  39 minutes exceed 26.95ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning118.html"> warning: 00:15:D5 [ThP Volume 50 GB] latency  24 minutes exceed 22.09ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning119.html"> warning: 00:17:A5 [ThP Volume 50 GB] latency  23 minutes exceed 22.88ms at 25.10.2018 10:04</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning120.html"> warning: 00:A5:57 [Data_Volume_mykulls1319] latency  24 minutes exceed 25.60ms at 25.10.2018 10:03</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning121.html"> warning: 00:12:3E [Data_Volume_mykulls1319_20] latency  38 minutes exceed 24.09ms at 25.10.2018 10:04</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning122.html"> warning: 00:17:77 [DV_50G_mykulls1319-c_T1] latency  23 minutes exceed 22.90ms at 25.10.2018 10:04</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning123.html"> warning: 00:82:52 [Data_Volume_quaker1] latency  26 minutes exceed 25.86ms at 25.10.2018 17:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning124.html"> warning: 00:82:53 [Data_Volume_quaker1] latency  26 minutes exceed 25.50ms at 25.10.2018 17:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning125.html"> warning: 00:82:50 [Data_Volume_quaker1] latency  25 minutes exceed 24.63ms at 25.10.2018 17:23</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning126.html"> warning: 00:82:54 [Data_Volume_quaker1] latency  25 minutes exceed 25.17ms at 25.10.2018 17:23</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning127.html"> warning: 00:82:51 [Data_Volume_quaker1] latency  26 minutes exceed 24.52ms at 25.10.2018 17:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning128.html"> warning: 00:18:2A [ThP Volume 200 GB] latency  20 minutes exceed 23.62ms at 25.10.2018 04:57</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning129.html"> warning: 00:21:81 [ThP Volume 50GB] latency  19 minutes exceed 34.45ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning130.html"> warning: 00:21:4B [ThP Volume 50 GB] latency  19 minutes exceed 33.27ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning131.html"> warning: 00:21:7B [ThP Volume 50GB] latency  19 minutes exceed 33.50ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning132.html"> warning: 00:21:4D [ThP Volume 50 GB] latency  19 minutes exceed 33.43ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning133.html"> warning: 00:21:80 [ThP Volume 50GB] latency  19 minutes exceed 34.24ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning134.html"> warning: 00:21:86 [Data_Volume_mykulls1774_c] latency  19 minutes exceed 34.72ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning135.html"> warning: 00:21:7A [ThP Volume 50GB] latency  19 minutes exceed 33.34ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning136.html"> warning: 00:21:82 [Data_Volume_mykulls1774_c] latency  19 minutes exceed 33.24ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning137.html"> warning: 00:21:4C [ThP Volume 50 GB] latency  19 minutes exceed 32.47ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning138.html"> warning: 00:21:4A [ThP Volume 50 GB] latency  19 minutes exceed 32.53ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning139.html"> warning: 00:21:49 [ThP Volume 50 GB] latency  19 minutes exceed 34.34ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning140.html"> warning: 00:21:87 [Data_Volume_mykulls1774_c] latency  19 minutes exceed 33.03ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning141.html"> warning: 00:21:84 [Data_Volume_mykulls1774_c] latency  19 minutes exceed 34.84ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning142.html"> warning: 00:21:83 [Data_Volume_mykulls1774_c] latency  19 minutes exceed 30.54ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning143.html"> warning: 00:21:85 [Data_Volume_mykulls1774_c] latency  19 minutes exceed 31.47ms at 25.10.2018 13:01</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning144.html"> warning: 00:21:4E [ThP Volume 50 GB] latency  19 minutes exceed 31.64ms at 25.10.2018 13:01</a></li>
+
+  </ul>
+
+wp_avg=6.5
+wp_max=14
+wputilavg_0=8.1
+wputilavg_1=6
+wputilavg_2=8.4
+wputilavg_3=6.2
+wputilavg_4=4.08
+wputilavg_5=7.1
+wputilavg_6=4.28
+wputilavg_7=8.8
+wputilavg_8=7.6
+wputilavg_9=4.79
+wputilmax_0=26.5
+wputilmax_1=11.4
+wputilmax_2=14.7
+wputilmax_3=12.8
+wputilmax_4=8.4
+wputilmax_5=18.6
+wputilmax_6=10.8
+wputilmax_7=15.1
+wputilmax_8=18.4
+wputilmax_9=11.3
+writependingavg=6.1
+writependingmax=13.9

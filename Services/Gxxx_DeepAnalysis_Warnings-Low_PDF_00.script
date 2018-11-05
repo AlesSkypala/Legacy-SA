@@ -1,0 +1,321 @@
+SA_Version=87
+{*************************************  Daily Analysis Section ****************************************}
+{*************************************  Daily Analysis Section ****************************************}
+{*************************************  Daily Analysis Section ****************************************}
+{*************************************  Daily Analysis Section ****************************************}
+Description=DeepAnalysis Script compute basic extended storage metrics and parse HTML template
+
+
+{***** Images defaults*****}
+Chart.Width=970
+Chart.Height=250
+Grid=120
+
+
+
+{***** Response time Chart on LUNs *****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Response.zip
+Chart.Statistic=*
+Chart.Open=1
+Chart=DelZero
+Chart=Divide1000
+Chart.Filter=7
+Chart.Name=Reponse Time Histogram
+Chart.TransformToHistogram
+HistogramChart.Height=200
+HistogramChart.Width=470
+HistogramChart.Save=Response2_00
+Chart=AscendingSort
+Chart.TopSelect=10
+Chart.Name=LUN Response Time
+//Chart.SaveActive=LatencyTable
+Chart.Name=Top LUNs with the highest Reponse Time
+Chart.TransformToHtmlTable=LatencyTable
+Chart.Search=*
+Chart.Name=LUN's Reposponse Time
+$PGRespMax=#chart.max
+$PGRespAvg=#chart.avg
+Chart.Name=Reponse Time on LUNs
+Chart.Save=Response_00
+AddWarning=Type: Over, Treshold: 15, Time: 15, Text: Warning: $Item latency  $Time minutes exceed $Valuems at $StartTime
+Chart.Close=*
+
+
+
+
+
+
+{***** IOPs Chart on LUNs***** }
+Chart.File=LDEVEachOfCU_dat\LDEV_IOPS.zip
+Chart.Statistic=*
+Chart.Open=4
+Chart=DelZero
+Chart.Filter=7
+Chart=AscendingSort
+Chart.TopSelect=10
+Chart.Name=LUN IOPs
+//Chart.SaveActive=IOPsTable2
+Chart.Name=Top LUNs with the highest IOPs trafic
+Chart.TransformToHtmlTable=IOPsTable2
+Chart.Close=*
+
+
+
+{***** IOPs Chart on Ports***** }
+Chart.File=Port_dat.ZIP
+Chart.Statistic=Port_IOPS.csv
+Chart.Open=2
+Chart=DelZero, ShowSum
+Chart.Name=I/O Rate per second on Ports
+$PortIopsMax=#chart.summax
+$PortIopsAvg=#chart.sumavg
+Chart.Filter=7
+Chart.Save=IopsOnPort_00
+Chart.Filter=70
+Chart.Name=I/O Rate per second by hour of day
+Chart.TransformToAreaChart
+AreaChart.Width=470
+AreaChart.Height=200
+AreaChart.Save=IopsOnPort2_00
+Chart.Close=*
+
+
+
+{***** MBs Chart on LUNs***** }
+Chart.File=LDEVEachOfCU_dat\LDEV_TransRate.zip
+Chart.Statistic=*
+Chart.Open=4
+Chart=DelZero, Divide1000,AscendingSort
+Chart.Filter=7
+Chart.TopSelect=10
+Chart.Name=LUN MB/s
+//Chart.SaveActive=MBsTable2
+Chart.Name=Top LUNs with the highest MBps trafic
+Chart.TransformToHtmlTable=MBsTable2
+Chart.Close=*
+
+
+
+{ ***** KBPS Chart on ports*****}
+Chart.File=Port_dat.ZIP
+Chart.Statistic=Port_KBPS.csv
+Chart.Open=3
+Chart=DelZero, Divide1000, ShowSum
+Chart.Name=Transfer rate on Ports
+$PortMBsMax=#chart.summax
+$PortMBsAvg=#chart.sumavg
+Chart.Filter=7
+Chart.Save=MBsOnPort_00
+Chart.Filter=70
+Chart.Name=
+Chart.TransformToAreaChart
+AreaChart.Width=470
+AreaChart.Height=200
+AreaChart.Save=MBsOnPort2_00
+Chart.Close=*
+
+
+
+
+{***** Random/Seq ration *****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Seq_Write_IOPS.zip
+Chart.Statistic=*
+Chart.Open=9
+Chart.File=LDEVEachOfCU_dat\LDEV_Rnd_Write_IOPS.zip
+Chart.Statistic=*
+Chart.Open=11
+Chart.File=LDEVEachOfCU_dat\LDEV_Seq_Read_IOPS.zip
+Chart.Statistic=*
+Chart.Open=12
+Chart.File=LDEVEachOfCU_dat\LDEV_Rnd_Read_IOPS.zip
+Chart.Statistic=*
+Chart.Open=13
+Chart.Create=10
+Chart.Name=Read/Write and Random/Sequential ratio
+Chart.LeftAxis=[IOPs]
+SerieCopy=#chart.sum,9,10,Sequential Write, clRed, 1
+SerieCopy=#chart.sum,11,10,Random Write, clMaroon, 1
+SerieCopy=#chart.sum,12,10,Sequential Read,clGreen, 1
+SerieCopy=#chart.sum,13,10,Random Read, clOlive, 1
+
+Chart.Filter=7
+Chart.Save=SeqRndRatio_00
+Chart.TransformToPieChart
+PieChart.Width=470
+PieChart.Height=250
+PieChart.Save=SeqRndRatioPie_00
+Chart.Close=*
+
+
+
+
+{Read/Write Ratio}
+Chart.File=LDEVEachOfCU_dat\LDEV_Read_IOPS.zip
+Chart.Statistic=*
+Chart.Open=4
+Chart.File=LDEVEachOfCU_dat\LDEV_Write_IOPS.zip
+Chart.Statistic=*
+Chart.Open=6
+Chart.Create=5
+Chart.Name=Read/Write ratio
+Chart.LeftAxis=[IOPs]
+SerieCopy=#chart.sum,4,5, Read, clGreen, 1
+SerieCopy=#chart.sum,6,5, Write, clRed, 1
+Chart.Filter=7
+Chart.Save=RWratio_00
+Chart.TransformToPieChart
+PieChart.Width=470
+PieChart.Height=250
+PieChart.Save=RWRatioPie_00
+Chart.Close=*
+
+
+
+
+{***** PG utilisation *****}
+Chart.File=PhyPG_dat.ZIP
+Chart.Statistic=PHY_Short_PG.csv, PHY_PG.csv
+Chart.Open=7
+Chart.Name=Utilization of the physical drives
+$PGUtilMax=#chart.max
+$PGUtilAvg=#chart.avg
+Chart.Filter=7
+
+AddWarning=Type: Over, Treshold: 70, Time: 10, Text: Warning:  $Item utilization $Time minutes exceed $Value% at $StartTime
+
+Loop.ConfigFilter=Config.zip, LdevInfo.csv, ECC Group, Pool Name, External
+
+Loop(
+Chart.Search=Loop.Value
+Chart.Name=Utilization of the physical drives of Loop.Name
+Chart.Save=PGUtilization_Loop.ID
+$PGUtilMax_Loop.ID=#chart.max
+$PGUtilAvg_Loop.ID=#chart.avg
+$>>PoolsUtilization=<!-- Loop.Name -->
+$>>PoolsUtilization=<div><img id="Loop.Name" title="Drive utilization of Loop.Name - Average: %PGUtilAvg_Loop.ID%, peak: %PGUtilMax_Loop.ID%." alt="PGUtil" src="%ImagePath%PGUtilization_Loop.ID.png"></div>
+$>>PoolsUtilization=<div>Utilization of the physical disks of Loop.Name over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_Loop.ID% [%], peak: %PGUtilMax_Loop.ID% [%].</div>
+$>>PoolsUtilization=<br>
+$>>PoolsUtilization=
+)
+
+Chart.Search=*
+Chart.TransformToBarChart
+BarChart.Save=PGUtilization2_00
+Chart.Legend=off
+Chart.Close=*
+
+
+
+
+{***** Processor utilisation *****}
+Chart.File=PhyProc_dat.ZIP
+Chart.Statistic=PHY_Short_MP.csv, PHY_MP.csv, PHY_Short_CHP.csv
+Chart.Open=8
+Chart.Name=Utlization of the MP storage processors
+$ProcUtilMax=#chart.max
+$ProcUtilAvg=#chart.avg
+Chart.Filter=7
+Chart.Save=ProcUtilization_00
+Chart.TransformToBarChart
+BarChart.Save=ProcUtilization2_00
+Chart.Legend=off
+AddWarning=Type: Over, Treshold: 50, Time: 10, Text: Warning: $Item MP storage core utilization  $Time minutes exceed $Value%  at $StartTime
+Chart.Close=*
+
+
+{***** Pomer Write Pending Rate *****}
+Chart.File=PhyMainPK_dat.ZIP, PhyMPU_dat.ZIP, PhyCMPK_dat.ZIP, PhyESW_dat.ZIP, PhyCSW_dat.ZIP
+Chart.Statistic=PHY_Short_Write_Pending_Rate.csv, PHY_Write_Pending_Rate.csv
+Chart.Open=17
+Chart.Name=Write Pending Rate
+$WritePendingMax=#chart.max
+$WritePendingAvg=#chart.avg
+Chart.Filter=7
+Chart.Save=WritePending_00
+Chart.Legend=off
+AddWarning=Type: Over, Treshold: 30, Time: 10, Text: Warning: $Item Write Pending Rate $Time minutes exceed $Value% ms at $StartTime
+Chart.Close=*
+
+
+
+{***** ReadBlock Size = KBs div IOPs ******}
+
+Chart.File=LDEVEachOfCU_dat\LDEV_Read_TransRate.zip
+Chart.Statistic=*
+Chart.Open=18
+Chart.File=LDEVEachOfCU_dat\LDEV_Read_IOPS.zip
+Chart.Statistic=*
+Chart.Open=19
+Chart.Select=18
+Chart.DivideByChart=19
+Chart=DelZero
+Chart.LeftAxis=[kB]
+Chart.Name=Block size histogram of Read IOs
+Chart.TransformToHistogram
+HistogramChart.Width=470
+HistogramChart.Height=250
+HistogramChart.Save=RBlockSize_00
+Chart.Close=*
+
+
+
+{***** WriteBlock Size *****}
+Chart.File=LDEVEachOfCU_dat\LDEV_Write_TransRate.zip
+Chart.Statistic=*
+Chart.Open=20
+Chart.File=LDEVEachOfCU_dat\LDEV_Write_IOPS.zip
+Chart.Statistic=*
+Chart.Open=21
+Chart.Select=20
+Chart.DivideByChart=21
+Chart=DelZero
+Chart.LeftAxis=[kB]
+Chart.Name=Block size histogram of Write IOs
+Chart.TransformToHistogram
+HistogramChart.Width=470
+HistogramChart.Height=250
+HistogramChart.Save=WBlockSize_00
+Chart.Close=*
+
+
+
+
+{***** Detect Actual Date Info *****}
+$ActualDate=TimeRange
+
+
+{***** External response *****}
+
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Response.csv
+Chart.Open=50
+Chart=DelZero
+Chart.Name=External Storage Latency
+Chart.LeftAxis=[ms]
+Chart.Save=ExResponse_00
+$ExRespAvg=#chart.avg
+$ExRespMax=#chart.max
+Chart.Close=*
+
+
+{***** External MB/s *****}
+Chart.File=PhyExG_dat.ZIP
+Chart.Statistic=PHY_ExG_Trans.csv
+Chart.Open=51
+Chart=DelZero, Divide1000, ShowSum
+Chart.Filter=7
+Chart.Name=External Storage Transfer rate
+Chart.LeftAxis=[MB/s]
+Chart.Save=ExMBs_00
+$ExMBsAvg=#chart.sumavg
+$ExMBsMax=#chart.summax
+Chart.Close=*
+
+
+
+{***** Parse Section*****}
+Html.Parse=Header_05.html,   Body_ImageChange_JS.html,  Body_Metro_DetailReport_ExtCSS_E1.html,     Footer_3S_01.html
+
+
+
+Return

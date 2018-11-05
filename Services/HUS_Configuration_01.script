@@ -1,0 +1,87 @@
+SA_Version=87
+
+
+{***************************************** Config Report*******************************************}
+{***************************************** Config Report*******************************************}
+{***************************************** Config Report*******************************************}
+{***************************************** Config Report*******************************************}
+{***************************************** Config Report*******************************************}
+{***************************************** Config Report*******************************************}
+
+{*****  This script load all detected 'Config.txt' files and extract DP pool capacity informations *******}
+
+
+
+
+
+
+{***** Daily Report Section *****}
+
+{Defaul width/height}
+Chart.Width=980
+Chart.Height=300
+Line.Width=2
+
+{***** how many days *****}
+Day.Select=*
+
+Chart.File=Config.txt
+Chart.Statistic=Percent
+Chart.ModularCapacityOpen=1
+Chart.Name=Capacity Usage [%]
+Chart.Interpolation=4
+Chart.Save=dp_cap_usage00
+Chart.TransformToBarChart=LastValue
+BarChart.Height=200
+BarChart.Width=330
+BarChart.Save=dp_cap_usage01
+
+
+
+Chart.Close=*
+
+
+Chart.Statistic=Total
+Chart.ModularCapacityOpen=2
+Chart.Name=Total Capacity [TB]
+Chart.Interpolation=4
+Chart.Save=dp_cap_total00
+Chart.TransformToBarChart=LastValue
+BarChart.Height=200
+BarChart.Width=320
+BarChart.Save=dp_cap_total01
+Chart.Close=*
+
+
+Chart.Statistic=Consumed
+Chart.ModularCapacityOpen=3
+Chart.Name=Consumed Capacity [TB]
+Chart.Interpolation=4
+Chart.Save=dp_cap_consumed00
+Chart.TransformToBarChart=LastValue
+BarChart.Height=200
+BarChart.Width=320
+BarChart.Save=dp_cap_consumed01
+Chart.Close=*
+
+
+Chart.Statistic=Free
+Chart.ModularCapacityOpen=4
+Chart.Name=Free Capacity [TB]
+Chart.Interpolation=4
+Chart.Save=dp_cap_free00
+Chart.TransformToBarChart=LastValue
+BarChart.Height=200
+BarChart.Width=320
+BarChart.Save=dp_cap_free01
+Chart.Close=*
+
+
+{***** Parse to Html template ******}
+Html.Parse=Metro_Capacity Info_InclCSS.html
+
+{***** Create report tree *****}
+CreateModularReport=config.txt,port.txt
+
+return
+

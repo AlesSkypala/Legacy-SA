@@ -1,0 +1,1212 @@
+actualdate=TimeRange
+avg_0=-
+avg_1=-
+avg_2=-
+disbalanceinfo_cha_1pc_cha_2pc=
+disbalanceinfo_cha_1pd_cha_2pd=
+disbalanceinfo_cha_1pj_cha_2pj=
+exmbsavg=0
+exmbsmax=0
+exrespavg=-
+exrespmax=-
+extmbsavg=0
+extmbsmax=0
+extresponseavg=-
+extresponsemax=-
+headeritems=<li><a href="Day%20Analysis.html">Last Day</a></li>
+<li><a href="index.html">Last Week</a></li>
+<li><a href="Month%20Analysis.html" style="background: GreenYellow;">Last Month</a></li>
+<li>&nbsp; &#9658; &nbsp;</li>
+<li><a href="#CHA_1PD_CHA_2PD"><img title="" alt="" src="port01.png">&nbsp; CHA-1PD,CHA-2PD</a></li>
+<li><a href="#CHA_1PC_CHA_2PC"><img title="" alt="" src="port01.png">&nbsp; CHA-1PC,CHA-2PC</a></li>
+<li><a href="#CHA_1PJ_CHA_2PJ"><img title="" alt="" src="port01.png">&nbsp; CHA-1PJ,CHA-2PJ</a></li>
+htmlbody=<!-- Code Created by Script -->
+<div class="sectionBox" style="width: 995px">
+<h2>WorkLoad on Particalated CHA, Time Range: %TimeRange%<a href="#toph">&#9650;</a></h2>
+<div style="text-align:center"><img title="MBps rate on Loop.Value" alt="CHA_adapters" src="%ImagePath%CHadapt_00.png" onclick="DynChart('CHadapt_00', 'Transfer Rate on Channel Adapters in details ', '[MBps]')"  style="cursor: alias;" ></div>
+<div style="text-align:center;  margin: 20px 20px 20px 20px;">%CHA_Summary%</div>
+</div>
+HtmlWidth=970
+cha_avg_cha-1pc=134
+cha_avg_cha-1pd=67.5
+cha_avg_cha-1pj=254
+cha_avg_cha-2pc=134
+cha_avg_cha-2pd=67.8
+cha_avg_cha-2pj=253
+CHA_PAIR_Table_CHA_1PC_CHA_2PC=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PC</th>
+    <td>134</td>
+    <td>134</td>
+    <td>23</td>
+    <td>1084</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PC</th>
+    <td>134</td>
+    <td>134</td>
+    <td>23</td>
+    <td>1087</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+CHA_PAIR_Table_CHA_1PD_CHA_2PD=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PD</th>
+    <td>67</td>
+    <td>67</td>
+    <td>3.7</td>
+    <td>1723</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PD</th>
+    <td>68</td>
+    <td>68</td>
+    <td>3.9</td>
+    <td>1715</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+CHA_PAIR_Table_CHA_1PJ_CHA_2PJ=
+<table class="tb1">
+  <tr>
+    <th></th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>CHA-1PJ</th>
+    <td>254</td>
+    <td>254</td>
+    <td>46</td>
+    <td>1311</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>CHA-2PJ</th>
+    <td>253</td>
+    <td>253</td>
+    <td>45</td>
+    <td>1307</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+cha_summary=<!--Sub-Loop code generating -->
+<!-- Series_5=CHA-1PD,CHA-2PD -->
+<div id="CHA_1PD_CHA_2PD" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PD,CHA-2PD<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PD,CHA-2PD</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PD_CHA_2PD%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PD_CHA_2PD" alt="Series_5=CHA-1PD,CHA-2PD" src="%ImagePath%CHA_PAIR_CHA_1PD_CHA_2PD.png" onclick="DynChart('CHA_PAIR_CHA_1PD_CHA_2PD', 'Transfer Rate on Poorts of Channel Adapter CHA-1PD,CHA-2PD in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PD</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PD%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PD" alt="1=CHA-1PD" src="%ImagePath%CHA_PORT_CHA-1PD.png" onclick="DynChart('CHA_PORT_CHA-1PD', 'Transfer Rate on Poorts of Channel Adapter CHA-1PD in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PD</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PD%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PD" alt="2=CHA-2PD" src="%ImagePath%CHA_PORT_CHA-2PD.png" onclick="DynChart('CHA_PORT_CHA-2PD', 'Transfer Rate on Poorts of Channel Adapter CHA-2PD in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+<!-- Series_6=CHA-1PC,CHA-2PC -->
+<div id="CHA_1PC_CHA_2PC" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PC,CHA-2PC<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PC,CHA-2PC</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PC_CHA_2PC%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PC_CHA_2PC" alt="Series_6=CHA-1PC,CHA-2PC" src="%ImagePath%CHA_PAIR_CHA_1PC_CHA_2PC.png" onclick="DynChart('CHA_PAIR_CHA_1PC_CHA_2PC', 'Transfer Rate on Poorts of Channel Adapter CHA-1PC,CHA-2PC in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PC</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PC%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PC" alt="1=CHA-1PC" src="%ImagePath%CHA_PORT_CHA-1PC.png" onclick="DynChart('CHA_PORT_CHA-1PC', 'Transfer Rate on Poorts of Channel Adapter CHA-1PC in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PC</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PC%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PC" alt="2=CHA-2PC" src="%ImagePath%CHA_PORT_CHA-2PC.png" onclick="DynChart('CHA_PORT_CHA-2PC', 'Transfer Rate on Poorts of Channel Adapter CHA-2PC in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+<!-- Series_7=CHA-1PJ,CHA-2PJ -->
+<div id="CHA_1PJ_CHA_2PJ" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+<h2>WorkLoad on Particular CHA Pair: CHA-1PJ,CHA-2PJ<a href="#toph">&#9650;</a></h2>
+<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>CHA-1PJ,CHA-2PJ</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_CHA_1PJ_CHA_2PJ%<br>
+
+</div>
+<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on CHA_1PJ_CHA_2PJ" alt="Series_7=CHA-1PJ,CHA-2PJ" src="%ImagePath%CHA_PAIR_CHA_1PJ_CHA_2PJ.png" onclick="DynChart('CHA_PAIR_CHA_1PJ_CHA_2PJ', 'Transfer Rate on Poorts of Channel Adapter CHA-1PJ,CHA-2PJ in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-1PJ</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-1PJ%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-1PJ" alt="1=CHA-1PJ" src="%ImagePath%CHA_PORT_CHA-1PJ.png" onclick="DynChart('CHA_PORT_CHA-1PJ', 'Transfer Rate on Poorts of Channel Adapter CHA-1PJ in details ', '[MBps]')" style="cursor: alias;"></div>
+<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>CHA-2PJ</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_CHA-2PJ%</div>
+<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on CHA-2PJ" alt="2=CHA-2PJ" src="%ImagePath%CHA_PORT_CHA-2PJ.png" onclick="DynChart('CHA_PORT_CHA-2PJ', 'Transfer Rate on Poorts of Channel Adapter CHA-2PJ in details ', '[MBps]')" style="cursor: alias;"></div>
+</div>
+CHAWarning_EventCount_CHA_1PC_CHA_2PC=0
+CHAWarning_EventCount_CHA_1PD_CHA_2PD=0
+CHAWarning_EventCount_CHA_1PJ_CHA_2PJ=0
+chawarning_totalevent=0
+ImagePath=Month_Analysis_Images/
+IOPsTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest IOPs trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>00:12:7E [ThP Volume 200GB_czchols4012]</th>
+    <td>2171</td>
+    <td>2167</td>
+    <td>0</td>
+    <td>4420</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:12:7D [ThP Volume 200GB_czchols4012]</th>
+    <td>1291</td>
+    <td>1288</td>
+    <td>0</td>
+    <td>3148</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:12:76 [ThP Volume 200 GB]</th>
+    <td>1122</td>
+    <td>1119</td>
+    <td>0</td>
+    <td>1876</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:1F:41 [ThP Volume 50GB]</th>
+    <td>830</td>
+    <td>829</td>
+    <td>0</td>
+    <td>1636</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th>00:1F:30 [ThP Volume 200GB]</th>
+    <td>764</td>
+    <td>763</td>
+    <td>0</td>
+    <td>1604</td>
+    <td>[IOPs]</td>
+  </tr>
+ </tbody>
+</table>
+
+IOPsTable2=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest IOPs trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_5.png');">00:12:7E [ThP Volume 200GB_czchols4012]</a></th>
+    <td>2167</td>
+    <td>2167</td>
+    <td>450</td>
+    <td>3174</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_6.png');">00:12:7D [ThP Volume 200GB_czchols4012]</a></th>
+    <td>1288</td>
+    <td>1288</td>
+    <td>261</td>
+    <td>1921</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_7.png');">00:12:76 [ThP Volume 200 GB]</a></th>
+    <td>1120</td>
+    <td>1120</td>
+    <td>354</td>
+    <td>1661</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_8.png');">00:1F:41 [ThP Volume 50GB]</a></th>
+    <td>829</td>
+    <td>829</td>
+    <td>200</td>
+    <td>1492</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_9.png');">00:1F:30 [ThP Volume 200GB]</a></th>
+    <td>763</td>
+    <td>763</td>
+    <td>202</td>
+    <td>1137</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_10.png');">00:10:23 [ThP Volume 200GB_czchols4057]</a></th>
+    <td>643</td>
+    <td>643</td>
+    <td>182</td>
+    <td>848</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_11.png');">00:12:7C [ThP Volume 20GB_czchols4012]</a></th>
+    <td>495</td>
+    <td>495</td>
+    <td>96</td>
+    <td>700</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_12.png');">00:12:75 [ThP Volume 200 GB]</a></th>
+    <td>353</td>
+    <td>353</td>
+    <td>108</td>
+    <td>920</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_13.png');">00:10:25 [ThP Volume 200GB_czchols4057]</a></th>
+    <td>338</td>
+    <td>338</td>
+    <td>12</td>
+    <td>690</td>
+    <td>[IOPs]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('IOPsTable2','IOPsTable2_14.png');">00:12:73 [ThP Volume 200 GB]</a></th>
+    <td>252</td>
+    <td>252</td>
+    <td>67</td>
+    <td>816</td>
+    <td>[IOPs]</td>
+  </tr>
+ </tbody>
+</table>
+
+JobName=Month Analysis
+LatencyTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest Reponse Time</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_5.png');">00:10:DF [ThP Volume 500 GB _00x]</a></th>
+    <td>2.8</td>
+    <td>0.23</td>
+    <td>0</td>
+    <td>5.0</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_6.png');">00:10:F1 [ThP Volume 500 GB _00x]</a></th>
+    <td>2.3</td>
+    <td>0.15</td>
+    <td>0</td>
+    <td>4.5</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_7.png');">00:12:0B [Data_Vol_200GB_czchows5985]</a></th>
+    <td>1.7</td>
+    <td>1.3</td>
+    <td>0</td>
+    <td>9.1</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_8.png');">00:36:87 [ThP Volume 100GB]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.39</td>
+    <td>3.5</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_9.png');">00:10:24 [ThP Volume 200GB_czchols4057]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.50</td>
+    <td>4.0</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_10.png');">00:36:85 [ThP Volume 100GB]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.39</td>
+    <td>3.5</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_11.png');">00:36:8A [ThP Volume 100GB]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.39</td>
+    <td>3.5</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_12.png');">00:36:84 [ThP Volume 100GB]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.39</td>
+    <td>3.5</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_13.png');">00:36:86 [ThP Volume 100GB]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.39</td>
+    <td>3.5</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('LatencyTable','LatencyTable_14.png');">00:36:88 [ThP Volume 100GB]</a></th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.39</td>
+    <td>3.5</td>
+    <td>[ms]</td>
+  </tr>
+ </tbody>
+</table>
+
+max_0=-
+max_1=-
+max_2=-
+MBsTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest MBps trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>00:10:F1 [ThP Volume 500 GB _00x]</th>
+    <td>87</td>
+    <td>3.6</td>
+    <td>0</td>
+    <td>111</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:10:DF [ThP Volume 500 GB _00x]</th>
+    <td>84</td>
+    <td>4.9</td>
+    <td>0</td>
+    <td>111</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:11:F6 [ThP Volume 50 GB]</th>
+    <td>67</td>
+    <td>1.8</td>
+    <td>0</td>
+    <td>189</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:11:F2 [ThP Volume 20 GB]</th>
+    <td>55</td>
+    <td>0.73</td>
+    <td>0</td>
+    <td>189</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th>00:11:F1 [ThP Volume 20 GB]</th>
+    <td>48</td>
+    <td>0.73</td>
+    <td>0</td>
+    <td>194</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+MBsTable2=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with the highest MBps trafic</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_5.png');">00:10:F1 [ThP Volume 500 GB _00x]</a></th>
+    <td>55</td>
+    <td>3.6</td>
+    <td>0</td>
+    <td>109</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_6.png');">00:10:DF [ThP Volume 500 GB _00x]</a></th>
+    <td>59</td>
+    <td>4.9</td>
+    <td>0</td>
+    <td>107</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_7.png');">00:11:F6 [ThP Volume 50 GB]</a></th>
+    <td>15</td>
+    <td>1.8</td>
+    <td>0</td>
+    <td>141</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_8.png');">00:11:F2 [ThP Volume 20 GB]</a></th>
+    <td>12</td>
+    <td>0.75</td>
+    <td>0</td>
+    <td>74</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_11.png');">00:12:5C [DV_100G_czchows5378_T0]</a></th>
+    <td>14</td>
+    <td>1.2</td>
+    <td>0</td>
+    <td>152</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_13.png');">00:12:76 [ThP Volume 200 GB]</a></th>
+    <td>23</td>
+    <td>23</td>
+    <td>6.5</td>
+    <td>206</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_14.png');">00:12:7E [ThP Volume 200GB_czchols4012]</a></th>
+    <td>19</td>
+    <td>19</td>
+    <td>3.6</td>
+    <td>158</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_18.png');">00:10:23 [ThP Volume 200GB_czchols4057]</a></th>
+    <td>14</td>
+    <td>14</td>
+    <td>5.6</td>
+    <td>19</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_19.png');">00:12:73 [ThP Volume 200 GB]</a></th>
+    <td>13</td>
+    <td>13</td>
+    <td>3.9</td>
+    <td>203</td>
+    <td>[MB/s]</td>
+  </tr>
+  <tr>
+    <th><a href="javascript:imgchange('MBsTable2','MBsTable2_21.png');">00:12:7D [ThP Volume 200GB_czchols4012]</a></th>
+    <td>12</td>
+    <td>12</td>
+    <td>2.1</td>
+    <td>56</td>
+    <td>[MB/s]</td>
+  </tr>
+ </tbody>
+</table>
+
+pgrespavg=0.27
+pgrespmax=22.8
+pgutilavg=3.44
+pgutilavg_0=4.86
+pgutilavg_1=1.78
+pgutilavg_2=3.91
+pgutilmax=33
+pgutilmax_0=25.8
+pgutilmax_1=25.1
+pgutilmax_2=24.3
+poolsutilization=<!-- Pool#1 AFA-T1  -->
+<div><img id="Pool#1 AFA-T1" title="Drive utilization of Pool#1 AFA-T1 - Average: %PGUtilAvg_0%, peak: %PGUtilMax_0%." alt="PGUtil" src="%ImagePath%PGUtilization_0.png"></div>
+<div>Utilization of the physical disks of Pool#1 AFA-T1 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_0% [%], peak: %PGUtilMax_0% [%].</div>
+<br>
+
+<!-- Pool#2 AFA-T2  -->
+<div><img id="Pool#2 AFA-T2" title="Drive utilization of Pool#2 AFA-T2 - Average: %PGUtilAvg_1%, peak: %PGUtilMax_1%." alt="PGUtil" src="%ImagePath%PGUtilization_1.png"></div>
+<div>Utilization of the physical disks of Pool#2 AFA-T2 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_1% [%], peak: %PGUtilMax_1% [%].</div>
+<br>
+
+<!-- Pool#3 AFA-T0  -->
+<div><img id="Pool#3 AFA-T0" title="Drive utilization of Pool#3 AFA-T0 - Average: %PGUtilAvg_2%, peak: %PGUtilMax_2%." alt="PGUtil" src="%ImagePath%PGUtilization_2.png"></div>
+<div>Utilization of the physical disks of Pool#3 AFA-T0 over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_2% [%], peak: %PGUtilMax_2% [%].</div>
+<br>
+
+Port_Table_CHA-1PC=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>1B</th>
+    <td>16</td>
+    <td>0.87</td>
+    <td>47</td>
+    <td>[MB/s]</td>
+    <td>0.054%</td>
+    <td>2.9%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>5B</th>
+    <td>8</td>
+    <td>2.2</td>
+    <td>156</td>
+    <td>[MB/s]</td>
+    <td>0.28%</td>
+    <td>19%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>5A</th>
+    <td>8</td>
+    <td>5.8</td>
+    <td>806</td>
+    <td>[MB/s]</td>
+    <td>0.72%</td>
+    <td><div class="utilization-warning">101%</div></td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>1A</th>
+    <td>16</td>
+    <td>18</td>
+    <td>824</td>
+    <td>[MB/s]</td>
+    <td>1.1%</td>
+    <td>52%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>3B</th>
+    <td>16</td>
+    <td>32</td>
+    <td>263</td>
+    <td>[MB/s]</td>
+    <td>2.0%</td>
+    <td>16%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+  <tr>
+    <th>3A</th>
+    <td>16</td>
+    <td>76</td>
+    <td>842</td>
+    <td>[MB/s]</td>
+    <td>4.7%</td>
+    <td>53%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-1PD=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>7D</th>
+    <td>16</td>
+    <td>0.65</td>
+    <td>47</td>
+    <td>[MB/s]</td>
+    <td>0.040%</td>
+    <td>2.9%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>5D</th>
+    <td>8</td>
+    <td>3.8</td>
+    <td>269</td>
+    <td>[MB/s]</td>
+    <td>0.48%</td>
+    <td>34%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>7C</th>
+    <td>16</td>
+    <td>5.2</td>
+    <td>808</td>
+    <td>[MB/s]</td>
+    <td>0.33%</td>
+    <td>51%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>1C</th>
+    <td>16</td>
+    <td>6.7</td>
+    <td>809</td>
+    <td>[MB/s]</td>
+    <td>0.42%</td>
+    <td>51%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>5C</th>
+    <td>8</td>
+    <td>10</td>
+    <td>78</td>
+    <td>[MB/s]</td>
+    <td>1.3%</td>
+    <td>9.7%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>1D</th>
+    <td>16</td>
+    <td>41</td>
+    <td>318</td>
+    <td>[MB/s]</td>
+    <td>2.5%</td>
+    <td>20%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-1PJ=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>5J</th>
+    <td>8</td>
+    <td>0.003</td>
+    <td>1.9</td>
+    <td>[MB/s]</td>
+    <td>0%</td>
+    <td>0.24%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>3J</th>
+    <td>16</td>
+    <td>0.68</td>
+    <td>115</td>
+    <td>[MB/s]</td>
+    <td>0.043%</td>
+    <td>7.2%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+  <tr>
+    <th>5K</th>
+    <td>8</td>
+    <td>1.5</td>
+    <td>41</td>
+    <td>[MB/s]</td>
+    <td>0.19%</td>
+    <td>5.1%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>3K</th>
+    <td>16</td>
+    <td>3.2</td>
+    <td>790</td>
+    <td>[MB/s]</td>
+    <td>0.20%</td>
+    <td>49%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+  <tr>
+    <th>1K</th>
+    <td>16</td>
+    <td>4.4</td>
+    <td>43</td>
+    <td>[MB/s]</td>
+    <td>0.27%</td>
+    <td>2.7%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>1J</th>
+    <td>16</td>
+    <td>244</td>
+    <td>1282</td>
+    <td>[MB/s]</td>
+    <td>15%</td>
+    <td>80%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PC=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>2B</th>
+    <td>16</td>
+    <td>0.83</td>
+    <td>46</td>
+    <td>[MB/s]</td>
+    <td>0.052%</td>
+    <td>2.9%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>6B</th>
+    <td>8</td>
+    <td>2.2</td>
+    <td>156</td>
+    <td>[MB/s]</td>
+    <td>0.28%</td>
+    <td>19%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>6A</th>
+    <td>8</td>
+    <td>5.7</td>
+    <td>806</td>
+    <td>[MB/s]</td>
+    <td>0.71%</td>
+    <td><div class="utilization-warning">101%</div></td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>2A</th>
+    <td>16</td>
+    <td>18</td>
+    <td>823</td>
+    <td>[MB/s]</td>
+    <td>1.1%</td>
+    <td>51%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>4B</th>
+    <td>16</td>
+    <td>32</td>
+    <td>263</td>
+    <td>[MB/s]</td>
+    <td>2.0%</td>
+    <td>16%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+  <tr>
+    <th>4A</th>
+    <td>16</td>
+    <td>75</td>
+    <td>845</td>
+    <td>[MB/s]</td>
+    <td>4.7%</td>
+    <td>53%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PD=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>8D</th>
+    <td>16</td>
+    <td>0.66</td>
+    <td>47</td>
+    <td>[MB/s]</td>
+    <td>0.041%</td>
+    <td>2.9%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>6D</th>
+    <td>8</td>
+    <td>3.8</td>
+    <td>268</td>
+    <td>[MB/s]</td>
+    <td>0.48%</td>
+    <td>34%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>8C</th>
+    <td>16</td>
+    <td>5.3</td>
+    <td>811</td>
+    <td>[MB/s]</td>
+    <td>0.33%</td>
+    <td>51%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>2C</th>
+    <td>16</td>
+    <td>6.8</td>
+    <td>809</td>
+    <td>[MB/s]</td>
+    <td>0.43%</td>
+    <td>51%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>6C</th>
+    <td>8</td>
+    <td>10</td>
+    <td>77</td>
+    <td>[MB/s]</td>
+    <td>1.3%</td>
+    <td>9.7%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>2D</th>
+    <td>16</td>
+    <td>41</td>
+    <td>319</td>
+    <td>[MB/s]</td>
+    <td>2.6%</td>
+    <td>20%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+ </tbody>
+</table>
+
+Port_Table_CHA-2PJ=
+<table class=": tb1">
+  <tr>
+    <th>: Port</th>
+    <th>Speed</th>
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Metrics</th>
+    <th>Avg Util</th>
+    <th>Max Util</th>
+    <th>Description</th>
+    <th>CL-1 switch</th>
+    <th>CL-2 switch</th>
+  </tr>
+  <tr>
+    <th>6J</th>
+    <td>8</td>
+    <td>0.005</td>
+    <td>1.9</td>
+    <td>[MB/s]</td>
+    <td>0%</td>
+    <td>0.24%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>4J</th>
+    <td>16</td>
+    <td>0.69</td>
+    <td>117</td>
+    <td>[MB/s]</td>
+    <td>0.043%</td>
+    <td>7.3%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+  <tr>
+    <th>6K</th>
+    <td>8</td>
+    <td>1.5</td>
+    <td>44</td>
+    <td>[MB/s]</td>
+    <td>0.19%</td>
+    <td>5.6%</td>
+    <td>hosts</td>
+    <td>J032</td>
+    <td>K044</td>
+  </tr>
+  <tr>
+    <th>4K</th>
+    <td>16</td>
+    <td>3.2</td>
+    <td>789</td>
+    <td>[MB/s]</td>
+    <td>0.20%</td>
+    <td>49%</td>
+    <td>hosts</td>
+    <td>J034</td>
+    <td>K046</td>
+  </tr>
+  <tr>
+    <th>2K</th>
+    <td>16</td>
+    <td>4.4</td>
+    <td>48</td>
+    <td>[MB/s]</td>
+    <td>0.27%</td>
+    <td>3.0%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+  <tr>
+    <th>2J</th>
+    <td>16</td>
+    <td>244</td>
+    <td>1277</td>
+    <td>[MB/s]</td>
+    <td>15%</td>
+    <td>80%</td>
+    <td>hosts</td>
+    <td>J035</td>
+    <td>K047</td>
+  </tr>
+ </tbody>
+</table>
+
+portiopsavg=23 799
+portiopsmax=61 281
+portmbsavg=897
+portmbsmax=3 688
+procutilavg=7.5
+procutilmax=18
+ReportDate=25.10.2018
+ReportPath=c:\StorageAnalytics\WEB\238 CHA Adapters Board\
+ReportTime=31.10.2018 11:36:52
+ResponseTable=
+<table class="tb1">
+  <tr>
+    <th>Top LUNs with highest response time</th>
+    <th>NonZero Average</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Metrics</th>
+  </tr>
+  <tr>
+    <th>00:10:DF [ThP Volume 500 GB _00x]</th>
+    <td>2.4</td>
+    <td>0.23</td>
+    <td>0</td>
+    <td>4.9</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:10:F1 [ThP Volume 500 GB _00x]</th>
+    <td>2.0</td>
+    <td>0.15</td>
+    <td>0</td>
+    <td>4.4</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:36:87 [ThP Volume 100GB]</th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.61</td>
+    <td>3.3</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:10:24 [ThP Volume 200GB_czchols4057]</th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.57</td>
+    <td>3.7</td>
+    <td>[ms]</td>
+  </tr>
+  <tr>
+    <th>00:36:85 [ThP Volume 100GB]</th>
+    <td>1.7</td>
+    <td>1.7</td>
+    <td>0.61</td>
+    <td>3.3</td>
+    <td>[ms]</td>
+  </tr>
+ </tbody>
+</table>
+
+StorageSystem=XP7_B13_59006
+Template=Storage Analytics Report [Month Analysis]
+timerange=23.10.2018 19:57  -  25.10.2018 19:56
+WarningList=  <ul class="warning">
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning0.html"> warning: 00:11:CC [ThP Volume 200GB] latency  31 minutes exceed 18.92ms at 25.10.2018 18:20</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning1.html"> warning: 00:10:40 [ThP Volume 200GB] latency  29 minutes exceed 17.27ms at 25.10.2018 18:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning2.html"> warning: 00:11:CB [ThP Volume 200GB] latency  30 minutes exceed 17.40ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning3.html"> warning: 00:10:44 [ThP Volume 200GB] latency  30 minutes exceed 17.23ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning4.html"> warning: 00:10:42 [ThP Volume 200GB] latency  28 minutes exceed 17.22ms at 25.10.2018 18:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning5.html"> warning: 00:11:CA [ThP Volume 200GB] latency  28 minutes exceed 17.58ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning6.html"> warning: 00:10:46 [ThP Volume 200GB] latency  28 minutes exceed 17.38ms at 25.10.2018 18:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning7.html"> warning: 00:10:43 [ThP Volume 200GB] latency  29 minutes exceed 16.90ms at 25.10.2018 18:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning8.html"> warning: 00:10:45 [ThP Volume 200GB] latency  29 minutes exceed 16.96ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning9.html"> warning: 00:10:41 [ThP Volume 200GB] latency  28 minutes exceed 16.86ms at 25.10.2018 18:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning10.html"> warning: 00:10:3C [ThP Volume 200GB] latency  30 minutes exceed 17.85ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning11.html"> warning: 00:10:3B [ThP Volume 200GB] latency  29 minutes exceed 17.75ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning12.html"> warning: 00:10:3F [ThP Volume 200GB] latency  29 minutes exceed 16.60ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning13.html"> warning: 00:10:3E [ThP Volume 200GB] latency  30 minutes exceed 17.41ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning14.html"> warning: 00:10:3D [ThP Volume 200GB] latency  30 minutes exceed 17.02ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning15.html"> warning: 00:11:C9 [ThP Volume 200GB] latency  27 minutes exceed 17.13ms at 25.10.2018 18:24</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning16.html"> warning: 00:10:49 [ThP Volume 200GB] latency  29 minutes exceed 16.58ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning17.html"> warning: 00:10:47 [ThP Volume 200GB] latency  28 minutes exceed 16.53ms at 25.10.2018 18:22</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning18.html"> warning: 00:10:48 [ThP Volume 200GB] latency  28 minutes exceed 16.10ms at 25.10.2018 18:21</a></li>
+    <li><a class="warning" title="Warning details" href="_Daily%20Analysis-warning19.html"> warning: 00:10:4A [ThP Volume 200GB] latency  26 minutes exceed 15.89ms at 25.10.2018 18:23</a></li>
+
+  </ul>
+
+writependingavg=3.83
+writependingmax=13

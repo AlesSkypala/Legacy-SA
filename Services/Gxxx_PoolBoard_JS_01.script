@@ -1,0 +1,102 @@
+SA_Version=87
+{*************************************** HDD PoolBoard Section *******************************************}
+{*************************************** HDD PoolBoard Section *******************************************}
+{*************************************** HDD PoolBoard Section *******************************************}
+{*************************************** HDD PoolBoard Section *******************************************}
+Description=PoolBoard Script compute basic storage metrics by particular DP pool and create/parse HTML template
+
+
+Line.Width=1
+Chart.Width=970
+
+
+{**** clear variables ****}
+$HeaderItems=
+$HtmlBody=
+
+
+{***** PG utilisation *****}
+Chart.File=PhyPG_dat.ZIP
+Chart.Statistic=PHY_PG.csv, PHY_Short_PG.csv
+Chart.Open=1
+Chart.Filter=5
+
+Loop.ConfigFilter=Config.zip, LdevInfo.csv, ECC Group, Pool Name, External
+
+Loop(
+Chart.Height=180
+Chart.Search=Loop.Value
+Chart.Name=Physical drives utilization of  Loop.Name
+Chart.Save=PGUtilization_Loop.ID
+$PGUtilMax_Loop.ID=#chart.max
+$PGUtilAvg_Loop.ID=#chart.avg
+)
+
+Chart.Close=*
+
+Chart.File=LDEVEachOfCU_dat\LDEV_Response.zip
+Chart.Statistic=*
+Chart.Open=2
+Chart.Filter=5
+Chart=Divide1000, AscendingSort
+
+Loop.ConfigFilter=Config.zip, LdevInfo.csv, LDEV#, Pool Name, External
+
+Loop(
+Chart.Select=2
+Chart.Copy=3
+Chart.Select=3
+Chart.Height=180
+Chart.Search=Loop.Value
+Chart=DelUnselected
+
+Chart.Name= Response Time of LUNs assigned to  Loop.Name
+Chart.Save=PGResp_Loop.ID
+$PGRespMax_Loop.ID=#chart.max
+$PGRespAvg_Loop.ID=#chart.avg
+
+Chart.TopSelect=8
+Chart.SaveActive=LatencyTable_Loop.ID
+Chart.Name=Top Response Time LUNs of Loop.Name
+Chart.TransformToHtmlTable=LatencyTable_Loop.ID
+Chart.Name=Response Histogram LUNs on Loop.Name
+Chart.TransformToHistogram
+HistogramChart.Width=470
+HistogramChart.Height=140
+HistogramChart.Save=HistogramResp_Loop.ID
+HistogramChart.Close
+Chart.Close=3
+
+
+$>>HeaderItems=<li><a href="#Loop.Name">Loop.Name</a></li>
+
+$>>HtmlBody=<!-- Loop.Name -->
+$>>HtmlBody=<div id="Loop.Name" class="sectionBox" style="width: 995px;">
+$>>HtmlBody=<h2>WorkLoad Charakteristic on  <big> Loop.Name</big><a href="#toph">&#9650;</a></h2>
+$>>HtmlBody=<!-- HDD -->
+$>>HtmlBody=<div style="text-align:center"><img  title="Drive utilization of Loop.Name - Average: %PGUtilAvg_Loop.ID%, peak: %PGUtilMax_Loop.ID%." alt="PGUtil" src="%ImagePath%PGUtilization_Loop.ID.png">
+$>>HtmlBody=<br>Utilization of the physical disks of Loop.Name over the entire data collection. X-Axis represents Date-Time, Y-Axis represents drive utilization [%]. Average: %PGUtilAvg_Loop.ID% [%], peak: %PGUtilMax_Loop.ID% [%].</div>
+$>>HtmlBody=<!-- Resp -->
+$>>HtmlBody=<div style="text-align:center"><img title="Response on Loop.Name - Average: %Server_RespAvg_Loop.ID% [ms], peak: %PGRespMax_Loop.ID% [ms]." alt="IOPs" src="%ImagePath%PGResp_Loop.ID.png">
+
+$>>HtmlBody=<br>Response Time on server group Loop.Name - Average: %PGRespAvg_Loop.ID% [ms], peak: %PGRespMax_Loop.ID% [ms]. X-Axis represents Date-Time, Y-Axis represents Response [ms].</div>
+
+
+$>>HtmlBody=<div style="display: inline-block; width: 470px;"><img title="Response Histogram" alt="Response Histogram" src="%ImagePath%HistogramResp_Loop.ID.png">
+$>>HtmlBody=<br>The latency histogram provide insight into the distribution of response times for IO requests. X-Axis represents latency, Y-Axis represents latency value rate [%].</div>
+$>>HtmlBody=<div style="display: inline-block; width: 470px;">
+$>>HtmlBody=%LatencyTable_Loop.ID%
+$>>HtmlBody=</div>
+$>>HtmlBody=<div><img id="LatencyTable_Loop.ID" src="../empty.png"></div>
+$>>HtmlBody=</div>
+
+$>>HtmlBody=</div>
+$>>HtmlBody=
+)
+
+Chart.Close=*
+
+{Parse HTML}
+Html.Parse=Header_01.html,   Body_ImageChange_JS.html,  Body_Metro_Empty_ExtCSS.html,    Footer_DataClue_01.html
+
+Return

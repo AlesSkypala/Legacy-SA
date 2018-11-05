@@ -1,0 +1,84 @@
+SA_Version=87
+{***************************************** GADBoard Section *******************************************}
+{***************************************** GADBoard Section *******************************************}
+{***************************************** GADBoard Section *******************************************}
+{***************************************** GADBoard Section *******************************************}
+Description=GADBoard Script compute basic storage metrics and parse DashBoard HTML template
+
+{***** Setting width/height/Style***** }
+Chart.Width=470
+Chart.Height=165
+Line.Width=1
+Grid=180
+
+
+
+
+
+
+
+Chart.File=RCLDEV_dat\RCLDEV_Update_Copy_Response.ZIP
+Chart.Statistic=*
+Chart.Open=1
+Chart=DelZero
+
+
+
+Chart.File=LDEVEachOfCU_dat\LDEV_Response.ZIP
+Chart.Statistic=*
+Chart.Open=2
+Chart.Search.ChartID=1
+Chart.Name=Response Time
+Chart.Filter=8
+Chart=Divide1000
+Chart.Save=ResponseGADP
+Chart.close=2
+
+Chart.File=LDEVEachOfCU_dat\LDEV_IOPS.ZIP
+Chart.Statistic=*
+Chart.Open=2
+Chart.Search.ChartID=1
+Chart.Name=Transaction Rate
+Chart.Filter=8
+Chart=ShowSum
+Chart.Save=IOpsGADP
+Chart.close=2
+
+Chart.File=LDEVEachOfCU_dat\LDEV_TransRate.ZIP
+Chart.Statistic=*
+Chart.Open=2
+Chart.Search.ChartID=1
+Chart.Name=Transfer Rate
+Chart.Filter=8
+Chart=Divide1000, ShowSum
+Chart.Save=MBpsGADP
+Chart.close=2
+
+Chart.File=LDEVEachOfCU_dat\LDEV_Read_TransRate.ZIP
+Chart.Statistic=*
+Chart.Open=2
+Chart.Search.ChartID=1
+Chart.Name=Read Transfer Rate 
+Chart.Filter=8
+Chart=Divide1000, ShowSum
+Chart.Save=MBpsrGADP
+Chart.close=2
+
+Chart.File=LDEVEachOfCU_dat\LDEV_Write_TransRate.ZIP
+Chart.Statistic=*
+Chart.Open=2
+Chart.Search.ChartID=1
+Chart.Name=Write Ttransfer Rate 
+Chart.Filter=8
+Chart=Divide1000, ShowSum
+Chart.Save=MBpswGADP
+Chart.close=2
+
+Chart.Close=*
+
+
+Return
+
+
+
+

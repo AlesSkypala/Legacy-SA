@@ -1,0 +1,153 @@
+SA_Version=87
+SilentMode
+
+{***** Use Select System command to manage many storage systems. Otherwise the default will be used ****}
+System.Select=XP7_G14_10560
+
+
+{********* Name of Web Pages ********}
+$StorageSystem=Global DashBoard
+
+
+{***************** Set Styles **************}
+PieChart.Style= 3D: 0, Serie.Slice: 2, Serie.Border: 0, Bck.Gradient: off, Bck.Color: clWhite, Margin: 5, Footer.Height: 0
+BarChart.Style= 3D: 0, Serie.Border: 0, Bck.Gradient: off, Bck.Color: clWhite, Footer.Height: 0
+Chart.Style=3D: 0, Serie.Border: 0, Sum.Style: area, Sum.Color: clGray, Legend: Bottom, SubTitle.height: 0, Footer.Height: 0
+HistogramChart.Style= Serie.Border: 0, Sum.Color: clGray, Footer.Height: 0
+AreaChart.Style=Serie.Border: 0, Serie.Bottom.Gama: 200, Serie.Top.Gama: 100, Legend: off , Footer.Height: 0
+
+Html.Template.Main= Header_00.html,    Body_Template_Main.html,    Footer_DataClue_01.html
+Html.Template.Calendar= Header_02.html,    Body_Template_Calendar.html,    Footer_DataClue_01.html
+Html.Template.ItemList=Header_03.html,    Body_Template_ItemList.html,    Footer_DataClue_01.html
+Html.Template.DocList=Header_04.html,    Body_Template_DocList.html,    Footer_DataClue_01.html
+Html.Template.Warning=Header_01.html,    Body_Template_Warning.html,    Footer_DataClue_01.html
+CreateWarningPage=off
+
+CopyFile=jquery-3.3.1.min.js, c:\StorageAnalytics\WEB\jquery.js
+
+
+
+
+
+{***************** Definitions *************}
+
+// Rooms and Systems definition
+$StorageRooms= CZ_Chodov, CZ_Sitel, MY_Cyberjaja, MY_AIMS, US_Ashburn, US_Mechanigsburg
+
+$StorageSystems_CZ_Chodov=XP7_G11_58417, XP7_G12_58416, XP7_G13_58734, XP7_G14_10560, XP7_G15_20028, XP7_G16_20359, XP7_B11_50225, XP7_B12_58678, XP7_B13_59006, XP7_B14_10554, XP7_B15_10640, XP7_B16_11114
+$StorageSystems_CZ_Sitel=XP7_STL1_58634, XP7_STL2_10558
+$StorageSystems_MY_Cyberjaja=XP7_AFA1_57216, XP7_AFA2_57222, XP7_AFA3_20575, XP7_AFA4_56053
+$StorageSystems_MY_AIMS=XP7_AIMS1_20627
+$StorageSystems_US_Ashburn= XP7_QAS1_20610, XP7_QAS2_56139
+$StorageSystems_US_Mechanigsburg=XP7_MEG1_10239, XP7_MEG2_20725
+
+
+// Link definition for dynamic link to DashBoard Subpages
+$XP7_G11_58417_DashBoard_Link=/011%20Dash%20Board/Dash%20Board.html
+$XP7_G12_58416_DashBoard_Link=/021%20Dash%20Board/Dash%20Board.html
+$XP7_G13_58734_DashBoard_Link=/031%20Dash%20Board/Dash%20Board.html
+$XP7_G16_20359_DashBoard_Link=/061%20Dash%20Board/Dash%20Board.html
+$XP7_B11_50225_DashBoard_Link=/211%20Dash%20Board/Dash%20Board.html
+$XP7_B12_58678_DashBoard_Link=/221%20Dash%20Board/Dash%20Board.html
+$XP7_B13_59006_DashBoard_Link=/231%20Dash%20Board/Dash%20Board.html
+$XP7_B14_10554_DashBoard_Link=/241%20Dash%20Board/Dash%20Board.html
+$XP7_B15_10640_DashBoard_Link=/251%20Dash%20Board/Dash%20Board.html
+$XP7_G14_10560_DashBoard_Link=/041%20Dash%20Board/Dash%20Board.html
+$XP7_G15_20028_DashBoard_Link=/051%20Dash%20Board/Dash%20Board.html
+$XP7_B16_11114_DashBoard_Link=/261%20Dash%20Board/Dash%20Board.html
+$XP7_STL1_58634_DashBoard_Link=/611%20Dash%20Board/Dash%20Board.html
+$XP7_STL2_10558_DashBoard_Link=/621%20Dash%20Board/Dash%20Board.html
+$XP7_AFA1_57216_DashBoard_Link=/411%20Dash%20Board/Dash%20Board.html
+$XP7_AFA2_57222_DashBoard_Link=/421%20Dash%20Board/Dash%20Board.html
+$XP7_AFA3_20575_DashBoard_Link=/431%20Dash%20Board/Dash%20Board.html
+$XP7_AFA4_56053_DashBoard_Link=/441%20Dash%20Board/Dash%20Board.html
+$XP7_AIMS1_20627_DashBoard_Link=/811%20Dash%20Board/Dash%20Board.html
+$XP7_QAS1_20610_DashBoard_Link=/511%20Dash%20Board/Dash%20Board.html
+$XP7_QAS2_56139_DashBoard_Link=/521%20Dash%20Board/Dash%20Board.html
+$XP7_MEG1_10239_DashBoard_Link=/711%20Dash%20Board/Dash%20Board.html
+$XP7_MEG2_20725_DashBoard_Link=/721%20Dash%20Board/Dash%20Board.html
+
+// Link definition for dynamic link to DpPool subpages
+$XP7_G11_58417_DpBoard_Link=/014%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_G12_58416_DpBoard_Link=/024%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_G13_58734_DpBoard_Link=/034%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_G16_20359_DpBoard_Link=/064%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_B11_50225_DpBoard_Link=/214%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_B12_58678_DpBoard_Link=/224%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_B13_59006_DpBoard_Link=/234%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_B14_10554_DpBoard_Link=/244%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_B15_10640_DpBoard_Link=/254%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_G14_10560_DpBoard_Link=/044%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_G15_20028_DpBoard_Link=/054%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_B16_11114_DpBoard_Link=/264%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_STL1_58634_DpBoard_Link=/614%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_STL2_10558_DpBoard_Link=/624%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_AFA1_57216_DpBoard_Link=/414%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_AFA2_57222_DpBoard_Link=/424%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_AFA3_20575_DpBoard_Link=/434%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_AFA4_56053_DpBoard_Link=/444%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_AIMS1_20627_DpBoard_Link=/814%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_QAS1_20610_DpBoard_Link=/514%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_QAS2_56139_DpBoard_Link=/524%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_MEG1_10239_DpBoard_Link=/714%20DP%20Pool%20Board%20and%20SLA/index.html
+$XP7_MEG2_20725_DpBoard_Link=/724%20DP%20Pool%20Board%20and%20SLA/index.html
+
+
+// Link definition for dynamic link to DpPool subpages
+$XP7_G11_58417_ChaBoard_Link=/018%20CHA%20Adapters%20Board/index.html
+$XP7_G12_58416_ChaBoard_Link=/028%20CHA%20Adapters%20Board/index.html
+$XP7_G13_58734_ChaBoard_Link=/038%20CHA%20Adapters%20Board/index.html
+$XP7_G16_20359_ChaBoard_Link=/068%20CHA%20Adapters%20Board/index.html
+$XP7_B11_50225_ChaBoard_Link=/218%20CHA%20Adapters%20Board/index.html
+$XP7_B12_58678_ChaBoard_Link=/228%20CHA%20Adapters%20Board/index.html
+$XP7_B13_59006_ChaBoard_Link=/238%20CHA%20Adapters%20Board/index.html
+$XP7_B14_10554_ChaBoard_Link=/248%20CHA%20Adapters%20Board/index.html
+$XP7_B15_10640_ChaBoard_Link=/258%20CHA%20Adapters%20Board/index.html
+$XP7_G14_10560_ChaBoard_Link=/048%20CHA%20Adapters%20Board/index.html
+$XP7_G15_20028_ChaBoard_Link=/058%20CHA%20Adapters%20Board/index.html
+$XP7_B16_11114_ChaBoard_Link=/268%20CHA%20Adapters%20Board/index.html
+$XP7_STL1_58634_ChaBoard_Link=/618%20CHA%20Adapters%20Board/index.html
+$XP7_STL2_10558_ChaBoard_Link=/628%20CHA%20Adapters%20Board/index.html
+$XP7_AFA1_57216_ChaBoard_Link=/418%20CHA%20Adapters%20Board/index.html
+$XP7_AFA2_57222_ChaBoard_Link=/428%20CHA%20Adapters%20Board/index.html
+$XP7_AFA3_20575_ChaBoard_Link=/438%20CHA%20Adapters%20Board/index.html
+$XP7_AFA4_56053_ChaBoard_Link=/448%20CHA%20Adapters%20Board/index.html
+$XP7_AIMS1_20627_ChaBoard_Link=/818%20CHA%20Adapters%20Board/index.html
+$XP7_QAS1_20610_ChaBoard_Link=/518%20CHA%20Adapters%20Board/index.html
+$XP7_QAS2_56139_ChaBoard_Link=/528%20CHA%20Adapters%20Board/index.html
+$XP7_MEG1_10239_ChaBoard_Link=/718%20CHA%20Adapters%20Board/index.html
+$XP7_MEG2_20725_ChaBoard_Link=/728%20CHA%20Adapters%20Board/index.html
+
+
+
+
+
+
+{***************** Runtime **************}
+// Path to WebPages
+$StorageSystem=Global DashBoard
+Report.Path=c:\StorageAnalytics\WEB\001 Performance Statistics
+Call=Makro-Day-Week-Month_Gxxx_GlobalDashBoard_PortInfo_01.script
+
+
+Report.Name=Capacity Statistics
+Report.Path=c:\StorageAnalytics\WEB\002 Capacity Statistics
+day.select=1
+$HeaderItems=
+Call=Gxxx_GlobalDashBoard_DPInfo_01.script
+
+
+Report.Path=c:\StorageAnalytics\WEB\003 DP and SLA Statistic
+Call=Makro-Day-Week-Month_Gxxx_GlobalDashBoard_DPSLAInfo_01.script
+
+
+Report.Path=c:\StorageAnalytics\WEB\006 Channel Adapters Statistics
+Call=Makro-Day-Week-Month_Gxxx_GlobalDashBoard_CHA_01.script
+
+
+
+Web.Reindex=../
+
+
+
+   

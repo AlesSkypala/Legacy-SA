@@ -1,0 +1,86 @@
+//Chart.Style=Legend: Bottom
+Chart.Density=0.01
+
+
+{Create Empty Chart}
+Chart.Create=101
+Chart.Name=Transfer Rate on Channel Adapters
+Chart.LeftAxis=[MB/s]
+
+
+$HtmlBody=<!-- Code Created by Script -->
+$>>HtmlBody=<div class="sectionBox" style="width: 995px;">
+$>>HtmlBody=<h2>WorkLoad on Particalated CHA, Time Range: %TimeRange%<a href="#toph">&#9650;</a></h2>
+$>>HtmlBody=<div style="text-align:center"><img title="MBps rate on Loop.Value" alt="CHA_adapters" src="%ImagePath%CHadapt_00.png"></div>
+$>>HtmlBody=<div style="text-align:center;  margin: 20px 20px 20px 20px;">%CHA_Summary%</div>
+$>>HtmlBody=</div>
+
+
+{Open Port Workload}
+Chart.Width=360
+Chart.Height=140
+Chart.File=Port_dat.ZIP
+Chart.Statistic=port_KBPS.csv
+Chart.Open=100
+Chart=Divide1000, DescendingSort
+$TimeRange=#Time.Range
+
+
+Loop.ConfigFilter=Config.zip, LunInfo.csv, Port,CHA Location
+//Loop.ShowInfo
+
+Loop(
+Chart.Search=Loop.Value
+SerieCopy=#Chart.Sum, 100, 101 ,"Loop.Name", #RandomColor, 1
+Chart.Name=
+Chart=ShowSum
+Chart.Save=CHA_PORT_Loop.Name
+Chart=HideSum
+Chart.TransformToHtmlTable=Port_Table_Loop.Name
+)
+
+Chart.select=101
+Chart.Width=970
+Chart.Height=230
+Chart=DescendingSort
+Chart.Save=CHadapt_00
+
+
+Loop.ItemsFilter=ActiveChartItems
+//Loop.ShowInfo
+
+$CHA_Summary=<table class="tb1">
+$>>CHA_Summary=<tr>
+$>>CHA_Summary=<th style="font-size:180%">&nbsp Channel Adapter</th>
+$>>CHA_Summary=<th style="font-size:180%">Average<br>Peak<p style="font-size:50%">Sorted from lowest utilized CHA</p></th>
+$>>CHA_Summary=<th style="font-size:180%;">Workload on Ports<p style="font-size:50%">Sorted from lowest utilized FE ports</p></th>
+$>>CHA_Summary=<th style="font-size:180%">Workload Chart</th>
+$>>CHA_Summary=</tr>
+
+
+Loop(
+{*** Fill Variables ***}
+Chart.Search=Loop.Value
+$AVG_Loop.ID=#Chart.Avg
+$MAX_Loop.ID=#Chart.MAX
+
+{*** Create HTML table ***}
+$>>CHA_Summary=<!-- Loop.Item -->
+$>>CHA_Summary=<tr>
+$>>CHA_Summary=<td style="font-size:150%"><b>Loop.Value</b></td>
+$>>CHA_Summary=<td style="font-size:150%">%AVG_Loop.ID% MB/s<br>%MAX_Loop.ID% MB/s</td>
+$>>CHA_Summary=<td style="padding: 10px 10px 10px 10px; width: 300px">%Port_Table_Loop.Value%</td>
+$>>CHA_Summary=<td style="padding: 10px 10px 10px 10px;"><img title="MBps rate on Loop.Value" alt="LOOP.Item" src="%ImagePath%CHA_PORT_Loop.Value.png"></td>
+$>>CHA_Summary=</tr>
+)
+
+$>>CHA_Summary=</table>
+
+Chart.Close=*
+
+Html.Parse=Header_01.html, Body_Metro_Empty_ExtCSS.html,    Footer_3S_01.html
+
+Return
+
+
+

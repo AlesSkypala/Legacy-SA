@@ -1,0 +1,44 @@
+
+{*************************  Pool Board Makro *************************}
+
+Line.Width=1
+Chart.Width=970
+
+
+
+$HeaderItems2=<li><a href="Day%20Analysis.html" style="background: GreenYellow;">Last Day</a></li>
+$>>HeaderItems2=<li><a href="index.html">Last Week</a></li>
+$>>HeaderItems2=<li><a href="Month%20Analysis.html">Last Month</a></li>
+$>>HeaderItems2=<li>&nbsp; &#9658; &nbsp;</li>
+Report.Name=Day Analysis
+Day.Select=1
+$VariableSet=CHA_day
+Call=Gxxx_GlobalDashBoard_CHA_01.script
+
+
+
+
+$HeaderItems2=<li><a href="Day%20Analysis.html"> Last Day</a></li>
+$>>HeaderItems2=<li><a href="index.html" style="background: GreenYellow;">Last Week</a></li>
+$>>HeaderItems2=<li><a href="Month%20Analysis.html">Last Month</a></li>
+$>>HeaderItems2=<li>&nbsp; &#9658; &nbsp;</li>
+Day.Select=7
+Report.Name=index
+//Override JobName in Title
+$JobName=Week Analysis
+$VariableSet=CHA_week
+Call=Gxxx_GlobalDashBoard_CHA_01.script
+
+
+$HeaderItems2=<li><a href="Day%20Analysis.html">Last Day</a></li>
+$>>HeaderItems2=<li><a href="index.html">Last Week</a></li>
+$>>HeaderItems2=<li><a href="Month%20Analysis.html" style="background: GreenYellow;">Last Month</a></li>
+$>>HeaderItems2=<li>&nbsp; &#9658; &nbsp;</li>
+Day.Select=30
+Report.Name=Month Analysis
+$VariableSet=CHA_Month
+Call=Gxxx_GlobalDashBoard_CHA_01.script
+
+
+return
+

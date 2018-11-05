@@ -1,0 +1,175 @@
+SA_Version=87
+{*************************************** Cannel Adapter Section *******************************************}
+{*************************************** Cannel Adapter Section *******************************************}
+{*************************************** Cannel Adapter Section *******************************************}
+{*************************************** Cannel Adapter Section *******************************************}
+
+{**** clear html body****}
+$HtmlBody=<!-- Code Created by Script -->
+
+
+
+{ Port Image for Buttons }
+CopyFile=port01.png, port01.png
+
+
+{**** Make more poinst for long-term charts ***}
+Chart.Density=0.5
+
+
+
+
+
+$>>HtmlBody=<div class="sectionBox" style="width: 995px">
+$>>HtmlBody=<h2>WorkLoad on Particalated CHA, Time Range: %TimeRange%<a href="#toph">&#9650;</a></h2>
+$>>HtmlBody=<div style="text-align:center"><img title="MBps rate on Loop.Value" alt="CHA_adapters" src="%ImagePath%CHadapt_00.png" onclick="DynChart('CHadapt_00', 'Transfer Rate on Channel Adapters in details ', '[MBps]')"  style="cursor: alias;" ></div>
+$>>HtmlBody=<div style="text-align:center;  margin: 20px 20px 20px 20px;">%CHA_Summary%</div>
+$>>HtmlBody=</div>
+
+
+{Open Port Workload}
+Chart.Width=450
+Chart.Height=140
+Chart.File=Port_dat.ZIP
+Chart.Statistic=port_KBPS.csv
+Chart.Open=100
+Chart.AssignCsv=CL-1, CL-2
+Chart=PortNameToShort, Divide1000, DescendingSort
+$TimeRange=#Time.Range
+
+
+
+
+{*********** Following code agregate PORT trafic to CHA trafic base on LunInfo.Csv configuration.  Chart Target ID: 101 ************}
+{*********** Following code agregate PORT trafic to CHA trafic base on LunInfo.Csv configuration.  Chart Target ID: 101 ************}
+{*********** Following code agregate PORT trafic to CHA trafic base on LunInfo.Csv configuration.  Chart Target ID: 101 ************}
+//   Create Empty Chart
+Chart.Create=101
+Chart.Name=Transfer Rate on Channel Adapters
+Chart.LeftAxis=[MB/s]
+Chart.Select=100
+Chart.Name=
+//   Init Loop
+Loop.ConfigFilter=Config.zip, LunInfo.csv, Port,CHA Location
+Loop(
+Chart.SetActive=Loop.Value
+SerieCopy=#Chart.Sum, 100, 101 ,"Loop.Name", #RandomColor, 1
+$CHA_Avg_Loop.Name=#Chart.SumAvg
+Chart.TransformToHtmlTable=Port_Table_Loop.Name, #Class: tb1, #Title: Port,  Speed,  #Avg,  #Max,  #Metrics,  #AvgUtil,  #MaxUtil,  Description,  CL-1 switch,  CL-2 switch
+//Add Treshold lines
+Chart.AddLine=Value: 800, Title: Limit 8G,  Mark: 800 MB/s, style: Dash, Color: clBlue
+Chart.AddLine=Value: 1600, Title: Limit 16G,  Mark: 1600 MB/s, style: Dash, Color: clRed
+Chart.SaveCsv=CHA_PORT_Loop.Name
+Chart.Save=CHA_PORT_Loop.Name
+)
+
+
+
+
+
+{*********** Following code agregate  CHA trafic to CHA pair, Chart Target ID: 102 ************}
+{*********** Following code agregate  CHA trafic to CHA pair, Chart Target ID: 102  ************}
+{*********** Following code agregate  CHA trafic to CHA pair, Chart Target ID: 102  ************}
+//   Create Empty Chart
+Chart.Create=102
+Chart.Name=Transfer Rate on Channel Adapters Pairs
+Chart.LeftAxis=[MB/s]
+Chart.Select=101
+Chart.AddLine=Value: 2000, Title: CHA Limit,  Mark: 2000 MB/s, style: Dash, Color: clRed
+Chart.Name=
+//   Init Loop
+Loop.UseLastFilter
+Loop.Function=JoinClusters
+Loop(
+Chart.SetActive=Loop.Value,  CHA Limit
+SerieCopy=#Chart.Sum, 101, 102 , "Loop.Value", #RandomColor, 1
+Chart.SaveImgCsv=CHA_PAIR_Loop.FValue
+Chart.SetActive=Loop.Value
+Chart.TransformToHTMLTable=CHA_PAIR_Table_Loop.FValue
+)
+
+
+{***************** Create Final Table *****************}
+{***************** Create Final Table *****************}
+{***************** Create Final Table *****************}
+
+//CHA Adapters
+Chart.Select=101
+Chart=DescendingSort
+Chart.Width=970
+Chart.Height=230
+Chart.SetActive=*
+Chart.SaveImgCsv=CHadapt_00
+
+
+//CHA Pairs
+Chart.Select=102
+Chart.SetActive=*
+Chart=DescendingSort
+// Init Loop
+
+Loop.Init.Series=ActiveChartItems
+
+
+
+
+
+
+Loop(
+$>>HeaderItems=<li><a href="#Loop.ID"><img title="" alt="" src="port01.png">&nbsp; Loop.Value</a></li>
+
+{*** Fill Variables ***}
+Chart.SetActive=Loop.Value
+$AVG_Loop.ID=#Chart.Avg
+$MAX_Loop.ID=#Chart.MAX
+
+{*** Create Info Box***}
+$>>CHA_Summary=<!-- Loop.Item -->
+$>>CHA_Summary=<div id="Loop.ID" class="sectionBox" style="width: 100%; margin: 10px 0px 0px 0px;">
+$>>CHA_Summary=<h2>WorkLoad on Particular CHA Pair: Loop.Value<a href="#toph">&#9650;</a></h2>
+
+
+//CHA Pair Items
+$>>CHA_Summary=<div style="margin: 10px; height: 10px;">Channel Adapter Pair:  <b>Loop.Value</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+$>>CHA_Summary=<div style="display: inline-block; width: 430px; vertical-align: top; margin-left: 30px;">%CHA_PAIR_Table_Loop.FValue%</div>
+$>>CHA_Summary=<div style="display: inline-block; width: 450px; vertical-align: top;"><img title="MBps rate on Loop.FValue" alt="LOOP.Item" src="%ImagePath%CHA_PAIR_Loop.FValue.png" onclick="DynChart('CHA_PAIR_Loop.FValue', 'Transfer Rate on Poorts of Channel Adapter Loop.Value in details ', '[MBps]')" style="cursor: alias;"></div>
+
+
+
+
+
+// Sub Loop prepare details for particular CHA pair
+Loop.ListFilter=Loop.Value
+
+Loop(
+$>>CHA_Summary=<div style="margin: 10px; height: 10px;">Channel Adapter:  <b>Loop.Value</b><hr style="margin:  1px 18px 0px 0px; box-shadow: none; border-top: dotted 1px gray;"></div>
+$>>CHA_Summary=<div style="display: inline-block; width: 430px;  vertical-align: top; margin-left: 30px">%Port_Table_Loop.Value%</div>
+$>>CHA_Summary=<div style="display: inline-block; width: 450px;  vertical-align: top;"><img title="MBps rate on Loop.Value" alt="LOOP.Item" src="%ImagePath%CHA_PORT_Loop.Value.png" onclick="DynChart('CHA_PORT_Loop.Value', 'Transfer Rate on Poorts of Channel Adapter Loop.Value in details ', '[MBps]')" style="cursor: alias;"></div>
+
+)
+
+
+//Close InfoBox
+$>>CHA_Summary=</div>
+)
+
+
+
+
+
+
+
+
+
+Chart.Close=*
+
+Html.Parse=Header_ModalGraph_01.html, Body_Metro_Empty_ExtCSS.html,  ModalGraph_01.html,  Footer_DataClue_01.html
+
+
+Chart.Density=1
+
+Return
+
+
+
+
