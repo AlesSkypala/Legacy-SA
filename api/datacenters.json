@@ -1,0 +1,29 @@
+{
+  "counts" : 6,
+  "datacenters": [
+    {
+      "id": "01",
+      "label": "CZ_Chodov"
+    },
+    {
+      "id": "02",
+      "label": "CZ_Sitel"
+    },
+    {
+      "id": "03",
+      "label": "MY_Cyberjaja"
+    },
+    {
+      "id": "04",
+      "label": "MY_AIMS"
+    },
+    {
+      "id": "05",
+      "label": "US_Ashburn"
+    },
+    {
+      "id": "06",
+      "label": "US_Mechanigsburg"
+    }
+  ]
+}

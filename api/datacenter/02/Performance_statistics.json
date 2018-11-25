@@ -1,0 +1,25 @@
+{
+  "id": "02",
+  "label": "CZ_Sitel",
+  "systems": [
+    {
+      "name": "XP_7_G11_58417",
+      "metrics": [
+        {
+          "name":"Workload",
+          "value": 100,
+          "unit": "IOPS",
+          "peak": "544",
+          "date": "2018-11-01"
+        },
+        {
+          "name":"Transfer",
+          "value": 12345,
+          "unit": "Mbps",
+          "peak": "10",
+          "date": "2018-11-02"
+        }
+      ]
+    }
+  ]
+}
