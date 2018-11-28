@@ -1,29 +1,132 @@
 {
-  "counts" : 6,
   "datacenters": [
     {
-      "id": "01",
-      "label": "CZ_Chodov"
+      "id": 1,
+      "label": "CZ_Chodov",
+      "systems": [
+        {
+          "id": 1,
+          "name": "XP7-G11 [58417]"
+        },
+        {
+          "id": 2,
+          "name": "XP7-G12 [58416]"
+        },
+        {
+          "id": 3,
+          "name": "XP7-G13 [58734]"
+        },
+        {
+          "id": 4,
+          "name": "XP7-G14 [10560]"
+        },
+        {
+          "id": 5,
+          "name": "XP7-G15 [20028]"
+        },
+        {
+          "id": 6,
+          "name": "XP7-G16 [20359]"
+        },
+        {
+          "id": 7,
+          "name": "XP7-B11 [50225]"
+        },
+        {
+          "id": 22,
+          "name": "XP7-B12 [58678]"
+        },
+        {
+          "id": 23,
+          "name": "XP7-B13 [59006]"
+        },
+        {
+          "id": 24,
+          "name": "XP7-B14 [10554]"
+        },
+        {
+          "id": 25,
+          "name": "XP7-B15 [10640]"
+        },
+        {
+          "id": 26,
+          "name": "XP7-B16 [11114]"
+        }
+      ]
     },
     {
-      "id": "02",
-      "label": "CZ_Sitel"
+      "id": 2,
+      "label": "CZ_Sitel",
+      "systems": [
+        {
+          "id": 61,
+          "name": "XP7-STL1 [58634]"
+        },
+        {
+          "id": 62,
+          "name": "XP7-STL2 [10558]"
+        }
+      ]
     },
     {
-      "id": "03",
-      "label": "MY_Cyberjaja"
+      "id": 3,
+      "label": "MY_Cyberjaja",
+      "systems": [
+        {
+          "id": 41,
+          "name": "XP7-AFA1 [57216]"
+        },
+        {
+          "id": 42,
+          "name": "XP7-AFA2 [57222]"
+        },
+        {
+          "id": 43,
+          "name": "XP7-AFA3 [20575]"
+        },
+        {
+          "id": 44,
+          "name": "XP7-AFA4 [56053]"
+        }
+      ]
     },
     {
-      "id": "04",
-      "label": "MY_AIMS"
+      "id": 4,
+      "label": "MY_AIMS",
+      "systems": [
+        {
+          "id": 81,
+          "name": "XP7-AIMS1 [20627]"
+        }
+      ]
     },
     {
-      "id": "05",
-      "label": "US_Ashburn"
+      "id": 5,
+      "label": "US_Ashburn",
+      "systems": [
+        {
+          "id": 51,
+          "name": "XP7-QAS1 [20610]"
+        },
+        {
+          "id": 52,
+          "name": "XP7-QAS2 [56139]"
+        }
+      ]
     },
     {
-      "id": "06",
-      "label": "US_Mechanigsburg"
+      "id": 6,
+      "label": "US_Mechanigsburg",
+      "systems": [
+        {
+          "id": 71,
+          "name": "XP7-MEG1 [10239]"
+        },
+        {
+          "id": 72,
+          "name": "XP7-MEG2 [20725]"
+        }
+      ]
     }
   ]
 }

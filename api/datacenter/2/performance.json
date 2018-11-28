@@ -1,0 +1,53 @@
+{
+  "id": "02",
+  "label": "CZ_Sitel",
+  "systems": [
+    {
+      "name": "XP_7_G11_58417",
+      "metrics": [
+        {
+          "name":"Workload",
+          "value": 71132 ,
+          "unit": "IOPS",
+          "peak": 148081,
+          "date": "2018-11-01"
+        },
+        {
+          "name":"Transfer",
+          "value": 3380,
+          "unit": "Mbps",
+          "peak": 6501,
+          "date": "2018-11-02"
+        },
+        {
+          "name":"Response",
+          "value": 1.51,
+          "unit": "ms",
+          "peak": 116,
+          "date": "2018-11-02"
+        },
+        {
+          "name":"CPU",
+          "value": 23.2,
+          "unit": "%",
+          "peak": 45.4,
+          "date": "2018-11-02"
+        },
+        {
+          "name":"HDD",
+          "value": 9.7,
+          "unit": "%",
+          "peak": 75.5,
+          "date": "2018-11-02"
+        },
+        {
+          "name":"Write Pending",
+          "value": 10.3,
+          "unit": "%",
+          "peak": 19.5,
+          "date": "2018-11-02"
+        }
+      ]
+    }
+  ]
+}
