@@ -3,132 +3,173 @@
   "label": "CZ_Chodov",
   "systems": [
     {
-
+      "id": 1,
       "name": "XP_7_G11_58417",
       "pools": [
         {
           "name": "Pool#1 15k-T1",
           "metrics": [
             {
-              "name": "Physical subs",
-              "value": 83.2,
+              "type": "Physical subs",
+              "value": 102,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
-              "value": 122,
+              "type": "Physical capacity",
+              "value": 67.9,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
-              "value": 122,
+              "type": "Available capacity",
+              "value": 20.2,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
-              "value": 122,
+              "type": "Logical used",
+              "value": 70,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
-              "value": 122,
+              "type": "Physical used",
+              "value": 70,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
-              "value": 122,
+              "type": "Compression ratio",
+              "value": 0,
               "unit": "",
               "date": "2018-11-02"
             }
           ]
         },
         {
-          "name": "Pool#1 15k-T2",
+          "name": "Pool#2 SmT-T1",
           "metrics": [
             {
-              "name": "Physical subs",
-              "value": 83.2,
+              "type": "Physical subs",
+              "value": 69,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
-              "value": 122,
+              "type": "Physical capacity",
+              "value": 83.2,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
-              "value": 122,
+              "type": "Available capacity",
+              "value": 43.3,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
-              "value": 122,
+              "type": "Logical used",
+              "value": 47,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
-              "value": 122,
+              "type": "Physical used",
+              "value": 47,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
-              "value": 122,
+              "type": "Compression ratio",
+              "value": 0,
+              "unit": "",
+              "date": "2018-11-02"
+            }
+          ]
+        },
+        {
+          "name": "Pool#3 FMD-T0",
+          "metrics": [
+            {
+              "type": "Physical subs",
+              "value": 66,
+              "unit": "%",
+              "date": "2018-11-01"
+            },
+            {
+              "type": "Physical capacity",
+              "value": 12.6,
+              "unit": "TB",
+              "date": "2018-11-02"
+            },
+            {
+              "type": "Available capacity",
+              "value": 4.71,
+              "unit": "TB",
+              "date": "2018-11-02"
+            },
+            {
+              "type": "Logical used",
+              "value": 62,
+              "unit": "%",
+              "date": "2018-11-02"
+            },
+            {
+              "type": "Physical used",
+              "value": 62,
+              "unit": "%",
+              "date": "2018-11-02"
+            },
+            {
+              "type": "Compression ratio",
+              "value": 0,
               "unit": "",
               "date": "2018-11-02"
             }
           ]
         }
-
       ]
     },
     {
+      "id": 2,
       "name": "XP_7_G11_58417",
       "pools": [
         {
           "name": "Pool#1 15k-T2",
           "metrics": [
             {
-              "name": "Physical subs",
+              "type": "Physical subs",
               "value": 83.2,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
+              "type": "Physical capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
+              "type": "Available capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
+              "type": "Logical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
+              "type": "Physical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
+              "type": "Compression ratio",
               "value": 122,
               "unit": "",
               "date": "2018-11-02"
@@ -139,37 +180,37 @@
           "name": "Pool#1 15k-T2",
           "metrics": [
             {
-              "name": "Physical subs",
+              "type": "Physical subs",
               "value": 83.2,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
+              "type": "Physical capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
+              "type": "Available capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
+              "type": "Logical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
+              "type": "Physical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
+              "type": "Compression ratio",
               "value": 122,
               "unit": "",
               "date": "2018-11-02"
@@ -180,37 +221,37 @@
           "name": "Pool#1 15k-T2",
           "metrics": [
             {
-              "name": "Physical subs",
+              "type": "Physical subs",
               "value": 83.2,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
+              "type": "Physical capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
+              "type": "Available capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
+              "type": "Logical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
+              "type": "Physical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
+              "type": "Compression ratio",
               "value": 122,
               "unit": "",
               "date": "2018-11-02"
@@ -221,37 +262,37 @@
           "name": "Pool#1 15k-T2",
           "metrics": [
             {
-              "name": "Physical subs",
+              "type": "Physical subs",
               "value": 83.2,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
+              "type": "Physical capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
+              "type": "Available capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
+              "type": "Logical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
+              "type": "Physical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
+              "type": "Compression ratio",
               "value": 122,
               "unit": "",
               "date": "2018-11-02"
@@ -262,37 +303,37 @@
           "name": "Pool#1 15k-T2",
           "metrics": [
             {
-              "name": "Physical subs",
+              "type": "Physical subs",
               "value": 83.2,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
+              "type": "Physical capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
+              "type": "Available capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
+              "type": "Logical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
+              "type": "Physical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
+              "type": "Compression ratio",
               "value": 122,
               "unit": "",
               "date": "2018-11-02"
@@ -303,44 +344,43 @@
           "name": "Pool#1 15k-T2",
           "metrics": [
             {
-              "name": "Physical subs",
+              "type": "Physical subs",
               "value": 83.2,
               "unit": "%",
               "date": "2018-11-01"
             },
             {
-              "name": "Physical capacity",
+              "type": "Physical capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Available capacity",
+              "type": "Available capacity",
               "value": 122,
               "unit": "TB",
               "date": "2018-11-02"
             },
             {
-              "name": "Logical used",
+              "type": "Logical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Physical used",
+              "type": "Physical used",
               "value": 122,
               "unit": "%",
               "date": "2018-11-02"
             },
             {
-              "name": "Compression ratio",
+              "type": "Compression ratio",
               "value": 122,
               "unit": "",
               "date": "2018-11-02"
             }
           ]
         }
-
       ]
     }
   ]

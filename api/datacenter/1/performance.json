@@ -6,42 +6,42 @@
       "name": "XP7_G11_58417",
       "metrics": [
         {
-          "name":"Workload",
-          "value": 71132 ,
+          "type": "workload",
+          "value": 71132,
           "unit": "IOPS",
           "peak": 148081,
           "date": "2018-11-01"
         },
         {
-          "name":"Transfer",
+          "type": "transfer",
           "value": 3380,
           "unit": "Mbps",
           "peak": 6501,
           "date": "2018-11-02"
         },
         {
-          "name":"Response",
+          "type": "response",
           "value": 1.51,
           "unit": "ms",
           "peak": 116,
           "date": "2018-11-02"
         },
         {
-          "name":"CPU",
+          "type": "cpu",
           "value": 23.2,
           "unit": "%",
           "peak": 45.4,
           "date": "2018-11-02"
         },
         {
-          "name":"HDD",
+          "type": "hdd",
           "value": 9.7,
           "unit": "%",
           "peak": 75.5,
           "date": "2018-11-02"
         },
         {
-          "name":"Write Pending",
+          "type": "write_pending",
           "value": 10.3,
           "unit": "%",
           "peak": 19.5,
@@ -53,42 +53,42 @@
       "name": "XP7_G11_58416",
       "metrics": [
         {
-          "name":"Workload",
-          "value": 6654 ,
+          "type": "workload",
+          "value": 6654,
           "unit": "IOPS",
           "peak": 148081,
           "date": "2018-11-01"
         },
         {
-          "name":"Transfer",
+          "type": "transfer",
           "value": 1234,
           "unit": "Mbps",
           "peak": 7489,
           "date": "2018-11-02"
         },
         {
-          "name":"Response",
+          "type": "response",
           "value": 2.1,
           "unit": "ms",
           "peak": 123,
           "date": "2018-11-02"
         },
         {
-          "name":"CPU",
+          "type": "cpu",
           "value": 22.2,
           "unit": "%",
           "peak": 34.4,
           "date": "2018-11-02"
         },
         {
-          "name":"HDD",
+          "type": "hdd",
           "value": 10.7,
           "unit": "%",
           "peak": 66.5,
           "date": "2018-11-02"
         },
         {
-          "name":"Write Pending",
+          "type": "write_pending",
           "value": 11.3,
           "unit": "%",
           "peak": 22.5,
@@ -100,42 +100,42 @@
       "name": "XP7_G11_58415",
       "metrics": [
         {
-          "name":"Workload",
-          "value": 18564 ,
+          "type": "workload",
+          "value": 18564,
           "unit": "IOPS",
           "peak": 168879,
           "date": "2018-11-01"
         },
         {
-          "name":"Transfer",
+          "type": "transfer",
           "value": 4587,
           "unit": "Mbps",
           "peak": 7895,
           "date": "2018-11-02"
         },
         {
-          "name":"Response",
+          "type": "response",
           "value": 5.51,
           "unit": "ms",
           "peak": 216,
           "date": "2018-11-02"
         },
         {
-          "name":"CPU",
+          "type": "cpu",
           "value": 26.2,
           "unit": "%",
           "peak": 41.4,
           "date": "2018-11-02"
         },
         {
-          "name":"HDD",
+          "type": "hdd",
           "value": 23.7,
           "unit": "%",
           "peak": 98.5,
           "date": "2018-11-02"
         },
         {
-          "name":"Write Pending",
+          "type": "write_pending",
           "value": 12.3,
           "unit": "%",
           "peak": 17.5,

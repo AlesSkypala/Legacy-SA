@@ -6,42 +6,42 @@
       "name": "XP_7_G11_58417",
       "metrics": [
         {
-          "name":"Workload",
+          "type":"workload",
           "value": 71132 ,
           "unit": "IOPS",
           "peak": 148081,
           "date": "2018-11-01"
         },
         {
-          "name":"Transfer",
+          "type":"transfer",
           "value": 3380,
           "unit": "Mbps",
           "peak": 6501,
           "date": "2018-11-02"
         },
         {
-          "name":"Response",
+          "type":"response",
           "value": 1.51,
           "unit": "ms",
           "peak": 116,
           "date": "2018-11-02"
         },
         {
-          "name":"CPU",
+          "type":"cpu",
           "value": 23.2,
           "unit": "%",
           "peak": 45.4,
           "date": "2018-11-02"
         },
         {
-          "name":"HDD",
+          "type":"hdd",
           "value": 9.7,
           "unit": "%",
           "peak": 75.5,
           "date": "2018-11-02"
         },
         {
-          "name":"Write Pending",
+          "type":"write_pending",
           "value": 10.3,
           "unit": "%",
           "peak": 19.5,
