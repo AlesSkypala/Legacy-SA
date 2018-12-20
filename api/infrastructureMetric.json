@@ -1,4 +1,18 @@
 {
+  "alerts" : [
+    {
+      "name": "disbalancedEvents",
+      "count": 5,
+      "warnTreshold": 2,
+      "errorTreshold": 5
+    },
+    {
+      "name": "slaBreach",
+      "count": 22,
+      "warnTreshold": 2,
+      "errorTreshold": 5
+    }
+  ],
   "metrics" : [
     {
       "type" : "workload",
