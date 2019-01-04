@@ -10,17 +10,13 @@
           "type": "workload",
           "value": 71132,
           "unit": "IOPS",
-          "peak": 148081,
-          "warnTreshold": 81,
-          "errorTreshold": 86
+          "peak": 148081
         },
         {
           "type": "transfer",
           "value": 3380,
           "unit": "Mbps",
-          "peak": 6501,
-          "warnTreshold": 81,
-          "errorTreshold": 86
+          "peak": 6501
         },
         {
           "type": "response",

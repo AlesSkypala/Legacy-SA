@@ -18,9 +18,7 @@
             {
               "type": "Physical capacity",
               "value": 67.9,
-              "unit": "TB",
-              "warnTreshold": 81,
-              "errorTreshold": 86
+              "unit": "TB"
             },
             {
               "type": "Available capacity",
@@ -56,9 +54,7 @@
             {
               "type": "Physical capacity",
               "value": 83.2,
-              "unit": "TB",
-              "warnTreshold": 81,
-              "errorTreshold": 86
+              "unit": "TB"
             },
             {
               "type": "Available capacity",
@@ -94,9 +90,7 @@
             {
               "type": "Physical capacity",
               "value": 12.6,
-              "unit": "TB",
-              "warnTreshold": 81,
-              "errorTreshold": 86
+              "unit": "TB"
             },
             {
               "type": "Available capacity",
