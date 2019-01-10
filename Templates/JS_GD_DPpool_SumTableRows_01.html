@@ -66,6 +66,15 @@ $(document).ready(function() {
 	for (q=0;q<RoomList.length;q++) {
 	   checkTotal(RoomList[q].id)}
     })	   
+
+//All Sel and All DeSel
+function checkAll(roominf, chckState) {
+  var RoomCont = document.getElementById(roominf);
+  var CheckList = RoomCont.getElementsByClassName("chck_item");
+  for (i=0;i<CheckList.length;i++) { CheckList[i].checked = chckState }	
+  checkTotal(RoomCont.id);
+  }
+      
 </script>
 
 

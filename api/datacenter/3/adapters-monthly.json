@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "label": "CZ_Chodov",
+  "systems": [
+    {
+      "id": 1,
+      "name": "XP_7_G11_58417",
+      "adapters": [
+        {
+          "id": 1,
+          "name": "CHA-1PC,CHA-2PC",
+          "disbalanceEvents": 6,
+          "info": "some more info"
+        },
+        {
+          "id": 2,
+          "name": "CHA-1PD,CHA-2PD",
+          "disbalanceEvents": 0,
+          "info": ""
+        },
+        {
+          "id": 3,
+          "name": "CHA-1PE,CHA-2PE",
+          "disbalanceEvents": 0,
+          "info": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "XP_7_G12_58417",
+      "pools": [
+        {
+          "id": 4,
+          "name": "CHA-1PC,CHA-2PC",
+          "disbalanceEvents": 0,
+          "info": ""
+        },
+        {
+          "id": 5,
+          "name": "CHA-1PD,CHA-2PD",
+          "disbalanceEvents": 0,
+          "info": ""
+        },
+        {
+          "id": 6,
+          "name": "CHA-1PE,CHA-2PE",
+          "disbalanceEvents": 0,
+          "info": ""
+        }
+      ]
+    }
+  ]
+}

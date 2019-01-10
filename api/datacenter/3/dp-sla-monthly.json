@@ -1,0 +1,72 @@
+{
+  "id": 1,
+  "label": "CZ_Chodov",
+  "systems": [
+    {
+      "id": 1,
+      "name": "XP_7_G11_58417",
+      "pools": [
+        {
+          "id": 1,
+          "name": "Pool#1 15k-T1",
+          "slaEvents": 6,
+          "outOfSlaTime": "03:16:00"
+        },
+        {
+          "id": 2,
+          "name": "Pool#2 SmT-T1",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        },
+        {
+          "id": 3,
+          "name": "Pool#3 FMD-T0",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "XP_7_G12_58417",
+      "pools": [
+        {
+          "id": 4,
+          "name": "Pool#1 15k-T2",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        },
+        {
+          "id": 5,
+          "name": "Pool#1 15k-T3",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        },
+        {
+          "id": 6,
+          "name": "Pool#1 15k-T4",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        },
+        {
+          "id": 7,
+          "name": "Pool#1 15k-T5",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        },
+        {
+          "id": 8,
+          "name": "Pool#1 15k-T6",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        },
+        {
+          "id": 9,
+          "name": "Pool#1 15k-T7",
+          "slaEvents": 0,
+          "outOfSlaTime": "00:00:00"
+        }
+      ]
+    }
+  ]
+}

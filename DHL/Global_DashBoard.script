@@ -2,7 +2,7 @@ SA_Version=87
 SilentMode
 
 {***** Use Select System command to manage many storage systems. Otherwise the default will be used ****}
-System.Select=XP7_G14_10560
+System.Select=XP7_AFA1_57216
 
 
 {********* Name of Web Pages ********}
@@ -23,7 +23,7 @@ Html.Template.DocList=Header_04.html,    Body_Template_DocList.html,    Footer_D
 Html.Template.Warning=Header_01.html,    Body_Template_Warning.html,    Footer_DataClue_01.html
 CreateWarningPage=off
 
-CopyFile=jquery-3.3.1.min.js, c:\StorageAnalytics\WEB\jquery.js
+CopyFile=jquery-3.3.1.min.js, D:\web\jquery.js
 
 
 
@@ -126,22 +126,22 @@ $XP7_MEG2_20725_ChaBoard_Link=/728%20CHA%20Adapters%20Board/index.html
 {***************** Runtime **************}
 // Path to WebPages
 $StorageSystem=Global DashBoard
-Report.Path=c:\StorageAnalytics\WEB\001 Performance Statistics
+Report.Path=D:\web\001 Performance Statistics
 Call=Makro-Day-Week-Month_Gxxx_GlobalDashBoard_PortInfo_01.script
 
 
 Report.Name=Capacity Statistics
-Report.Path=c:\StorageAnalytics\WEB\002 Capacity Statistics
+Report.Path=D:\web\002 Capacity Statistics
 day.select=1
 $HeaderItems=
 Call=Gxxx_GlobalDashBoard_DPInfo_01.script
 
 
-Report.Path=c:\StorageAnalytics\WEB\003 DP and SLA Statistic
+Report.Path=D:\web\003 DP and SLA Statistic
 Call=Makro-Day-Week-Month_Gxxx_GlobalDashBoard_DPSLAInfo_01.script
 
 
-Report.Path=c:\StorageAnalytics\WEB\006 Channel Adapters Statistics
+Report.Path=D:\web\006 Channel Adapters Statistics
 Call=Makro-Day-Week-Month_Gxxx_GlobalDashBoard_CHA_01.script
 
 

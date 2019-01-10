@@ -1,0 +1,132 @@
+{
+  "id": 1,
+  "label": "CZ_Chodov",
+  "systems": [
+    {
+      "id": 1,
+      "name": "XP7_G11_58417",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 8888,
+          "unit": "IOPS",
+          "peak": 148081
+        },
+        {
+          "type": "transfer",
+          "value": 3380,
+          "unit": "Mbps",
+          "peak": 6501
+        },
+        {
+          "type": "response",
+          "value": 1.51,
+          "unit": "ms",
+          "peak": 116
+        },
+        {
+          "type": "cpu",
+          "value": 23.2,
+          "unit": "%",
+          "peak": 45.4
+        },
+        {
+          "type": "hdd",
+          "value": 9.7,
+          "unit": "%",
+          "peak": 75.5
+        },
+        {
+          "type": "write_pending",
+          "value": 10.3,
+          "unit": "%",
+          "peak": 19.5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "XP7_G11_58416",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 6654,
+          "unit": "IOPS",
+          "peak": 148081
+        },
+        {
+          "type": "transfer",
+          "value": 1234,
+          "unit": "Mbps",
+          "peak": 7489
+        },
+        {
+          "type": "response",
+          "value": 2.1,
+          "unit": "ms",
+          "peak": 123
+        },
+        {
+          "type": "cpu",
+          "value": 22.2,
+          "unit": "%",
+          "peak": 34.4
+        },
+        {
+          "type": "hdd",
+          "value": 10.7,
+          "unit": "%",
+          "peak": 66.5
+        },
+        {
+          "type": "write_pending",
+          "value": 11.3,
+          "unit": "%",
+          "peak": 22.5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "XP7_G11_58415",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 18564,
+          "unit": "IOPS",
+          "peak": 168879
+        },
+        {
+          "type": "transfer",
+          "value": 4587,
+          "unit": "Mbps",
+          "peak": 7895
+        },
+        {
+          "type": "response",
+          "value": 5.51,
+          "unit": "ms",
+          "peak": 216
+        },
+        {
+          "type": "cpu",
+          "value": 26.2,
+          "unit": "%",
+          "peak": 41.4
+        },
+        {
+          "type": "hdd",
+          "value": 23.7,
+          "unit": "%",
+          "peak": 98.5
+        },
+        {
+          "type": "write_pending",
+          "value": 12.3,
+          "unit": "%",
+          "peak": 17.5
+        }
+      ]
+    }
+  ]
+}

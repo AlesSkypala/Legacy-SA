@@ -8,123 +8,459 @@
       "metrics": [
         {
           "type": "workload",
-          "value": 71132,
+          "value": 55350,
           "unit": "IOPS",
-          "peak": 148081
+          "peak": 181302
         },
         {
           "type": "transfer",
-          "value": 3380,
+          "value": 2926,
           "unit": "Mbps",
-          "peak": 6501
+          "peak": 6771
         },
         {
           "type": "response",
-          "value": 1.51,
+          "value": 1.37,
           "unit": "ms",
-          "peak": 116
+          "peak": 46
         },
         {
           "type": "cpu",
-          "value": 23.2,
+          "value": 19.1,
           "unit": "%",
-          "peak": 45.4
+          "peak": 41.9
         },
         {
           "type": "hdd",
-          "value": 9.7,
+          "value": 9.3,
           "unit": "%",
-          "peak": 75.5
+          "peak": 87
         },
         {
           "type": "write_pending",
-          "value": 10.3,
+          "value": 8.2,
           "unit": "%",
-          "peak": 19.5
+          "peak": 23
         }
       ]
     },
     {
       "id": 2,
-      "name": "XP7_G11_58416",
+      "name": "XP7_G12_58416",
       "metrics": [
         {
           "type": "workload",
-          "value": 6654,
+          "value": 76602,
           "unit": "IOPS",
-          "peak": 148081
+          "peak": 154114
         },
         {
           "type": "transfer",
-          "value": 1234,
+          "value": 3397,
           "unit": "Mbps",
-          "peak": 7489
+          "peak": 7408
         },
         {
           "type": "response",
-          "value": 2.1,
+          "value": 0.89,
           "unit": "ms",
-          "peak": 123
+          "peak": 126
         },
         {
           "type": "cpu",
-          "value": 22.2,
+          "value": 26.9,
           "unit": "%",
-          "peak": 34.4
+          "peak": 67
         },
         {
           "type": "hdd",
-          "value": 10.7,
+          "value": 14.7,
           "unit": "%",
-          "peak": 66.5
+          "peak": 64
         },
         {
           "type": "write_pending",
-          "value": 11.3,
+          "value": 6.7,
           "unit": "%",
-          "peak": 22.5
+          "peak": 31
         }
       ]
     },
     {
       "id": 3,
-      "name": "XP7_G11_58415",
+      "name": "XP7_G13_58734",
       "metrics": [
         {
           "type": "workload",
-          "value": 18564,
+          "value": 51107,
           "unit": "IOPS",
-          "peak": 168879
+          "peak": 94045
         },
         {
           "type": "transfer",
-          "value": 4587,
+          "value": 2497,
           "unit": "Mbps",
-          "peak": 7895
+          "peak": 7669
         },
         {
           "type": "response",
-          "value": 5.51,
+          "value": 0.64,
           "unit": "ms",
-          "peak": 216
+          "peak": 55.4
         },
         {
           "type": "cpu",
-          "value": 26.2,
+          "value": 23.2,
           "unit": "%",
-          "peak": 41.4
+          "peak": 59
         },
         {
           "type": "hdd",
-          "value": 23.7,
+          "value": 3.17,
           "unit": "%",
-          "peak": 98.5
+          "peak": 59
         },
         {
           "type": "write_pending",
-          "value": 12.3,
+          "value": 8.3,
           "unit": "%",
-          "peak": 17.5
+          "peak": 27
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "XP7_G14_10560",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 51107,
+          "unit": "IOPS",
+          "peak": 94045
+        },
+        {
+          "type": "transfer",
+          "value": 2497,
+          "unit": "Mbps",
+          "peak": 7669
+        },
+        {
+          "type": "response",
+          "value": 0.64,
+          "unit": "ms",
+          "peak": 55.4
+        },
+        {
+          "type": "cpu",
+          "value": 23.2,
+          "unit": "%",
+          "peak": 59
+        },
+        {
+          "type": "hdd",
+          "value": 3.17,
+          "unit": "%",
+          "peak": 59
+        },
+        {
+          "type": "write_pending",
+          "value": 8.3,
+          "unit": "%",
+          "peak": 27
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "XP7_G15_20028",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 51107,
+          "unit": "IOPS",
+          "peak": 94045
+        },
+        {
+          "type": "transfer",
+          "value": 2497,
+          "unit": "Mbps",
+          "peak": 7669
+        },
+        {
+          "type": "response",
+          "value": 0.64,
+          "unit": "ms",
+          "peak": 55.4
+        },
+        {
+          "type": "cpu",
+          "value": 23.2,
+          "unit": "%",
+          "peak": 59
+        },
+        {
+          "type": "hdd",
+          "value": 3.17,
+          "unit": "%",
+          "peak": 59
+        },
+        {
+          "type": "write_pending",
+          "value": 8.3,
+          "unit": "%",
+          "peak": 27
+        }
+      ] 
+    },
+    {
+      "id": 21,
+      "name": "XP7_B11_50225",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 74679,
+          "unit": "IOPS",
+          "peak": 161880
+        },
+        {
+          "type": "transfer",
+          "value": 3535,
+          "unit": "Mbps",
+          "peak": 6189
+        },
+        {
+          "type": "response",
+          "value": 1.18,
+          "unit": "ms",
+          "peak": 164
+        },
+        {
+          "type": "cpu",
+          "value": 21,
+          "unit": "%",
+          "peak": 50
+        },
+        {
+          "type": "hdd",
+          "value": 11.9,
+          "unit": "%",
+          "peak": 62
+        },
+        {
+          "type": "write_pending",
+          "value": 6.4,
+          "unit": "%",
+          "peak": 21
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "XP7_B12_58678",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 41319,
+          "unit": "IOPS",
+          "peak": 105176
+        },
+        {
+          "type": "transfer",
+          "value": 2552,
+          "unit": "Mbps",
+          "peak": 6764
+        },
+        {
+          "type": "response",
+          "value": 5.40,
+          "unit": "ms",
+          "peak": 130
+        },
+        {
+          "type": "cpu",
+          "value": 14.6,
+          "unit": "%",
+          "peak": 51
+        },
+        {
+          "type": "hdd",
+          "value": 14.2,
+          "unit": "%",
+          "peak": 45
+        },
+        {
+          "type": "write_pending",
+          "value": 2.13,
+          "unit": "%",
+          "peak": 11
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "XP7_B13_59006",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 18024,
+          "unit": "IOPS",
+          "peak": 54183
+        },
+        {
+          "type": "transfer",
+          "value": 763,
+          "unit": "Mbps",
+          "peak": 4097
+        },
+        {
+          "type": "response",
+          "value": 0.27,
+          "unit": "ms",
+          "peak": 42.3
+        },
+        {
+          "type": "cpu",
+          "value": 6.8,
+          "unit": "%",
+          "peak": 33
+        },
+        {
+          "type": "hdd",
+          "value": 3.34,
+          "unit": "%",
+          "peak": 66
+        },
+        {
+          "type": "write_pending",
+          "value": 2.42,
+          "unit": "%",
+          "peak": 23
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "XP7_B14_10554",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 119142,
+          "unit": "IOPS",
+          "peak": 256608
+        },
+        {
+          "type": "transfer",
+          "value": 4123,
+          "unit": "Mbps",
+          "peak": 9217
+        },
+        {
+          "type": "response",
+          "value": 0.71,
+          "unit": "ms",
+          "peak": 89.4
+        },
+        {
+          "type": "cpu",
+          "value": 13.8,
+          "unit": "%",
+          "peak": 53
+        },
+        {
+          "type": "hdd",
+          "value": 7.5,
+          "unit": "%",
+          "peak": 30.8
+        },
+        {
+          "type": "write_pending",
+          "value": 12.8,
+          "unit": "%",
+          "peak": 25.9
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "XP7_B15_10640",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 57252,
+          "unit": "IOPS",
+          "peak": 139764
+        },
+        {
+          "type": "transfer",
+          "value": 2194,
+          "unit": "Mbps",
+          "peak": 6972
+        },
+        {
+          "type": "response",
+          "value": 0.63,
+          "unit": "ms",
+          "peak": 18.7
+        },
+        {
+          "type": "cpu",
+          "value": 16.2,
+          "unit": "%",
+          "peak": 94
+        },
+        {
+          "type": "hdd",
+          "value": 6.7,
+          "unit": "%",
+          "peak": 43
+        },
+        {
+          "type": "write_pending",
+          "value": 7,
+          "unit": "%",
+          "peak": 26.9
+        }
+      ] 
+    },
+    {
+      "id": 26,
+      "name": "XP7_B16_11114",
+      "metrics": [
+        {
+          "type": "workload",
+          "value": 44492,
+          "unit": "IOPS",
+          "peak": 139055
+        },
+        {
+          "type": "transfer",
+          "value": 815,
+          "unit": "Mbps",
+          "peak": 2721
+        },
+        {
+          "type": "response",
+          "value": 0.49,
+          "unit": "ms",
+          "peak": 3.9
+        },
+        {
+          "type": "cpu",
+          "value": 10.6,
+          "unit": "%",
+          "peak": 31
+        },
+        {
+          "type": "hdd",
+          "value": 6.1,
+          "unit": "%",
+          "peak": 24.3
+        },
+        {
+          "type": "write_pending",
+          "value": 4.88,
+          "unit": "%",
+          "peak": 14
         }
       ]
     }

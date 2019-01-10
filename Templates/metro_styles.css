@@ -72,12 +72,10 @@ table.tb2 {
    width: 100%;
    border-collapse: separate;
    border: 1px dashed black;
-   font-size: 9px;
+   font-size: 12px;
    text-align: center;
-   font-weight: normal;}
+   font-weight: bold;}
 .tb2 tbody td {
-   font-size: 12px; 
-   font-weight: bold; 
    margin: 2px;}
 .tb2 tbody tr:nth-child(0) {background: #dfebff !important;}
 .tb2 tbody th:nth-child(1) {text-align: center !Important; padding-left: 2px;  white-space: nowrap; width: 13%;}
@@ -89,6 +87,7 @@ table.tb2 {
    background-color:#DDDDDD !important; 
    color:#000000 !important;
    padding: 2px;
+   font-size: 9px;
    font-weight: bold;}
 .tb2 tbody a:link, .tb2 tbody a:visited {
    float:left; 
