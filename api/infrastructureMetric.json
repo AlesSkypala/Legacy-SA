@@ -16,9 +16,9 @@
   "metrics" : [
     {
       "type" : "workload",
-      "value" : "123123",
+      "value" : "9588",
       "unit" : "IOPs",
-      "peak" : 25555
+      "peak" : 385555
     },
     {
       "type" : "response",
