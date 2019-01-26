@@ -9,20 +9,50 @@
         {
           "id": 1,
           "name": "Pool#1 15k-T1",
-          "slaEvents": 6,
-          "outOfSlaTime": "03:16:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 2,
           "name": "Pool#2 SmT-T1",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 3,
           "name": "Pool#3 FMD-T0",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         }
       ]
     },
@@ -33,38 +63,98 @@
         {
           "id": 4,
           "name": "Pool#1 15k-T2",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 5,
           "name": "Pool#1 15k-T3",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 6,
           "name": "Pool#1 15k-T4",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 7,
           "name": "Pool#1 15k-T5",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 8,
           "name": "Pool#1 15k-T6",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         },
         {
           "id": 9,
           "name": "Pool#1 15k-T7",
-          "slaEvents": 0,
-          "outOfSlaTime": "00:00:00"
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
         }
       ]
     }

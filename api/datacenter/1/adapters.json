@@ -5,24 +5,54 @@
     {
       "id": 1,
       "name": "XP_7_G11_58417",
-      "adapters": [
+      "pools": [
         {
           "id": 1,
           "name": "CHA-1PC,CHA-2PC",
-          "disbalanceEvents": 6,
-          "info": "some more info"
+          "metrics": [
+            {
+              "type": "info",
+              "value": "some info",
+              "unit": ""
+            },
+            {
+              "type": "disbalance_events",
+              "value": 6,
+              "unit": ""
+            }
+          ]
         },
         {
           "id": 2,
           "name": "CHA-1PD,CHA-2PD",
-          "disbalanceEvents": 0,
-          "info": ""
+          "metrics": [
+            {
+              "type": "info",
+              "value": "some info",
+              "unit": ""
+            },
+            {
+              "type": "disbalance_events",
+              "value": 12,
+              "unit": ""
+            }
+          ]
         },
         {
           "id": 3,
           "name": "CHA-1PE,CHA-2PE",
-          "disbalanceEvents": 0,
-          "info": ""
+          "metrics": [
+            {
+              "type": "info",
+              "value": "some info",
+              "unit": ""
+            },
+            {
+              "type": "disbalance_events",
+              "value": 0,
+              "unit": ""
+            }
+          ]
         }
       ]
     },
@@ -30,25 +60,39 @@
       "id": 2,
       "name": "XP_7_G12_58417",
       "pools": [
-        {
-          "id": 4,
-          "name": "CHA-1PC,CHA-2PC",
-          "disbalanceEvents": 0,
-          "info": ""
-        },
-        {
-          "id": 5,
-          "name": "CHA-1PD,CHA-2PD",
-          "disbalanceEvents": 0,
-          "info": ""
-        },
-        {
-          "id": 6,
-          "name": "CHA-1PE,CHA-2PE",
-          "disbalanceEvents": 0,
-          "info": ""
-        }
-      ]
+      {
+        "id": 1,
+        "name": "CHA-3PC,CHA-4PC",
+        "metrics": [
+          {
+            "type": "info",
+            "value": "some info",
+            "unit": ""
+          },
+          {
+            "type": "disbalance_events",
+            "value": 6,
+            "unit": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "CHA-1PD,CHA-2PD",
+        "metrics": [
+          {
+            "type": "info",
+            "value": "some info",
+            "unit": ""
+          },
+          {
+            "type": "disbalance_events",
+            "value": 12,
+            "unit": ""
+          }
+        ]
+      }
+    ]
     }
   ]
 }
