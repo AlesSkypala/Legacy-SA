@@ -1,0 +1,162 @@
+{
+  "id": 1,
+  "label": "CZ_Chodov",
+  "systems": [
+    {
+      "id": 1,
+      "name": "XP_7_G11_58417",
+      "pools": [
+        {
+          "id": 1,
+          "name": "Pool#1 15k-T1",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Pool#2 SmT-T1",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Pool#3 FMD-T0",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "XP_7_G12_58417",
+      "pools": [
+        {
+          "id": 4,
+          "name": "Pool#1 15k-T2",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Pool#1 15k-T3",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Pool#1 15k-T4",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Pool#1 15k-T5",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Pool#1 15k-T6",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Pool#1 15k-T7",
+          "metrics": [
+            {
+              "type": "sla_events",
+              "value": 6,
+              "unit": ""
+            },
+            {
+              "type": "out_of_sla_time",
+              "value": 182,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
