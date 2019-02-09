@@ -1,132 +1,132 @@
-{
-  "datacenters": [
-    {
-      "id": 0,
-      "label": "CZ_Chodov",
-      "systems": [
+﻿{
+    "datacenters": [
         {
-          "id": 1,
-          "name": "XP7-G11 [58417]"
+            "id": 0,
+            "label": "CZ_Chodov",
+            "systems": [
+                {
+                    "id": 0,
+                    "name": "XP7_G11_58417"
+                },
+                {
+                    "id": 1,
+                    "name": "XP7_G12_58416"
+                },
+                {
+                    "id": 2,
+                    "name": "XP7_G13_58734"
+                },
+                {
+                    "id": 3,
+                    "name": "XP7_G14_10560"
+                },
+                {
+                    "id": 4,
+                    "name": "XP7_G15_20028"
+                },
+                {
+                    "id": 5,
+                    "name": "XP7_G16_20359"
+                },
+                {
+                    "id": 6,
+                    "name": "XP7_B11_50225"
+                },
+                {
+                    "id": 7,
+                    "name": "XP7_B12_58678"
+                },
+                {
+                    "id": 8,
+                    "name": "XP7_B13_59006"
+                },
+                {
+                    "id": 9,
+                    "name": "XP7_B14_10554"
+                },
+                {
+                    "id": 10,
+                    "name": "XP7_B15_10640"
+                },
+                {
+                    "id": 11,
+                    "name": "XP7_B16_11114"
+                }
+            ]
         },
         {
-          "id": 2,
-          "name": "XP7-G12 [58416]"
+            "id": 1,
+            "label": "CZ_Sitel",
+            "systems": [
+                {
+                    "id": 12,
+                    "name": "XP7_STL1_58634"
+                },
+                {
+                    "id": 13,
+                    "name": "XP7_STL2_10558"
+                }
+            ]
         },
         {
-          "id": 3,
-          "name": "XP7-G13 [58734]"
+            "id": 2,
+            "label": "MY_Cyberjaja",
+            "systems": [
+                {
+                    "id": 14,
+                    "name": "XP7_AFA1_57216"
+                },
+                {
+                    "id": 15,
+                    "name": "XP7_AFA2_57222"
+                },
+                {
+                    "id": 16,
+                    "name": "XP7_AFA3_20575"
+                },
+                {
+                    "id": 17,
+                    "name": "XP7_AFA4_56053"
+                }
+            ]
         },
         {
-          "id": 4,
-          "name": "XP7-G14 [10560]"
+            "id": 3,
+            "label": "MY_AIMS",
+            "systems": [
+                {
+                    "id": 18,
+                    "name": "XP7_AIMS1_20627"
+                }
+            ]
         },
         {
-          "id": 5,
-          "name": "XP7-G15 [20028]"
+            "id": 4,
+            "label": "US_Ashburn",
+            "systems": [
+                {
+                    "id": 19,
+                    "name": "XP7_QAS1_20610"
+                },
+                {
+                    "id": 20,
+                    "name": "XP7_QAS2_56139"
+                }
+            ]
         },
         {
-          "id": 6,
-          "name": "XP7-G16 [20359]"
-        },
-        {
-          "id": 21,
-          "name": "XP7-B11 [50225]"
-        },
-        {
-          "id": 22,
-          "name": "XP7-B12 [58678]"
-        },
-        {
-          "id": 23,
-          "name": "XP7-B13 [59006]"
-        },
-        {
-          "id": 24,
-          "name": "XP7-B14 [10554]"
-        },
-        {
-          "id": 25,
-          "name": "XP7-B15 [10640]"
-        },
-        {
-          "id": 26,
-          "name": "XP7-B16 [11114]"
+            "id": 5,
+            "label": "US_Mechanigsburg",
+            "systems": [
+                {
+                    "id": 21,
+                    "name": "XP7_MEG1_10239"
+                },
+                {
+                    "id": 22,
+                    "name": "XP7_MEG2_20725"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": 1,
-      "label": "CZ_Sitel",
-      "systems": [
-        {
-          "id": 61,
-          "name": "XP7-STL1 [58634]"
-        },
-        {
-          "id": 62,
-          "name": "XP7-STL2 [10558]"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "label": "MY_Cyberjaja",
-      "systems": [
-        {
-          "id": 41,
-          "name": "XP7-AFA1 [57216]"
-        },
-        {
-          "id": 42,
-          "name": "XP7-AFA2 [57222]"
-        },
-        {
-          "id": 43,
-          "name": "XP7-AFA3 [20575]"
-        },
-        {
-          "id": 44,
-          "name": "XP7-AFA4 [56053]"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "label": "MY_AIMS",
-      "systems": [
-        {
-          "id": 81,
-          "name": "XP7-AIMS1 [20627]"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "label": "US_Ashburn",
-      "systems": [
-        {
-          "id": 51,
-          "name": "XP7-QAS1 [20610]"
-        },
-        {
-          "id": 52,
-          "name": "XP7-QAS2 [56139]"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "label": "US_Mechanigsburg",
-      "systems": [
-        {
-          "id": 71,
-          "name": "XP7-MEG1 [10239]"
-        },
-        {
-          "id": 72,
-          "name": "XP7-MEG2 [20725]"
-        }
-      ]
-    }
-  ]
+    ]
 }
